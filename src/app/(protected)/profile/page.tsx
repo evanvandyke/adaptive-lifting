@@ -4,6 +4,7 @@ import { createClient } from "@/utils/supabase/server";
 import type { Profile, BodyWeightLog } from "@/lib/types";
 import { ProgressChart, type DataPoint } from "../dashboard/components/ProgressChart";
 import { SuccessBanner } from "./SuccessBanner";
+import PeriodizationCard from "./components/PeriodizationCard";
 
 export default async function ProfilePage({
   searchParams,
@@ -25,7 +26,7 @@ export default async function ProfilePage({
   eightWeeksAgo.setDate(eightWeeksAgo.getDate() - 56);
   const eightWeeksAgoStr = eightWeeksAgo.toISOString().split("T")[0];
 
-  const [profileRes, bodyWeightRes] = await Promise.all([
+  const [profileRes, bodyWeightRes, firstWorkoutRes] = await Promise.all([
     supabase
       .from("lifting_profiles")
       .select("*")
@@ -37,10 +38,27 @@ export default async function ProfilePage({
       .eq("user_id", user.id)
       .gte("date", eightWeeksAgoStr)
       .order("date", { ascending: true }),
+    supabase
+      .from("lifting_workouts")
+      .select("date")
+      .eq("user_id", user.id)
+      .eq("completed", true)
+      .order("date", { ascending: true })
+      .limit(1)
+      .maybeSingle(),
   ]);
 
   const profile = (profileRes.data as Profile | null) ?? null;
   const bodyWeightLog = (bodyWeightRes.data ?? []) as BodyWeightLog[];
+
+  // Calculate weeks training from first workout
+  let weeksTraining = 0;
+  if (firstWorkoutRes.data?.date) {
+    const firstDate = new Date(firstWorkoutRes.data.date);
+    const now = new Date();
+    const diffMs = now.getTime() - firstDate.getTime();
+    weeksTraining = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 7));
+  }
 
   const bodyWeightData: DataPoint[] = bodyWeightLog.map((bw) => ({
     label: new Date(bw.date).toLocaleDateString("en-US", {
@@ -304,6 +322,19 @@ export default async function ProfilePage({
         unit=" lbs"
         color="amber"
       />
+
+      {/* Periodization Planner */}
+      {firstWorkoutRes.data?.date && (
+        <div className="space-y-2">
+          <h2
+            className="text-sm font-medium uppercase tracking-wide"
+            style={{ color: "var(--text-secondary)" }}
+          >
+            Training Phase
+          </h2>
+          <PeriodizationCard weeksTraining={weeksTraining} />
+        </div>
+      )}
 
       {/* Account */}
       <section className="glass-card p-5 space-y-4">

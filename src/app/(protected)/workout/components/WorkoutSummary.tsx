@@ -1,5 +1,7 @@
 "use client";
 
+import SharePR from "./SharePR";
+
 interface WorkoutSummaryProps {
   summary: {
     totalVolume: number;
@@ -9,11 +11,15 @@ interface WorkoutSummaryProps {
     prs: string[];
   };
   onDismiss: () => void;
+  totalSessions?: number;
+  streakCount?: number;
 }
 
 export default function WorkoutSummary({
   summary,
   onDismiss,
+  totalSessions,
+  streakCount,
 }: WorkoutSummaryProps) {
   const completionRate = Math.round(
     (summary.setsCompleted / summary.totalSets) * 100
@@ -105,15 +111,32 @@ export default function WorkoutSummary({
                   New Personal Records
                 </p>
               </div>
-              <ul className="space-y-1">
-                {summary.prs.map((pr, i) => (
-                  <li
-                    key={i}
-                    className="text-text-primary text-sm font-mono pl-6"
-                  >
-                    {pr}
-                  </li>
-                ))}
+              <ul className="space-y-2">
+                {summary.prs.map((pr, i) => {
+                  // Parse "Exercise Name: 225 lbs" format
+                  const match = pr.match(/^(.+):\s*(\d+(?:\.\d+)?)\s*lbs$/);
+                  const exerciseName = match ? match[1] : pr;
+                  const weight = match ? parseFloat(match[2]) : 0;
+
+                  return (
+                    <li
+                      key={i}
+                      className="flex items-center justify-between pl-6"
+                    >
+                      <span className="text-text-primary text-sm font-mono">
+                        {pr}
+                      </span>
+                      {match && (
+                        <SharePR
+                          exerciseName={exerciseName}
+                          weight={weight}
+                          totalSessions={totalSessions}
+                          streakCount={streakCount}
+                        />
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           )}

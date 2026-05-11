@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { logProtein, deleteProteinEntry } from "./actions";
+import { NutritionCoachCard } from "./components/NutritionCoachCard";
 
 interface NutritionEntry {
   id: string;
@@ -350,6 +351,9 @@ export function NutritionPageClient({
           />
         </div>
       </section>
+
+      {/* AI Nutrition Coach */}
+      <NutritionCoachCard />
 
       <p
         className="text-[11px] text-center italic pb-4"

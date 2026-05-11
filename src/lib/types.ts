@@ -90,6 +90,17 @@ export type SessionTemplate = {
   }[];
 };
 
+export type AdvancedTemplate = {
+  name: string;
+  type: "UA" | "UB" | "LA" | "LB";
+  exercises: {
+    exerciseName: string;
+    sets: number;
+    targetReps: string;
+    isHeavy: boolean;
+  }[];
+};
+
 export const SESSION_TEMPLATES: SessionTemplate[] = [
   {
     name: "Session A",
@@ -111,6 +122,53 @@ export const SESSION_TEMPLATES: SessionTemplate[] = [
       { exerciseName: "Pull-ups", sets: 3, targetReps: "8-10", isHeavy: false },
       { exerciseName: "Dumbbell Rows", sets: 3, targetReps: "10", isHeavy: false },
       { exerciseName: "Hanging Leg Raises", sets: 3, targetReps: "10-15", isHeavy: false },
+    ],
+  },
+];
+
+export const ADVANCED_TEMPLATES: AdvancedTemplate[] = [
+  {
+    name: "Upper A",
+    type: "UA",
+    exercises: [
+      { exerciseName: "Bench Press", sets: 4, targetReps: "5", isHeavy: true },
+      { exerciseName: "Barbell Row", sets: 4, targetReps: "8", isHeavy: false },
+      { exerciseName: "Overhead Press", sets: 3, targetReps: "8", isHeavy: false },
+      { exerciseName: "Face Pulls", sets: 3, targetReps: "15", isHeavy: false },
+      { exerciseName: "Bicep Curls", sets: 3, targetReps: "12", isHeavy: false },
+    ],
+  },
+  {
+    name: "Upper B",
+    type: "UB",
+    exercises: [
+      { exerciseName: "Overhead Press", sets: 4, targetReps: "5", isHeavy: true },
+      { exerciseName: "Pull-ups", sets: 4, targetReps: "8", isHeavy: false },
+      { exerciseName: "Incline Bench", sets: 3, targetReps: "10", isHeavy: false },
+      { exerciseName: "Dumbbell Rows", sets: 3, targetReps: "10", isHeavy: false },
+      { exerciseName: "Tricep Pushdowns", sets: 3, targetReps: "12", isHeavy: false },
+    ],
+  },
+  {
+    name: "Lower A",
+    type: "LA",
+    exercises: [
+      { exerciseName: "Squat", sets: 4, targetReps: "5", isHeavy: true },
+      { exerciseName: "Romanian Deadlift", sets: 3, targetReps: "8", isHeavy: false },
+      { exerciseName: "Leg Press", sets: 3, targetReps: "10", isHeavy: false },
+      { exerciseName: "Leg Curls", sets: 3, targetReps: "12", isHeavy: false },
+      { exerciseName: "Hanging Leg Raises", sets: 3, targetReps: "12", isHeavy: false },
+    ],
+  },
+  {
+    name: "Lower B",
+    type: "LB",
+    exercises: [
+      { exerciseName: "Deadlift", sets: 4, targetReps: "5", isHeavy: true },
+      { exerciseName: "Front Squat", sets: 3, targetReps: "8", isHeavy: false },
+      { exerciseName: "Walking Lunges", sets: 3, targetReps: "10/leg", isHeavy: false },
+      { exerciseName: "Calf Raises", sets: 4, targetReps: "15", isHeavy: false },
+      { exerciseName: "Plank", sets: 3, targetReps: "45-60s", isHeavy: false },
     ],
   },
 ];

@@ -11,8 +11,24 @@ export default async function WorkoutPage() {
 
   if (!user) redirect("/");
 
-  const todayData = await getTodayWorkout();
-  const nextSessionType = await getNextSessionType();
+  const [todayData, nextSessionType, streakRes, sessionCountRes] =
+    await Promise.all([
+      getTodayWorkout(),
+      getNextSessionType(),
+      supabase
+        .from("lifting_streaks")
+        .select("current_streak")
+        .eq("user_id", user.id)
+        .maybeSingle(),
+      supabase
+        .from("lifting_workouts")
+        .select("id", { count: "exact", head: true })
+        .eq("user_id", user.id)
+        .eq("completed", true),
+    ]);
+
+  const streakCount = streakRes.data?.current_streak ?? 0;
+  const totalSessions = sessionCountRes.count ?? 0;
 
   // Get session template info for mapping exercise names to template data
   const { SESSION_TEMPLATES } = await import("@/lib/types");
@@ -58,6 +74,8 @@ export default async function WorkoutPage() {
       initialSets={todayData?.sets ?? []}
       nextSessionType={nextSessionType}
       templateInfo={templateInfo}
+      streakCount={streakCount}
+      totalSessions={totalSessions}
     />
   );
 }

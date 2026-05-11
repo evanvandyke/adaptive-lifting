@@ -14,6 +14,7 @@ import { StreakRing } from "./components/StreakRing";
 import { ProgressChart, type DataPoint } from "./components/ProgressChart";
 import { InsightCard } from "./components/InsightCard";
 import { NutritionCard } from "./components/NutritionCard";
+import { BodyCompCard } from "./components/BodyCompCard";
 
 function formatDate(date: Date): string {
   return date.toLocaleDateString("en-US", {
@@ -51,6 +52,10 @@ export default async function DashboardPage() {
 
   const today = new Date().toISOString().split("T")[0];
 
+  const twelveWeeksAgo = new Date();
+  twelveWeeksAgo.setDate(twelveWeeksAgo.getDate() - 84);
+  const twelveWeeksAgoStr = twelveWeeksAgo.toISOString().split("T")[0];
+
   const [
     profileRes,
     streakRes,
@@ -59,6 +64,7 @@ export default async function DashboardPage() {
     progressionsRes,
     thisWeekWorkoutsRes,
     nutritionTodayRes,
+    bodyCompRes,
   ] = await Promise.all([
     supabase
       .from("lifting_profiles")
@@ -101,6 +107,12 @@ export default async function DashboardPage() {
       .eq("user_id", user.id)
       .eq("date", today)
       .order("created_at", { ascending: true }),
+    supabase
+      .from("lifting_body_composition")
+      .select("*")
+      .eq("user_id", user.id)
+      .gte("date", twelveWeeksAgoStr)
+      .order("date", { ascending: true }),
   ]);
 
   const profile = (profileRes.data as Profile | null) ?? null;
@@ -120,6 +132,16 @@ export default async function DashboardPage() {
     protein_grams: number;
     meal_type: string;
     meal_description: string | null;
+  }[];
+  const bodyCompHistory = (bodyCompRes.data ?? []) as {
+    id: string;
+    date: string;
+    weight: number;
+    waist_inches: number;
+    neck_inches: number;
+    estimated_bf_pct: number;
+    lean_mass: number;
+    fat_mass: number;
   }[];
   const proteinTarget = Math.round((profile?.current_weight ?? 200) * 0.8);
 
@@ -408,6 +430,12 @@ export default async function DashboardPage() {
       <NutritionCard
         todayEntries={nutritionToday}
         proteinTarget={proteinTarget}
+      />
+
+      {/* Body Composition */}
+      <BodyCompCard
+        history={bodyCompHistory}
+        hasHeight={!!profile?.height_inches}
       />
 
       {/* Progress Charts */}

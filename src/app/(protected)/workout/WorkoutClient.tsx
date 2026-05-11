@@ -15,6 +15,8 @@ interface WorkoutClientProps {
   initialSets: (WorkoutSet & { exercise?: Exercise })[];
   nextSessionType: "A" | "B";
   templateInfo: Record<string, { targetReps: string; isHeavy: boolean }>;
+  streakCount?: number;
+  totalSessions?: number;
 }
 
 export default function WorkoutClient({
@@ -22,6 +24,8 @@ export default function WorkoutClient({
   initialSets,
   nextSessionType,
   templateInfo,
+  streakCount,
+  totalSessions,
 }: WorkoutClientProps) {
   const router = useRouter();
   const [workout, setWorkout] = useState(initialWorkout);
@@ -231,6 +235,8 @@ export default function WorkoutClient({
         <WorkoutSummary
           summary={summary}
           onDismiss={() => router.push("/dashboard")}
+          streakCount={streakCount}
+          totalSessions={totalSessions}
         />
       )}
     </div>
