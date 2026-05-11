@@ -52,7 +52,8 @@ This note contains everything Evan and I accomplished during our first session o
   - Plank completion counter may not update in real-time (agent fixed ExerciseCard but integration wasn't fully verified)
   - "Start Workout" button sometimes needs a second click (possible race condition with server action)
   - Warm-up sets and plate calculator were integrated into ExerciseCard but not visually tested in browser
-- **Not yet built:** Progress photos, exercise swap suggestions, periodization planner, social sharing (all Phase 4 per implementation plan)
+- **Phase 4 completed late session:** Body composition tracker (Navy Method BF%), AI exercise swap suggestions, AI nutrition coaching, PR share cards (html2canvas, Instagram story format), periodization planner (4 training phases + advanced 4-day upper/lower templates)
+- **Not yet built:** Progress photos (camera upload + gallery scroll-back)
 
 ### Key Files & Architecture
 

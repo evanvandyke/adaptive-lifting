@@ -38,13 +38,22 @@ Inspired by BAU5 and Anatoly's compound-first training philosophy, validated aga
 - Auto-fill reps and weight on set completion
 
 **Intelligence**
-- Weekly AI analysis (stall detection, fatigue signals, exercise swap suggestions)
+- Weekly AI analysis (stall detection, fatigue signals, recovery gaps)
+- AI exercise swap suggestions when a lift stalls for 2+ weeks
+- AI nutrition coaching (analyzes protein intake + weight trends)
 - Post-workout hype-man notifications
 - PR detection and celebration
 - Progression recommendations stored per exercise
 
+**Body Composition**
+- Body fat % estimation using the Navy Method (weight, waist, neck)
+- Lean mass vs fat mass breakdown
+- BF% trend sparkline over time
+- No calipers or fancy equipment needed
+
 **Motivation**
 - Streak tracker (workouts this week, consecutive sessions)
+- Shareable PR cards (Instagram story format, download or copy to clipboard)
 - Win notifications for PRs
 - Accountability nudges for missed sessions
 - Progress charts (strength curves, body weight, volume trends)
@@ -53,7 +62,13 @@ Inspired by BAU5 and Anatoly's compound-first training philosophy, validated aga
 - Daily protein target (0.8g per lb bodyweight)
 - Quick-tap buttons (+20g chicken, +30g shake, +15g eggs, +10g yogurt)
 - 7-day protein bar chart
+- AI coaching that analyzes your patterns and gives actionable advice
 - No meal plans. No obsessive macros. Just: eat more protein, eat less bullshit, don't starve.
+
+**Periodization**
+- Training phase tracker (Neural Adaptation → Linear Progression → Volume Accumulation → Ready to Split)
+- Shows current week and what's happening physiologically
+- 4-day upper/lower split templates for when you're ready to graduate from 3x full-body
 
 **Design**
 - Dark glassmorphism UI with living aurora background
@@ -94,7 +109,7 @@ NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your_supabase_key
 ANTHROPIC_API_KEY=your_anthropic_key
 ```
 
-3. Set up the database — run the migrations in your Supabase SQL editor. The schema includes tables for profiles, workouts, sets, exercises, streaks, progressions, body weight logs, calibration, and nutrition. All tables are prefixed with `lifting_` and have RLS enabled.
+3. Set up the database — run the migrations in your Supabase SQL editor. The schema includes tables for profiles, workouts, sets, exercises, streaks, progressions, body weight logs, calibration, nutrition, and body composition. All tables are prefixed with `lifting_` and have RLS enabled.
 
 4. Start the dev server:
 ```bash
@@ -132,8 +147,9 @@ This entire application was built in a single Claude Code session using parallel
 3. **Integration** — AI layer, progression engine, motivation system, PWA setup
 4. **Testing** — Full E2E test via browser automation, bug fixes
 5. **Enhancement** — Research-backed algorithm update, plate calculator, warm-up sets, nutrition tracker
+6. **Phase 4** — Body composition, AI coaching, PR sharing, periodization planner
 
-Total: ~43 TypeScript files, ~6,500 lines of code, 8+ Supabase tables, 13 routes.
+Total: 52 TypeScript files, ~8,300 lines of code, 9 Supabase tables, 15 routes, 4 AI endpoints. All four build phases completed in a single session.
 
 ## Philosophy
 
