@@ -24,12 +24,8 @@ The handful of documents that are authoritative for this project — the ones a 
 Adaptive Lifting is a strength-training PWA that auto-adjusts weights via RPE-based progression (BAU5/Anatoly-inspired, research-validated). Next.js 16 + Supabase + Claude API on Vercel, dark-glassmorphism UI. Built and deployed live in a single session; built for Evan's own return to lifting after a year off.
 
 ## Adaptive Lifting is not what you'd assume
-- **Next.js here is not the Next.js in your training data.** Per `AGENTS.md`, this version has breaking changes to APIs, conventions, and file structure. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code.
+- **Next.js here is not the Next.js in your training data.** This version has breaking changes to APIs, conventions, and file structure. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code.
 - **The Supabase project is shared with Hank.** All this app's DB tables are prefixed `lifting_*` to coexist. Evan's auth account (`evan.vandyke@gmail.com`) is shared across both apps — a login can land on an existing Hank account with no `lifting_profiles` row, which is why middleware redirects such users to onboarding.
 
 ---
 Need a section beyond these? The canonical menu of project sections, each with its purpose, is `~/.agents/project-template/AGENTS-SECTIONS.md`. Add only what fits; keep this file lean.
-
-## Adaptive Lifting is not what you'd assume: the Next.js version
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
