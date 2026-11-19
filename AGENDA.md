@@ -4,6 +4,8 @@ Before editing, read `~/.agents/project-template/_SPEC.md`, section "AGENDA.md".
 
 ## ACTIVE (one deliverable)
 
+- **Project: Adaptive Lifting → Finalize the gym and home training plan.** Why: Evan approved continued planning around three weekly visits, a 30-minute target and a bodyweight fallback; exercise suitability and the proposed progression rules need resolution before building. Plan: `TRAINING-PLAN.md`
+
 ## UP NEXT (three slots total, including FOLLOW-UP)
 
 1. **Project: Adaptive Lifting → Visual-verify warm-up sets + plate calculator.** Why: Both were integrated into `ExerciseCard` during the build but never confirmed in a real browser; screenshot-check them first because they're load-bearing gym UX.

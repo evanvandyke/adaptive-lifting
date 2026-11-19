@@ -2,7 +2,7 @@
 
 2026-11-19 · America/Denver
 
-Companion to [the gym-experience brief](GYM-EXPERIENCE.md). This records Evan's program preferences and the bodyweight fallback he approved for the design. It specifies product behavior, not a finished training prescription. Exercise selection, numerical progression rules and calibration limits remain open. This addition has not received the earlier brief's Fable review.
+Companion to [the gym-experience brief](GYM-EXPERIENCE.md). This records Evan's program preferences and the bodyweight fallback he approved for the design. It specifies product behavior, not a finished training prescription. The [draft training plan](TRAINING-PLAN.md) now proposes exercises, progression rules, calibration boundaries and timing; these remain proposals rather than implemented or personally validated prescriptions. Its separate [review record](TRAINING-PLAN-REVIEW.md) distinguishes the new planning review from the earlier gym-experience review.
 
 ## Confirmed with Evan
 
@@ -32,7 +32,7 @@ These are proposed defaults to carry into the training specification and its rev
 5. **Return to gym:** retain the next due gym session and its exercise histories. Home visits advance the home sequence; they do not mark unperformed gym sessions complete. The next gym preview identifies what is due.
 6. **Account for elapsed time:** assess return guidance from time since each gym exercise was performed, plus relevant recent training and discomfort context. A home attendance streak does not establish recent practice of a barbell lift. Preserve historical loads; any revised prescription uses the separately defined return rules and explains the change.
 
-Home sequence design and partial-session advancement remain open. The product requirement is that repeated home visits produce an appropriate next session without a growing backlog of missed gym workouts or instructions to cram them into the week.
+The training-plan draft proposes a repeatable home template and partial-session advancement rules. The product requirement is that repeated home visits produce an appropriate next session without a growing backlog of missed gym workouts or instructions to cram them into the week.
 
 ## Bodyweight adaptation
 
@@ -44,11 +44,11 @@ Track exercise variation, setup, target reps and confirmed reps separately. When
 - **When no suitable harder option is available:** explain the limit and retain an attainable prescription. Do not increase reps indefinitely, assume equipment or shorten rest merely to manufacture progress.
 - **After an adjustment:** preserve issued prescriptions and actual results under the brief's correction rules. Completed work stays historical; only eligible future work changes.
 
-Numerical rep ranges, progression thresholds, regression criteria, stopping rules and first-use calibration remain to be justified and reviewed before implementation. A harder variation is a new performance context, not a converted weight record.
+The training-plan draft supplies proposed rep ranges, progression thresholds, regression criteria, stopping rules and first-use calibration boundaries. Exercise-specific load selection and variation policies still need definition, and the combined rules need validation before implementation. A harder variation is a new performance context, not a converted weight record.
 
 ## Progress reporting
 
-Count each eligible completed home visit once toward attendance. Define eligibility and partial-session credit with the wider session rules before building. Show completed sets, confirmed reps and variation-specific progress for bodyweight work. Keep external-load tonnage and weighted PRs distinct.
+Count each eligible home visit once toward attendance. The training-plan draft defines eligibility and distinguishes calibration/partial attendance from full-template completion. Show completed sets, confirmed reps and variation-specific progress for bodyweight work. Keep external-load tonnage and weighted PRs distinct.
 
 A week at home must not trigger a fatigue/deload recommendation solely because recorded pounds lifted fell. Comparisons and AI summaries must identify setting and exercise changes, distinguish unavailable evidence from deterioration, and retain the actual work performed.
 
@@ -72,4 +72,4 @@ These are requirements, not passed software tests. Numerical transitions use lab
 
 ## Next specification work
 
-Select the three-day gym rotation, exercise menu and feasible superset pairings alongside the small home menu. Define preparation, calibration, effort/stopping boundaries, rep ranges, progression and return rules against those actual exercises. Check both gym and home histories in the same adversarial review before treating either as ready to build.
+Review the concrete [training-plan proposal](TRAINING-PLAN.md) against Evan's movement restrictions and preferences. Resolve exercise-specific starting loads, coarse equipment increments, return-load selection and approved variation transitions, then validate the state examples and timing. A planning-review pass is not build readiness or evidence that the combined training algorithm has been validated.
