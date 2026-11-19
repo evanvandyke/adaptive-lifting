@@ -2,7 +2,7 @@
 
 Thursday, 2026-11-19 · America/Denver
 
-**Planning draft; not implemented or approved for a gym trial.** Develops [Program Direction](PROGRAM-DIRECTION.md) and [Gym Experience](GYM-EXPERIENCE.md). Evan authorized continued planning. His answer about injuries, recurring pain and excluded movements is pending; exercise suitability and starting loads remain provisional.
+**Planning draft; not implemented or approved for a gym trial.** Develops [Program Direction](PROGRAM-DIRECTION.md) and [Gym Experience](GYM-EXPERIENCE.md). Evan authorized continued planning. On November 19 he reported no injuries and described himself as basically starting from zero. Plan from a fresh training baseline; current movement ability, working loads and tolerable volume still need to be established.
 
 ## Direction and evidence
 
@@ -32,6 +32,8 @@ After two completed exposures at current volume, ask once whether recovery has b
 Both sides make one unilateral set. Each side must independently meet its target; 8 left/6 right does not meet 8 per side. Dead bug has one exercise identity across A, B and home when execution/setup match; retain pairing/context flags rather than three competing progressions. Calf raise and split squat begin in bodyweight mode; first external load follows the separate calibration branch below.
 
 ## Preparation and first use
+
+**Evan's starting context:** use the first visits to rehearse movements and establish current capacity. Prior lifting experience supplies context, not starting weights or a presumed ability to tolerate the former workload. Select each initial variant and load from current rehearsal/calibration; even the barbell itself is not an assumed starting load. The ordinary ten-set template is a later session shape once its movements are established, not a first-visit quota.
 
 Use controlled reps through an established comfortable range. Stop when technique deteriorates, pain appears or continuation feels unsafe. Early practice leaves several reps available. After two completed comparable exposures without difficulty flags, the prescription exits the app's initial cautious state; this is an evidence-state transition, not verified physical readiness. Later cues can explain approximately 2–3 reps in reserve, without mandatory scoring or pretending completion measures spare capacity.
 
@@ -113,4 +115,4 @@ Sample weights are fixtures, not Evan's loads.
 | Correction after higher work | Correct an earlier 8 to 6 after later 9/9 occurred: retain later 9/9 and issued targets; replay unstarted guidance only. |
 | Home and return | Three home visits count once per local day; gym template/history persist, and known exercise return checks use prepared working sets. |
 
-Before implementation: resolve movement restrictions; approve exercise suitability; specify starting-load selection, allowed variation transitions, coarse-step trial eligibility/limits, the cumulative per-visit upward recalibration cap and return-load proposals; validate state/counter traces and timing. All these thresholds need independent review. Desk fixtures can precede numerical approval; live training and app changes remain separately authorized.
+Before implementation: select initial exercise variants for this fresh start; specify starting-load selection, allowed variation transitions, coarse-step trial eligibility/limits, the cumulative per-visit upward recalibration cap and return-load proposals; validate state/counter traces and timing. All these thresholds need independent review. Desk fixtures can precede numerical approval; live training and app changes remain separately authorized.

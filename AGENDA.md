@@ -4,7 +4,7 @@ Before editing, read `~/.agents/project-template/_SPEC.md`, section "AGENDA.md".
 
 ## ACTIVE (one deliverable)
 
-- **Project: Adaptive Lifting → Finalize the gym and home training plan.** Why: Evan approved continued planning around three weekly visits, a 30-minute target and a bodyweight fallback; exercise suitability and the proposed progression rules need resolution before building. Plan: `TRAINING-PLAN.md`
+- **Project: Adaptive Lifting → Finalize the gym and home training plan.** Why: Evan approved continued planning around three weekly visits, a 30-minute target and a bodyweight fallback; initial exercise variants, starting loads and progression policies need definition for his fresh training baseline. Plan: `TRAINING-PLAN.md`
 
 ## UP NEXT (three slots total, including FOLLOW-UP)
 

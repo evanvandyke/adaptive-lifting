@@ -6,6 +6,7 @@ Companion to [the gym-experience brief](GYM-EXPERIENCE.md). This records Evan's 
 
 ## Confirmed with Evan
 
+- On November 19, Evan reported no injuries and described himself as basically starting from zero. Establish current strength and work capacity through the initial sessions; historical lifts and workload are not current baselines.
 - Plan around three sessions per week, advancing by visits rather than fixed weekdays.
 - Target approximately 30 minutes. Evan's reference is six exercises in three superset pairs, repeated for three or four rounds: 18–24 working sets. This is his familiar workload, not a guaranteed starting prescription or duration.
 - Design the primary experience for a full gym. Prefer free weights; use machines when better suited to the training objective and circumstances.
@@ -72,4 +73,4 @@ These are requirements, not passed software tests. Numerical transitions use lab
 
 ## Next specification work
 
-Review the concrete [training-plan proposal](TRAINING-PLAN.md) against Evan's movement restrictions and preferences. Resolve exercise-specific starting loads, coarse equipment increments, return-load selection and approved variation transitions, then validate the state examples and timing. A planning-review pass is not build readiness or evidence that the combined training algorithm has been validated.
+Refine the concrete [training-plan proposal](TRAINING-PLAN.md) for Evan's fresh starting baseline. Resolve initial exercise variants, exercise-specific starting loads, coarse equipment increments, return-load selection and approved variation transitions, then validate the state examples and timing. A planning-review pass is not build readiness or evidence that the combined training algorithm has been validated.

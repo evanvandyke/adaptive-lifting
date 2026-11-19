@@ -4,6 +4,8 @@ Thursday, 2026-11-19 · America/Denver
 
 **Final outcome: PASS for planning review; NOT READY for implementation.** Fable 5.2 closed all 13 original findings and verified the final clarifications. The initial verdict below applies to the earlier draft. This record concerns [TRAINING-PLAN.md](TRAINING-PLAN.md), not the earlier gym-experience manuscript.
 
+**Subsequent user clarification, November 19 at 07:06 MST:** Evan reported no injuries and described himself as basically starting from zero. The parent updated the plan's starting context and remaining-work descriptions accordingly: establish current ability rather than using historical loads or treating the ordinary ten-set template as a first-visit quota. This context update postdates the reviewed snapshot below; numerical rules are unchanged. References to the pending personal answer in the preserved reviews describe their earlier checkpoint.
+
 ## Evidence and verification
 
 A separate research agent checked the evidence and timing independently without reading the writer's draft. The parent read the source material, the finished draft and its references, and recalculated all five initial timing rows. The research check supported the broad direction while rejecting a guaranteed 18–24-set, 30-minute session and equivalence between floor-only work and a full gym program. No code, database, runtime or gym testing took place.
