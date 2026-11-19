@@ -6,6 +6,8 @@
 
 This request authorizes a write-up and adversarial review only. Programming, calibration limits and adaptation mathematics remain build blockers. A prototype, gym trial and wholesale rebuild each remain unapproved.
 
+**Subsequent direction, November 19:** Evan approved a three-day, approximately 30-minute gym baseline with free weights preferred, plus a bodyweight fallback for days or weeks without gym access. [Program direction](PROGRAM-DIRECTION.md) records the confirmed preferences, proposed switching rules and acceptance cases. That addition and this cross-reference postdate the Fable-reviewed manuscript; the prior review applies to its recorded snapshot, not these additions.
+
 ## What Evan has established
 
 - The app chooses the next session, exercises, loads and reps. Evan wants to know the session focus and approximate duration, rather than plan each gym visit.
