@@ -97,7 +97,7 @@ The original design also proposed a three-week onboarding phase. Current first-u
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 20.9+ (the installed Next.js 16 requirement; the standalone engine was exercised on Node 26.8.1)
 - A Supabase project
 - An Anthropic API key (for AI features)
 
