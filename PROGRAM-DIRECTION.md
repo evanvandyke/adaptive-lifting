@@ -45,7 +45,7 @@ Track exercise variation, setup, target reps and confirmed reps separately. When
 - **When no suitable harder option is available:** explain the limit and retain an attainable prescription. Do not increase reps indefinitely, assume equipment or shorten rest merely to manufacture progress.
 - **After an adjustment:** preserve issued prescriptions and actual results under the brief's correction rules. Completed work stays historical; only eligible future work changes.
 
-The training-plan draft supplies proposed rep ranges, progression thresholds, regression criteria, stopping rules and first-use calibration boundaries. Exercise-specific load selection and variation policies still need definition, and the combined rules need validation before implementation. A harder variation is a new performance context, not a converted weight record.
+The training-plan draft supplies the program direction; [ENGINE-SPEC.md](ENGINE-SPEC.md) now defines the isolated candidate's exact ranges, load-selection policies, progression, return handling and variation boundaries. Executable scenario checks and adversarial review evaluate that implementation; they do not establish physiological effectiveness. A harder variation is a new performance context, not a converted weight record.
 
 ## Progress reporting
 
@@ -73,4 +73,4 @@ These are requirements, not passed software tests. Numerical transitions use lab
 
 ## Next specification work
 
-Refine the concrete [training-plan proposal](TRAINING-PLAN.md) for Evan's fresh starting baseline. Resolve initial exercise variants, exercise-specific starting loads, coarse equipment increments, return-load selection and approved variation transitions, then validate the state examples and timing. A planning-review pass is not build readiness or evidence that the combined training algorithm has been validated.
+The standalone candidate's [verification results](ENGINE-RESULTS.md) and [review record](ENGINE-REVIEW.md) are complete for this iteration. Next, assess the Claude Design proposal and plan explicit UI/storage integration. Real equipment, movement checks and later gym use will establish Evan's personal loads and whether the experience fits. A software-policy pass is not evidence of training effectiveness or a completed live integration.

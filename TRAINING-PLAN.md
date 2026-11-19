@@ -4,6 +4,8 @@ Thursday, 2026-11-19 · America/Denver
 
 **Planning draft; not implemented or approved for a gym trial.** Develops [Program Direction](PROGRAM-DIRECTION.md) and [Gym Experience](GYM-EXPERIENCE.md). Evan authorized continued planning. On November 19 he reported no injuries and described himself as basically starting from zero. Plan from a fresh training baseline; current movement ability, working loads and tolerable volume still need to be established.
 
+**Subsequent engine work:** Evan authorized a standalone candidate and simulations while design proceeds. [ENGINE-SPEC.md](ENGINE-SPEC.md) and [engine/src/](engine/src/) now own its exact numerical transitions, including low-load and return-restoration paths that refine this planning draft. [ENGINE-REVIEW.md](ENGINE-REVIEW.md) records the independent review; [simulation results](engine/reports/SUMMARY.md) identify the executed snapshot. The candidate is separate from live app integration and real workout validation.
+
 ## Direction and evidence
 
 Prioritize Evan's approximately 30-minute budget. Propose repeating full-body A/B visits, usually three nonconsecutive days weekly: one priority lift performed separately, then two superset blocks. Under the model below, ordinary sessions contain **about ten working sets**, initially across five movements; eleven fits only if measured timing permits. Six exercises and 18–24 sets remain an extended-session option, not a requirement or a 30-minute promise.

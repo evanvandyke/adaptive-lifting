@@ -1,0 +1,6014 @@
+{
+  "runId": "adaptive-lifting-engine-K8Kcvn",
+  "startedAt": "2026-11-19T17:49:56.020Z",
+  "policyVersion": "experimental-v1",
+  "scenarioVersion": "independent-histories-v2",
+  "archiveDirectory": "runs/adaptive-lifting-engine-K8Kcvn",
+  "compiledCandidateSha256": "f45ad53b567c5d5a6ba8ad3256266c891913695388e698ee692c9f3fb225a198",
+  "compiledScenarioSha256": "be6f7ddfa6acc26060121cff2db5ed695e7487ad07856fa2bd448a25ba522759",
+  "specSha256": "ee5a0e6ab9da9ad6b58ab3259bb71e4828c696bef199582418a70f32b2aa61c2",
+  "model": "Deterministic scripted observations; no physiological forecast",
+  "id": "23",
+  "title": "Pain flag corrected away",
+  "purpose": "Actual correction cannot erase a safety latch.",
+  "requestedVisits": 12,
+  "observedVisits": 12,
+  "status": "passed",
+  "invariantFailures": [],
+  "counts": {
+    "journalEvents": 81,
+    "projectedSets": 20,
+    "issuedPrescriptions": 10
+  },
+  "finalSummary": {
+    "attendanceDates": [
+      "2026-11-01",
+      "2026-11-04",
+      "2026-11-07",
+      "2026-11-10",
+      "2026-11-19",
+      "2026-11-22",
+      "2026-11-25",
+      "2026-11-28",
+      "2026-12-01",
+      "2026-12-04"
+    ],
+    "nextGymTemplate": "A",
+    "completedVisits": 9,
+    "partialVisits": 1,
+    "calibrationVisits": 0,
+    "confirmedWorkingSets": 19,
+    "calibrationSets": 1,
+    "bodyweightReps": 0,
+    "externalTonnageByConvention": {
+      "per_hand:lb": 1960
+    },
+    "conflicts": 0,
+    "pending": 0
+  },
+  "journalSha256": "90fcfcded88483a2e83927468e0111c0c06d10ac98411a27051bedd2c977e096",
+  "visits": [
+    {
+      "number": 1,
+      "visitId": "s23-v1",
+      "start": "2026-11-01T17:00:00.000Z",
+      "trainingDate": "2026-11-01",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "proposal",
+            "reasons": [],
+            "prerequisites": [
+              "acknowledge_trial"
+            ],
+            "prescription": {
+              "id": "p-238d90a9f5dca395",
+              "visitId": "s23-v1",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                8
+              ],
+              "roles": [
+                "calibration"
+              ],
+              "kind": "calibration",
+              "source": "first_use",
+              "provisional": true,
+              "extrasAllowed": false,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 0,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-01T17:00:00.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e2",
+                "s23-e3"
+              ],
+              "dependencyFingerprint": "ac5ca1e9d2f1f633",
+              "context": "paired"
+            },
+            "stateRevision": 3,
+            "counters": {
+              "successes": 0,
+              "difficulty": 0,
+              "failedTrialDates": 0
+            }
+          }
+        },
+        {
+          "moment": "after-calibration",
+          "decision": {
+            "status": "proposal",
+            "reasons": [],
+            "prerequisites": [],
+            "prescription": {
+              "id": "p-7d0585b323844f11",
+              "visitId": "s23-v1",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                8,
+                8
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "provisional_working",
+              "provisional": true,
+              "extrasAllowed": false,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-01T17:02:10.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e2",
+                "s23-e3",
+                "s23-e4",
+                "s23-e5"
+              ],
+              "dependencyFingerprint": "0ef99b077ae8260f",
+              "context": "paired"
+            },
+            "stateRevision": 5,
+            "counters": {
+              "successes": 0,
+              "difficulty": 0,
+              "failedTrialDates": 0
+            }
+          }
+        },
+        {
+          "moment": "after-set-1",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "prepared_prescription_unchanged"
+            ],
+            "prerequisites": [],
+            "stateRevision": 7,
+            "prescription": {
+              "context": "paired",
+              "dependencyFingerprint": "0ef99b077ae8260f",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e2",
+                "s23-e3",
+                "s23-e4",
+                "s23-e5"
+              ],
+              "extrasAllowed": false,
+              "id": "p-7d0585b323844f11",
+              "identity": {
+                "setupId": "scenario-verified",
+                "variant": "db_flat_press"
+              },
+              "issuedAt": "2026-11-01T17:02:10.000Z",
+              "kind": "working",
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "policyVersion": "experimental-v1",
+              "preparationRequired": true,
+              "provisional": true,
+              "recoverySeconds": 90,
+              "roles": [
+                "working",
+                "working"
+              ],
+              "source": "provisional_working",
+              "targets": [
+                8,
+                8
+              ],
+              "visitId": "s23-v1",
+              "workingSetBudget": 2
+            }
+          }
+        },
+        {
+          "moment": "after-set-2",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "movement_complete_this_visit"
+            ],
+            "prerequisites": [],
+            "stateRevision": 8
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e1",
+          "entityId": "s23-e1",
+          "revision": 1,
+          "occurredAt": "2026-11-01T17:00:00.000Z",
+          "receivedAt": "2026-11-01T17:00:00.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v1",
+            "setting": "gym",
+            "template": "A",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-11-01",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e2",
+          "entityId": "s23-e2",
+          "revision": 1,
+          "occurredAt": "2026-11-01T17:00:00.000Z",
+          "receivedAt": "2026-11-01T17:00:00.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v1",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e3",
+          "entityId": "s23-e3",
+          "revision": 1,
+          "occurredAt": "2026-11-01T17:00:00.000Z",
+          "receivedAt": "2026-11-01T17:00:00.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v1",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e4",
+          "entityId": "s23-e4",
+          "revision": 1,
+          "occurredAt": "2026-11-01T17:00:00.000Z",
+          "receivedAt": "2026-11-01T17:00:00.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "prescription_issued",
+          "payload": {
+            "context": {
+              "visitId": "s23-v1",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "now": "2026-11-01T17:00:00.000Z",
+              "inventory": {
+                "verified": true,
+                "equipment": [
+                  "dumbbells",
+                  "bench"
+                ],
+                "loads": [
+                  {
+                    "amountMilli": 10000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 12500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 15000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 17500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 20000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 25000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 30000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 35000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 40000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 45000,
+                    "unit": "lb"
+                  }
+                ]
+              },
+              "remainingSeconds": 1800,
+              "context": "paired",
+              "requestTrial": false
+            },
+            "prescription": {
+              "id": "p-238d90a9f5dca395",
+              "visitId": "s23-v1",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                8
+              ],
+              "roles": [
+                "calibration"
+              ],
+              "kind": "calibration",
+              "source": "first_use",
+              "provisional": true,
+              "extrasAllowed": false,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 0,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-01T17:00:00.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e2",
+                "s23-e3"
+              ],
+              "dependencyFingerprint": "ac5ca1e9d2f1f633",
+              "context": "paired"
+            },
+            "expectedStateRevision": 3
+          }
+        },
+        {
+          "id": "s23-e5",
+          "entityId": "s23-e5",
+          "revision": 1,
+          "occurredAt": "2026-11-01T17:00:40.000Z",
+          "receivedAt": "2026-11-01T17:00:40.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v1",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-238d90a9f5dca395",
+            "setIndex": 0,
+            "role": "calibration",
+            "startedAt": "2026-11-01T17:00:00.000Z",
+            "endedAt": "2026-11-01T17:00:40.000Z",
+            "actual": {
+              "reps": 8,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e6",
+          "entityId": "s23-e6",
+          "revision": 1,
+          "occurredAt": "2026-11-01T17:02:10.000Z",
+          "receivedAt": "2026-11-01T17:02:10.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "prescription_issued",
+          "payload": {
+            "context": {
+              "visitId": "s23-v1",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "now": "2026-11-01T17:02:10.000Z",
+              "inventory": {
+                "verified": true,
+                "equipment": [
+                  "dumbbells",
+                  "bench"
+                ],
+                "loads": [
+                  {
+                    "amountMilli": 10000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 12500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 15000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 17500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 20000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 25000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 30000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 35000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 40000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 45000,
+                    "unit": "lb"
+                  }
+                ]
+              },
+              "remainingSeconds": 1800,
+              "context": "paired",
+              "requestTrial": false
+            },
+            "prescription": {
+              "id": "p-7d0585b323844f11",
+              "visitId": "s23-v1",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                8,
+                8
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "provisional_working",
+              "provisional": true,
+              "extrasAllowed": false,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-01T17:02:10.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e2",
+                "s23-e3",
+                "s23-e4",
+                "s23-e5"
+              ],
+              "dependencyFingerprint": "0ef99b077ae8260f",
+              "context": "paired"
+            },
+            "expectedStateRevision": 5
+          }
+        },
+        {
+          "id": "s23-e7",
+          "entityId": "s23-e7",
+          "revision": 1,
+          "occurredAt": "2026-11-01T17:02:50.000Z",
+          "receivedAt": "2026-11-01T17:02:50.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v1",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-7d0585b323844f11",
+            "setIndex": 0,
+            "role": "working",
+            "startedAt": "2026-11-01T17:02:10.000Z",
+            "endedAt": "2026-11-01T17:02:50.000Z",
+            "actual": {
+              "reps": 8,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e8",
+          "entityId": "s23-e8",
+          "revision": 1,
+          "occurredAt": "2026-11-01T17:05:00.000Z",
+          "receivedAt": "2026-11-01T17:05:00.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v1",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-7d0585b323844f11",
+            "setIndex": 1,
+            "role": "working",
+            "startedAt": "2026-11-01T17:04:20.000Z",
+            "endedAt": "2026-11-01T17:05:00.000Z",
+            "actual": {
+              "reps": 8,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e9",
+          "entityId": "s23-e9",
+          "revision": 1,
+          "occurredAt": "2026-11-01T17:05:00.000Z",
+          "receivedAt": "2026-11-01T17:05:00.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v1"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01"
+        ],
+        "nextGymTemplate": "B",
+        "completedVisits": 1,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 2,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 240
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 2,
+      "visitId": "s23-v2",
+      "start": "2026-11-04T17:05:00.000Z",
+      "trainingDate": "2026-11-04",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "proposal",
+            "reasons": [],
+            "prerequisites": [],
+            "prescription": {
+              "id": "p-cc510b79609d872f",
+              "visitId": "s23-v2",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                8,
+                8
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "provisional_working",
+              "provisional": true,
+              "extrasAllowed": false,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-04T17:05:00.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e2",
+                "s23-e3",
+                "s23-e4",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "20d4a8cb1a7e329f",
+              "context": "paired"
+            },
+            "stateRevision": 12,
+            "counters": {
+              "successes": 1,
+              "difficulty": 0,
+              "failedTrialDates": 0
+            }
+          }
+        },
+        {
+          "moment": "after-set-1",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "prepared_prescription_unchanged"
+            ],
+            "prerequisites": [],
+            "stateRevision": 14,
+            "prescription": {
+              "context": "paired",
+              "dependencyFingerprint": "20d4a8cb1a7e329f",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e2",
+                "s23-e3",
+                "s23-e4",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "extrasAllowed": false,
+              "id": "p-cc510b79609d872f",
+              "identity": {
+                "setupId": "scenario-verified",
+                "variant": "db_flat_press"
+              },
+              "issuedAt": "2026-11-04T17:05:00.000Z",
+              "kind": "working",
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "policyVersion": "experimental-v1",
+              "preparationRequired": true,
+              "provisional": true,
+              "recoverySeconds": 90,
+              "roles": [
+                "working",
+                "working"
+              ],
+              "source": "provisional_working",
+              "targets": [
+                8,
+                8
+              ],
+              "visitId": "s23-v2",
+              "workingSetBudget": 2
+            }
+          }
+        },
+        {
+          "moment": "after-set-2",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "movement_complete_this_visit"
+            ],
+            "prerequisites": [],
+            "stateRevision": 15
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e10",
+          "entityId": "s23-e10",
+          "revision": 1,
+          "occurredAt": "2026-11-04T17:05:00.000Z",
+          "receivedAt": "2026-11-04T17:05:00.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v2",
+            "setting": "gym",
+            "template": "B",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-11-04",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e11",
+          "entityId": "s23-e11",
+          "revision": 1,
+          "occurredAt": "2026-11-04T17:05:00.000Z",
+          "receivedAt": "2026-11-04T17:05:00.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v2",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e12",
+          "entityId": "s23-e12",
+          "revision": 1,
+          "occurredAt": "2026-11-04T17:05:00.000Z",
+          "receivedAt": "2026-11-04T17:05:00.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v2",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e13",
+          "entityId": "s23-e13",
+          "revision": 1,
+          "occurredAt": "2026-11-04T17:05:00.000Z",
+          "receivedAt": "2026-11-04T17:05:00.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "prescription_issued",
+          "payload": {
+            "context": {
+              "visitId": "s23-v2",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "now": "2026-11-04T17:05:00.000Z",
+              "inventory": {
+                "verified": true,
+                "equipment": [
+                  "dumbbells",
+                  "bench"
+                ],
+                "loads": [
+                  {
+                    "amountMilli": 10000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 12500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 15000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 17500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 20000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 25000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 30000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 35000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 40000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 45000,
+                    "unit": "lb"
+                  }
+                ]
+              },
+              "remainingSeconds": 1800,
+              "context": "paired",
+              "requestTrial": false
+            },
+            "prescription": {
+              "id": "p-cc510b79609d872f",
+              "visitId": "s23-v2",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                8,
+                8
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "provisional_working",
+              "provisional": true,
+              "extrasAllowed": false,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-04T17:05:00.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e2",
+                "s23-e3",
+                "s23-e4",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "20d4a8cb1a7e329f",
+              "context": "paired"
+            },
+            "expectedStateRevision": 12
+          }
+        },
+        {
+          "id": "s23-e14",
+          "entityId": "s23-e14",
+          "revision": 1,
+          "occurredAt": "2026-11-04T17:05:40.000Z",
+          "receivedAt": "2026-11-04T17:05:40.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v2",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-cc510b79609d872f",
+            "setIndex": 0,
+            "role": "working",
+            "startedAt": "2026-11-04T17:05:00.000Z",
+            "endedAt": "2026-11-04T17:05:40.000Z",
+            "actual": {
+              "reps": 8,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e15",
+          "entityId": "s23-e15",
+          "revision": 1,
+          "occurredAt": "2026-11-04T17:07:50.000Z",
+          "receivedAt": "2026-11-04T17:07:50.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v2",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-cc510b79609d872f",
+            "setIndex": 1,
+            "role": "working",
+            "startedAt": "2026-11-04T17:07:10.000Z",
+            "endedAt": "2026-11-04T17:07:50.000Z",
+            "actual": {
+              "reps": 8,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e16",
+          "entityId": "s23-e16",
+          "revision": 1,
+          "occurredAt": "2026-11-04T17:07:50.000Z",
+          "receivedAt": "2026-11-04T17:07:50.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v2"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 2,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 4,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 400
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 3,
+      "visitId": "s23-v3",
+      "start": "2026-11-07T17:07:50.000Z",
+      "trainingDate": "2026-11-07",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "proposal",
+            "reasons": [],
+            "prerequisites": [],
+            "prescription": {
+              "id": "p-be9ea94aac5f5e8c",
+              "visitId": "s23-v3",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                9,
+                9
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "rep_progression",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-07T17:07:50.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e3",
+                "s23-e4",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "9f72379ca13e5fd0",
+              "context": "paired"
+            },
+            "stateRevision": 19,
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                8,
+                8
+              ],
+              "establishedAt": "2026-11-04T17:07:50.000Z"
+            },
+            "counters": {
+              "successes": 2,
+              "difficulty": 0,
+              "failedTrialDates": 0
+            }
+          }
+        },
+        {
+          "moment": "after-set-1",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "prepared_prescription_unchanged"
+            ],
+            "prerequisites": [],
+            "stateRevision": 21,
+            "prescription": {
+              "context": "paired",
+              "dependencyFingerprint": "9f72379ca13e5fd0",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e3",
+                "s23-e4",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "extrasAllowed": true,
+              "id": "p-be9ea94aac5f5e8c",
+              "identity": {
+                "setupId": "scenario-verified",
+                "variant": "db_flat_press"
+              },
+              "issuedAt": "2026-11-07T17:07:50.000Z",
+              "kind": "working",
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "policyVersion": "experimental-v1",
+              "preparationRequired": true,
+              "provisional": true,
+              "recoverySeconds": 90,
+              "roles": [
+                "working",
+                "working"
+              ],
+              "source": "rep_progression",
+              "targets": [
+                9,
+                9
+              ],
+              "visitId": "s23-v3",
+              "workingSetBudget": 2
+            },
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                8,
+                8
+              ],
+              "establishedAt": "2026-11-04T17:07:50.000Z"
+            }
+          }
+        },
+        {
+          "moment": "after-set-2",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "movement_complete_this_visit"
+            ],
+            "prerequisites": [],
+            "stateRevision": 22
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e17",
+          "entityId": "s23-e17",
+          "revision": 1,
+          "occurredAt": "2026-11-07T17:07:50.000Z",
+          "receivedAt": "2026-11-07T17:07:50.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v3",
+            "setting": "gym",
+            "template": "A",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-11-07",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e18",
+          "entityId": "s23-e18",
+          "revision": 1,
+          "occurredAt": "2026-11-07T17:07:50.000Z",
+          "receivedAt": "2026-11-07T17:07:50.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v3",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e19",
+          "entityId": "s23-e19",
+          "revision": 1,
+          "occurredAt": "2026-11-07T17:07:50.000Z",
+          "receivedAt": "2026-11-07T17:07:50.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v3",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e20",
+          "entityId": "s23-e20",
+          "revision": 1,
+          "occurredAt": "2026-11-07T17:07:50.000Z",
+          "receivedAt": "2026-11-07T17:07:50.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "prescription_issued",
+          "payload": {
+            "context": {
+              "visitId": "s23-v3",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "now": "2026-11-07T17:07:50.000Z",
+              "inventory": {
+                "verified": true,
+                "equipment": [
+                  "dumbbells",
+                  "bench"
+                ],
+                "loads": [
+                  {
+                    "amountMilli": 10000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 12500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 15000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 17500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 20000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 25000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 30000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 35000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 40000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 45000,
+                    "unit": "lb"
+                  }
+                ]
+              },
+              "remainingSeconds": 1800,
+              "context": "paired",
+              "requestTrial": false
+            },
+            "prescription": {
+              "id": "p-be9ea94aac5f5e8c",
+              "visitId": "s23-v3",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                9,
+                9
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "rep_progression",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-07T17:07:50.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e3",
+                "s23-e4",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "9f72379ca13e5fd0",
+              "context": "paired"
+            },
+            "expectedStateRevision": 19
+          }
+        },
+        {
+          "id": "s23-e21",
+          "entityId": "s23-e21",
+          "revision": 1,
+          "occurredAt": "2026-11-07T17:08:30.000Z",
+          "receivedAt": "2026-11-07T17:08:30.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v3",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-be9ea94aac5f5e8c",
+            "setIndex": 0,
+            "role": "working",
+            "startedAt": "2026-11-07T17:07:50.000Z",
+            "endedAt": "2026-11-07T17:08:30.000Z",
+            "actual": {
+              "reps": 9,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e22",
+          "entityId": "s23-e22",
+          "revision": 1,
+          "occurredAt": "2026-11-07T17:10:40.000Z",
+          "receivedAt": "2026-11-07T17:10:40.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v3",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-be9ea94aac5f5e8c",
+            "setIndex": 1,
+            "role": "working",
+            "startedAt": "2026-11-07T17:10:00.000Z",
+            "endedAt": "2026-11-07T17:10:40.000Z",
+            "actual": {
+              "reps": 9,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e23",
+          "entityId": "s23-e23",
+          "revision": 1,
+          "occurredAt": "2026-11-07T17:10:40.000Z",
+          "receivedAt": "2026-11-07T17:10:40.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v3"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07"
+        ],
+        "nextGymTemplate": "B",
+        "completedVisits": 3,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 6,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 580
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 4,
+      "visitId": "s23-v4",
+      "start": "2026-11-10T17:10:40.000Z",
+      "trainingDate": "2026-11-10",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "stop",
+            "reasons": [
+              "pain_or_control_loss_latched"
+            ],
+            "prerequisites": [
+              "resolve_stop_sources",
+              "fresh_preparation"
+            ],
+            "stateRevision": 28,
+            "stopEventIds": [
+              "s23-e27"
+            ]
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e24",
+          "entityId": "s23-e24",
+          "revision": 1,
+          "occurredAt": "2026-11-10T17:10:40.000Z",
+          "receivedAt": "2026-11-10T17:10:40.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v4",
+            "setting": "gym",
+            "template": "B",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-11-10",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e25",
+          "entityId": "s23-e25",
+          "revision": 1,
+          "occurredAt": "2026-11-10T17:10:40.000Z",
+          "receivedAt": "2026-11-10T17:10:40.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v4",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e26",
+          "entityId": "s23-e26",
+          "revision": 1,
+          "occurredAt": "2026-11-10T17:10:40.000Z",
+          "receivedAt": "2026-11-10T17:10:40.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v4",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e27",
+          "entityId": "s23-e27",
+          "revision": 1,
+          "occurredAt": "2026-11-10T17:11:20.000Z",
+          "receivedAt": "2026-11-10T17:11:20.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v4",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "role": "working",
+            "startedAt": "2026-11-10T17:10:40.000Z",
+            "endedAt": "2026-11-10T17:11:20.000Z",
+            "actual": {
+              "reps": 2,
+              "load": {
+                "amountMilli": 60000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "timingQuality": "measured",
+              "pain": true
+            }
+          }
+        },
+        {
+          "id": "s23-e28",
+          "entityId": "s23-e27",
+          "revision": 2,
+          "occurredAt": "2026-11-10T17:11:21.000Z",
+          "receivedAt": "2026-11-10T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_corrected",
+          "payload": {
+            "actual": {
+              "reps": 2,
+              "load": {
+                "amountMilli": 60000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "timingQuality": "measured",
+              "pain": false
+            }
+          },
+          "previousEventId": "s23-e27"
+        },
+        {
+          "id": "s23-e29",
+          "entityId": "s23-e29",
+          "revision": 1,
+          "occurredAt": "2026-11-10T17:11:21.000Z",
+          "receivedAt": "2026-11-10T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v4"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 3,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 7,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 700
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 5,
+      "visitId": "s23-v5",
+      "start": "2026-11-13T17:11:21.000Z",
+      "trainingDate": "2026-11-13",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "stop",
+            "reasons": [
+              "pain_or_control_loss_latched"
+            ],
+            "prerequisites": [
+              "resolve_stop_sources",
+              "fresh_preparation"
+            ],
+            "stateRevision": 32,
+            "stopEventIds": [
+              "s23-e27"
+            ]
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e30",
+          "entityId": "s23-e30",
+          "revision": 1,
+          "occurredAt": "2026-11-13T17:11:21.000Z",
+          "receivedAt": "2026-11-13T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v5",
+            "setting": "gym",
+            "template": "A",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-11-13",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e31",
+          "entityId": "s23-e31",
+          "revision": 1,
+          "occurredAt": "2026-11-13T17:11:21.000Z",
+          "receivedAt": "2026-11-13T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v5",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e32",
+          "entityId": "s23-e32",
+          "revision": 1,
+          "occurredAt": "2026-11-13T17:11:21.000Z",
+          "receivedAt": "2026-11-13T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v5",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e33",
+          "entityId": "s23-e33",
+          "revision": 1,
+          "occurredAt": "2026-11-13T17:11:21.000Z",
+          "receivedAt": "2026-11-13T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v5"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 3,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 7,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 700
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 6,
+      "visitId": "s23-v6",
+      "start": "2026-11-16T17:11:21.000Z",
+      "trainingDate": "2026-11-16",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "stop",
+            "reasons": [
+              "pain_or_control_loss_latched"
+            ],
+            "prerequisites": [
+              "resolve_stop_sources",
+              "fresh_preparation"
+            ],
+            "stateRevision": 36,
+            "stopEventIds": [
+              "s23-e27"
+            ]
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e34",
+          "entityId": "s23-e34",
+          "revision": 1,
+          "occurredAt": "2026-11-16T17:11:21.000Z",
+          "receivedAt": "2026-11-16T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v6",
+            "setting": "gym",
+            "template": "A",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-11-16",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e35",
+          "entityId": "s23-e35",
+          "revision": 1,
+          "occurredAt": "2026-11-16T17:11:21.000Z",
+          "receivedAt": "2026-11-16T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v6",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e36",
+          "entityId": "s23-e36",
+          "revision": 1,
+          "occurredAt": "2026-11-16T17:11:21.000Z",
+          "receivedAt": "2026-11-16T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v6",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e37",
+          "entityId": "s23-e37",
+          "revision": 1,
+          "occurredAt": "2026-11-16T17:11:21.000Z",
+          "receivedAt": "2026-11-16T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v6"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 3,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 7,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 700
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 7,
+      "visitId": "s23-v7",
+      "start": "2026-11-19T17:11:21.000Z",
+      "trainingDate": "2026-11-19",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "proposal",
+            "reasons": [],
+            "prerequisites": [],
+            "prescription": {
+              "id": "p-75ae9bb1d8c3c70b",
+              "visitId": "s23-v7",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                9,
+                9
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "provisional_working",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-19T17:11:22.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "8a7de5a9a1e47b79",
+              "context": "paired"
+            },
+            "stateRevision": 42,
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                8,
+                8
+              ],
+              "establishedAt": "2026-11-04T17:07:50.000Z"
+            },
+            "counters": {
+              "successes": 1,
+              "difficulty": 0,
+              "failedTrialDates": 0
+            }
+          }
+        },
+        {
+          "moment": "after-set-1",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "prepared_prescription_unchanged"
+            ],
+            "prerequisites": [],
+            "stateRevision": 44,
+            "prescription": {
+              "context": "paired",
+              "dependencyFingerprint": "8a7de5a9a1e47b79",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "extrasAllowed": true,
+              "id": "p-75ae9bb1d8c3c70b",
+              "identity": {
+                "setupId": "scenario-verified",
+                "variant": "db_flat_press"
+              },
+              "issuedAt": "2026-11-19T17:11:22.000Z",
+              "kind": "working",
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "policyVersion": "experimental-v1",
+              "preparationRequired": true,
+              "provisional": true,
+              "recoverySeconds": 90,
+              "roles": [
+                "working",
+                "working"
+              ],
+              "source": "provisional_working",
+              "targets": [
+                9,
+                9
+              ],
+              "visitId": "s23-v7",
+              "workingSetBudget": 2
+            },
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                8,
+                8
+              ],
+              "establishedAt": "2026-11-04T17:07:50.000Z"
+            }
+          }
+        },
+        {
+          "moment": "after-set-2",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "movement_complete_this_visit"
+            ],
+            "prerequisites": [],
+            "stateRevision": 45
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e38",
+          "entityId": "s23-e38",
+          "revision": 1,
+          "occurredAt": "2026-11-19T17:11:21.000Z",
+          "receivedAt": "2026-11-19T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v7",
+            "setting": "gym",
+            "template": "A",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-11-19",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e39",
+          "entityId": "s23-e39",
+          "revision": 1,
+          "occurredAt": "2026-11-19T17:11:21.000Z",
+          "receivedAt": "2026-11-19T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v7",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e40",
+          "entityId": "s23-e40",
+          "revision": 1,
+          "occurredAt": "2026-11-19T17:11:21.000Z",
+          "receivedAt": "2026-11-19T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v7",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e41",
+          "entityId": "s23-e41",
+          "revision": 1,
+          "occurredAt": "2026-11-19T17:11:21.000Z",
+          "receivedAt": "2026-11-19T17:11:21.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "stop_resolved",
+          "payload": {
+            "visitId": "s23-v7",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "acknowledged": true,
+            "stopEventIds": [
+              "s23-e27"
+            ]
+          }
+        },
+        {
+          "id": "s23-e42",
+          "entityId": "s23-e42",
+          "revision": 1,
+          "occurredAt": "2026-11-19T17:11:22.000Z",
+          "receivedAt": "2026-11-19T17:11:22.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v7",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e43",
+          "entityId": "s23-e43",
+          "revision": 1,
+          "occurredAt": "2026-11-19T17:11:22.000Z",
+          "receivedAt": "2026-11-19T17:11:22.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "prescription_issued",
+          "payload": {
+            "context": {
+              "visitId": "s23-v7",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "now": "2026-11-19T17:11:22.000Z",
+              "inventory": {
+                "verified": true,
+                "equipment": [
+                  "dumbbells",
+                  "bench"
+                ],
+                "loads": [
+                  {
+                    "amountMilli": 10000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 12500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 15000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 17500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 20000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 25000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 30000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 35000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 40000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 45000,
+                    "unit": "lb"
+                  }
+                ]
+              },
+              "remainingSeconds": 1800,
+              "context": "paired",
+              "requestTrial": false
+            },
+            "prescription": {
+              "id": "p-75ae9bb1d8c3c70b",
+              "visitId": "s23-v7",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                9,
+                9
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "provisional_working",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-19T17:11:22.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "8a7de5a9a1e47b79",
+              "context": "paired"
+            },
+            "expectedStateRevision": 42
+          }
+        },
+        {
+          "id": "s23-e44",
+          "entityId": "s23-e44",
+          "revision": 1,
+          "occurredAt": "2026-11-19T17:12:02.000Z",
+          "receivedAt": "2026-11-19T17:12:02.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v7",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-75ae9bb1d8c3c70b",
+            "setIndex": 0,
+            "role": "working",
+            "startedAt": "2026-11-19T17:11:22.000Z",
+            "endedAt": "2026-11-19T17:12:02.000Z",
+            "actual": {
+              "reps": 9,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e45",
+          "entityId": "s23-e45",
+          "revision": 1,
+          "occurredAt": "2026-11-19T17:14:12.000Z",
+          "receivedAt": "2026-11-19T17:14:12.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v7",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-75ae9bb1d8c3c70b",
+            "setIndex": 1,
+            "role": "working",
+            "startedAt": "2026-11-19T17:13:32.000Z",
+            "endedAt": "2026-11-19T17:14:12.000Z",
+            "actual": {
+              "reps": 9,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e46",
+          "entityId": "s23-e46",
+          "revision": 1,
+          "occurredAt": "2026-11-19T17:14:12.000Z",
+          "receivedAt": "2026-11-19T17:14:12.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v7"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-19"
+        ],
+        "nextGymTemplate": "B",
+        "completedVisits": 4,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 9,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 880
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 8,
+      "visitId": "s23-v8",
+      "start": "2026-11-22T17:14:12.000Z",
+      "trainingDate": "2026-11-22",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "proposal",
+            "reasons": [],
+            "prerequisites": [],
+            "prescription": {
+              "id": "p-63472de91801bac9",
+              "visitId": "s23-v8",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                10,
+                10
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "rep_progression",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-22T17:14:12.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "7bc5739e426d334e",
+              "context": "paired"
+            },
+            "stateRevision": 49,
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                9,
+                9
+              ],
+              "establishedAt": "2026-11-19T17:14:12.000Z"
+            },
+            "counters": {
+              "successes": 2,
+              "difficulty": 0,
+              "failedTrialDates": 0
+            }
+          }
+        },
+        {
+          "moment": "after-set-1",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "prepared_prescription_unchanged"
+            ],
+            "prerequisites": [],
+            "stateRevision": 51,
+            "prescription": {
+              "context": "paired",
+              "dependencyFingerprint": "7bc5739e426d334e",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "extrasAllowed": true,
+              "id": "p-63472de91801bac9",
+              "identity": {
+                "setupId": "scenario-verified",
+                "variant": "db_flat_press"
+              },
+              "issuedAt": "2026-11-22T17:14:12.000Z",
+              "kind": "working",
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "policyVersion": "experimental-v1",
+              "preparationRequired": true,
+              "provisional": true,
+              "recoverySeconds": 90,
+              "roles": [
+                "working",
+                "working"
+              ],
+              "source": "rep_progression",
+              "targets": [
+                10,
+                10
+              ],
+              "visitId": "s23-v8",
+              "workingSetBudget": 2
+            },
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                9,
+                9
+              ],
+              "establishedAt": "2026-11-19T17:14:12.000Z"
+            }
+          }
+        },
+        {
+          "moment": "after-set-2",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "movement_complete_this_visit"
+            ],
+            "prerequisites": [],
+            "stateRevision": 52
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e47",
+          "entityId": "s23-e47",
+          "revision": 1,
+          "occurredAt": "2026-11-22T17:14:12.000Z",
+          "receivedAt": "2026-11-22T17:14:12.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v8",
+            "setting": "gym",
+            "template": "B",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-11-22",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e48",
+          "entityId": "s23-e48",
+          "revision": 1,
+          "occurredAt": "2026-11-22T17:14:12.000Z",
+          "receivedAt": "2026-11-22T17:14:12.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v8",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e49",
+          "entityId": "s23-e49",
+          "revision": 1,
+          "occurredAt": "2026-11-22T17:14:12.000Z",
+          "receivedAt": "2026-11-22T17:14:12.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v8",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e50",
+          "entityId": "s23-e50",
+          "revision": 1,
+          "occurredAt": "2026-11-22T17:14:12.000Z",
+          "receivedAt": "2026-11-22T17:14:12.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "prescription_issued",
+          "payload": {
+            "context": {
+              "visitId": "s23-v8",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "now": "2026-11-22T17:14:12.000Z",
+              "inventory": {
+                "verified": true,
+                "equipment": [
+                  "dumbbells",
+                  "bench"
+                ],
+                "loads": [
+                  {
+                    "amountMilli": 10000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 12500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 15000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 17500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 20000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 25000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 30000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 35000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 40000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 45000,
+                    "unit": "lb"
+                  }
+                ]
+              },
+              "remainingSeconds": 1800,
+              "context": "paired",
+              "requestTrial": false
+            },
+            "prescription": {
+              "id": "p-63472de91801bac9",
+              "visitId": "s23-v8",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                10,
+                10
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "rep_progression",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-22T17:14:12.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "7bc5739e426d334e",
+              "context": "paired"
+            },
+            "expectedStateRevision": 49
+          }
+        },
+        {
+          "id": "s23-e51",
+          "entityId": "s23-e51",
+          "revision": 1,
+          "occurredAt": "2026-11-22T17:14:52.000Z",
+          "receivedAt": "2026-11-22T17:14:52.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v8",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-63472de91801bac9",
+            "setIndex": 0,
+            "role": "working",
+            "startedAt": "2026-11-22T17:14:12.000Z",
+            "endedAt": "2026-11-22T17:14:52.000Z",
+            "actual": {
+              "reps": 10,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e52",
+          "entityId": "s23-e52",
+          "revision": 1,
+          "occurredAt": "2026-11-22T17:17:02.000Z",
+          "receivedAt": "2026-11-22T17:17:02.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v8",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-63472de91801bac9",
+            "setIndex": 1,
+            "role": "working",
+            "startedAt": "2026-11-22T17:16:22.000Z",
+            "endedAt": "2026-11-22T17:17:02.000Z",
+            "actual": {
+              "reps": 10,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e53",
+          "entityId": "s23-e53",
+          "revision": 1,
+          "occurredAt": "2026-11-22T17:17:02.000Z",
+          "receivedAt": "2026-11-22T17:17:02.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v8"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-19",
+          "2026-11-22"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 5,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 11,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1080
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 9,
+      "visitId": "s23-v9",
+      "start": "2026-11-25T17:17:02.000Z",
+      "trainingDate": "2026-11-25",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "proposal",
+            "reasons": [],
+            "prerequisites": [],
+            "prescription": {
+              "id": "p-2e867b9438b42b66",
+              "visitId": "s23-v9",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                10,
+                10
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "provisional_working",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-25T17:17:02.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "d23070135020c2b3",
+              "context": "paired"
+            },
+            "stateRevision": 56,
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                9,
+                9
+              ],
+              "establishedAt": "2026-11-19T17:14:12.000Z"
+            },
+            "counters": {
+              "successes": 1,
+              "difficulty": 0,
+              "failedTrialDates": 0
+            }
+          }
+        },
+        {
+          "moment": "after-set-1",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "prepared_prescription_unchanged"
+            ],
+            "prerequisites": [],
+            "stateRevision": 58,
+            "prescription": {
+              "context": "paired",
+              "dependencyFingerprint": "d23070135020c2b3",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "extrasAllowed": true,
+              "id": "p-2e867b9438b42b66",
+              "identity": {
+                "setupId": "scenario-verified",
+                "variant": "db_flat_press"
+              },
+              "issuedAt": "2026-11-25T17:17:02.000Z",
+              "kind": "working",
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "policyVersion": "experimental-v1",
+              "preparationRequired": true,
+              "provisional": true,
+              "recoverySeconds": 90,
+              "roles": [
+                "working",
+                "working"
+              ],
+              "source": "provisional_working",
+              "targets": [
+                10,
+                10
+              ],
+              "visitId": "s23-v9",
+              "workingSetBudget": 2
+            },
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                9,
+                9
+              ],
+              "establishedAt": "2026-11-19T17:14:12.000Z"
+            }
+          }
+        },
+        {
+          "moment": "after-set-2",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "movement_complete_this_visit"
+            ],
+            "prerequisites": [],
+            "stateRevision": 59
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e54",
+          "entityId": "s23-e54",
+          "revision": 1,
+          "occurredAt": "2026-11-25T17:17:02.000Z",
+          "receivedAt": "2026-11-25T17:17:02.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v9",
+            "setting": "gym",
+            "template": "A",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-11-25",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e55",
+          "entityId": "s23-e55",
+          "revision": 1,
+          "occurredAt": "2026-11-25T17:17:02.000Z",
+          "receivedAt": "2026-11-25T17:17:02.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v9",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e56",
+          "entityId": "s23-e56",
+          "revision": 1,
+          "occurredAt": "2026-11-25T17:17:02.000Z",
+          "receivedAt": "2026-11-25T17:17:02.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v9",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e57",
+          "entityId": "s23-e57",
+          "revision": 1,
+          "occurredAt": "2026-11-25T17:17:02.000Z",
+          "receivedAt": "2026-11-25T17:17:02.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "prescription_issued",
+          "payload": {
+            "context": {
+              "visitId": "s23-v9",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "now": "2026-11-25T17:17:02.000Z",
+              "inventory": {
+                "verified": true,
+                "equipment": [
+                  "dumbbells",
+                  "bench"
+                ],
+                "loads": [
+                  {
+                    "amountMilli": 10000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 12500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 15000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 17500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 20000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 25000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 30000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 35000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 40000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 45000,
+                    "unit": "lb"
+                  }
+                ]
+              },
+              "remainingSeconds": 1800,
+              "context": "paired",
+              "requestTrial": false
+            },
+            "prescription": {
+              "id": "p-2e867b9438b42b66",
+              "visitId": "s23-v9",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                10,
+                10
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "provisional_working",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-25T17:17:02.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e6",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "d23070135020c2b3",
+              "context": "paired"
+            },
+            "expectedStateRevision": 56
+          }
+        },
+        {
+          "id": "s23-e58",
+          "entityId": "s23-e58",
+          "revision": 1,
+          "occurredAt": "2026-11-25T17:17:42.000Z",
+          "receivedAt": "2026-11-25T17:17:42.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v9",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-2e867b9438b42b66",
+            "setIndex": 0,
+            "role": "working",
+            "startedAt": "2026-11-25T17:17:02.000Z",
+            "endedAt": "2026-11-25T17:17:42.000Z",
+            "actual": {
+              "reps": 10,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e59",
+          "entityId": "s23-e59",
+          "revision": 1,
+          "occurredAt": "2026-11-25T17:19:52.000Z",
+          "receivedAt": "2026-11-25T17:19:52.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v9",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-2e867b9438b42b66",
+            "setIndex": 1,
+            "role": "working",
+            "startedAt": "2026-11-25T17:19:12.000Z",
+            "endedAt": "2026-11-25T17:19:52.000Z",
+            "actual": {
+              "reps": 10,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e60",
+          "entityId": "s23-e60",
+          "revision": 1,
+          "occurredAt": "2026-11-25T17:19:52.000Z",
+          "receivedAt": "2026-11-25T17:19:52.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v9"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25"
+        ],
+        "nextGymTemplate": "B",
+        "completedVisits": 6,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 13,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1280
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 10,
+      "visitId": "s23-v10",
+      "start": "2026-11-28T17:19:52.000Z",
+      "trainingDate": "2026-11-28",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "proposal",
+            "reasons": [],
+            "prerequisites": [],
+            "prescription": {
+              "id": "p-7b51df87dd05f30f",
+              "visitId": "s23-v10",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                11,
+                11
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "rep_progression",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-28T17:19:52.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e57",
+                "s23-e58",
+                "s23-e59",
+                "s23-e6",
+                "s23-e60",
+                "s23-e61",
+                "s23-e62",
+                "s23-e63",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "0ed1e85970e508bd",
+              "context": "paired"
+            },
+            "stateRevision": 63,
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                10,
+                10
+              ],
+              "establishedAt": "2026-11-25T17:19:52.000Z"
+            },
+            "counters": {
+              "successes": 2,
+              "difficulty": 0,
+              "failedTrialDates": 0
+            }
+          }
+        },
+        {
+          "moment": "after-set-1",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "prepared_prescription_unchanged"
+            ],
+            "prerequisites": [],
+            "stateRevision": 65,
+            "prescription": {
+              "context": "paired",
+              "dependencyFingerprint": "0ed1e85970e508bd",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e57",
+                "s23-e58",
+                "s23-e59",
+                "s23-e6",
+                "s23-e60",
+                "s23-e61",
+                "s23-e62",
+                "s23-e63",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "extrasAllowed": true,
+              "id": "p-7b51df87dd05f30f",
+              "identity": {
+                "setupId": "scenario-verified",
+                "variant": "db_flat_press"
+              },
+              "issuedAt": "2026-11-28T17:19:52.000Z",
+              "kind": "working",
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "policyVersion": "experimental-v1",
+              "preparationRequired": true,
+              "provisional": true,
+              "recoverySeconds": 90,
+              "roles": [
+                "working",
+                "working"
+              ],
+              "source": "rep_progression",
+              "targets": [
+                11,
+                11
+              ],
+              "visitId": "s23-v10",
+              "workingSetBudget": 2
+            },
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                10,
+                10
+              ],
+              "establishedAt": "2026-11-25T17:19:52.000Z"
+            }
+          }
+        },
+        {
+          "moment": "after-set-2",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "movement_complete_this_visit"
+            ],
+            "prerequisites": [],
+            "stateRevision": 66
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e61",
+          "entityId": "s23-e61",
+          "revision": 1,
+          "occurredAt": "2026-11-28T17:19:52.000Z",
+          "receivedAt": "2026-11-28T17:19:52.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v10",
+            "setting": "gym",
+            "template": "B",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-11-28",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e62",
+          "entityId": "s23-e62",
+          "revision": 1,
+          "occurredAt": "2026-11-28T17:19:52.000Z",
+          "receivedAt": "2026-11-28T17:19:52.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v10",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e63",
+          "entityId": "s23-e63",
+          "revision": 1,
+          "occurredAt": "2026-11-28T17:19:52.000Z",
+          "receivedAt": "2026-11-28T17:19:52.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v10",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e64",
+          "entityId": "s23-e64",
+          "revision": 1,
+          "occurredAt": "2026-11-28T17:19:52.000Z",
+          "receivedAt": "2026-11-28T17:19:52.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "prescription_issued",
+          "payload": {
+            "context": {
+              "visitId": "s23-v10",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "now": "2026-11-28T17:19:52.000Z",
+              "inventory": {
+                "verified": true,
+                "equipment": [
+                  "dumbbells",
+                  "bench"
+                ],
+                "loads": [
+                  {
+                    "amountMilli": 10000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 12500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 15000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 17500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 20000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 25000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 30000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 35000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 40000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 45000,
+                    "unit": "lb"
+                  }
+                ]
+              },
+              "remainingSeconds": 1800,
+              "context": "paired",
+              "requestTrial": false
+            },
+            "prescription": {
+              "id": "p-7b51df87dd05f30f",
+              "visitId": "s23-v10",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                11,
+                11
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "rep_progression",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-11-28T17:19:52.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e57",
+                "s23-e58",
+                "s23-e59",
+                "s23-e6",
+                "s23-e60",
+                "s23-e61",
+                "s23-e62",
+                "s23-e63",
+                "s23-e7",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "0ed1e85970e508bd",
+              "context": "paired"
+            },
+            "expectedStateRevision": 63
+          }
+        },
+        {
+          "id": "s23-e65",
+          "entityId": "s23-e65",
+          "revision": 1,
+          "occurredAt": "2026-11-28T17:20:32.000Z",
+          "receivedAt": "2026-11-28T17:20:32.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v10",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-7b51df87dd05f30f",
+            "setIndex": 0,
+            "role": "working",
+            "startedAt": "2026-11-28T17:19:52.000Z",
+            "endedAt": "2026-11-28T17:20:32.000Z",
+            "actual": {
+              "reps": 11,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e66",
+          "entityId": "s23-e66",
+          "revision": 1,
+          "occurredAt": "2026-11-28T17:22:42.000Z",
+          "receivedAt": "2026-11-28T17:22:42.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v10",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-7b51df87dd05f30f",
+            "setIndex": 1,
+            "role": "working",
+            "startedAt": "2026-11-28T17:22:02.000Z",
+            "endedAt": "2026-11-28T17:22:42.000Z",
+            "actual": {
+              "reps": 11,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e67",
+          "entityId": "s23-e67",
+          "revision": 1,
+          "occurredAt": "2026-11-28T17:22:42.000Z",
+          "receivedAt": "2026-11-28T17:22:42.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v10"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 7,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 15,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1500
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 11,
+      "visitId": "s23-v11",
+      "start": "2026-12-01T17:22:42.000Z",
+      "trainingDate": "2026-12-01",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "proposal",
+            "reasons": [],
+            "prerequisites": [],
+            "prescription": {
+              "id": "p-4e9276f635f1f804",
+              "visitId": "s23-v11",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                11,
+                11
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "provisional_working",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-12-01T17:22:42.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e57",
+                "s23-e58",
+                "s23-e59",
+                "s23-e6",
+                "s23-e60",
+                "s23-e61",
+                "s23-e62",
+                "s23-e63",
+                "s23-e64",
+                "s23-e65",
+                "s23-e66",
+                "s23-e67",
+                "s23-e68",
+                "s23-e69",
+                "s23-e7",
+                "s23-e70",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "8aaf927163db775d",
+              "context": "paired"
+            },
+            "stateRevision": 70,
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                10,
+                10
+              ],
+              "establishedAt": "2026-11-25T17:19:52.000Z"
+            },
+            "counters": {
+              "successes": 1,
+              "difficulty": 0,
+              "failedTrialDates": 0
+            }
+          }
+        },
+        {
+          "moment": "after-set-1",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "prepared_prescription_unchanged"
+            ],
+            "prerequisites": [],
+            "stateRevision": 72,
+            "prescription": {
+              "context": "paired",
+              "dependencyFingerprint": "8aaf927163db775d",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e57",
+                "s23-e58",
+                "s23-e59",
+                "s23-e6",
+                "s23-e60",
+                "s23-e61",
+                "s23-e62",
+                "s23-e63",
+                "s23-e64",
+                "s23-e65",
+                "s23-e66",
+                "s23-e67",
+                "s23-e68",
+                "s23-e69",
+                "s23-e7",
+                "s23-e70",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "extrasAllowed": true,
+              "id": "p-4e9276f635f1f804",
+              "identity": {
+                "setupId": "scenario-verified",
+                "variant": "db_flat_press"
+              },
+              "issuedAt": "2026-12-01T17:22:42.000Z",
+              "kind": "working",
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "policyVersion": "experimental-v1",
+              "preparationRequired": true,
+              "provisional": true,
+              "recoverySeconds": 90,
+              "roles": [
+                "working",
+                "working"
+              ],
+              "source": "provisional_working",
+              "targets": [
+                11,
+                11
+              ],
+              "visitId": "s23-v11",
+              "workingSetBudget": 2
+            },
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                10,
+                10
+              ],
+              "establishedAt": "2026-11-25T17:19:52.000Z"
+            }
+          }
+        },
+        {
+          "moment": "after-set-2",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "movement_complete_this_visit"
+            ],
+            "prerequisites": [],
+            "stateRevision": 73
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e68",
+          "entityId": "s23-e68",
+          "revision": 1,
+          "occurredAt": "2026-12-01T17:22:42.000Z",
+          "receivedAt": "2026-12-01T17:22:42.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v11",
+            "setting": "gym",
+            "template": "A",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-12-01",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e69",
+          "entityId": "s23-e69",
+          "revision": 1,
+          "occurredAt": "2026-12-01T17:22:42.000Z",
+          "receivedAt": "2026-12-01T17:22:42.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v11",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e70",
+          "entityId": "s23-e70",
+          "revision": 1,
+          "occurredAt": "2026-12-01T17:22:42.000Z",
+          "receivedAt": "2026-12-01T17:22:42.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v11",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e71",
+          "entityId": "s23-e71",
+          "revision": 1,
+          "occurredAt": "2026-12-01T17:22:42.000Z",
+          "receivedAt": "2026-12-01T17:22:42.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "prescription_issued",
+          "payload": {
+            "context": {
+              "visitId": "s23-v11",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "now": "2026-12-01T17:22:42.000Z",
+              "inventory": {
+                "verified": true,
+                "equipment": [
+                  "dumbbells",
+                  "bench"
+                ],
+                "loads": [
+                  {
+                    "amountMilli": 10000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 12500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 15000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 17500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 20000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 25000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 30000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 35000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 40000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 45000,
+                    "unit": "lb"
+                  }
+                ]
+              },
+              "remainingSeconds": 1800,
+              "context": "paired",
+              "requestTrial": false
+            },
+            "prescription": {
+              "id": "p-4e9276f635f1f804",
+              "visitId": "s23-v11",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                11,
+                11
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "provisional_working",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-12-01T17:22:42.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e57",
+                "s23-e58",
+                "s23-e59",
+                "s23-e6",
+                "s23-e60",
+                "s23-e61",
+                "s23-e62",
+                "s23-e63",
+                "s23-e64",
+                "s23-e65",
+                "s23-e66",
+                "s23-e67",
+                "s23-e68",
+                "s23-e69",
+                "s23-e7",
+                "s23-e70",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "8aaf927163db775d",
+              "context": "paired"
+            },
+            "expectedStateRevision": 70
+          }
+        },
+        {
+          "id": "s23-e72",
+          "entityId": "s23-e72",
+          "revision": 1,
+          "occurredAt": "2026-12-01T17:23:22.000Z",
+          "receivedAt": "2026-12-01T17:23:22.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v11",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-4e9276f635f1f804",
+            "setIndex": 0,
+            "role": "working",
+            "startedAt": "2026-12-01T17:22:42.000Z",
+            "endedAt": "2026-12-01T17:23:22.000Z",
+            "actual": {
+              "reps": 11,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e73",
+          "entityId": "s23-e73",
+          "revision": 1,
+          "occurredAt": "2026-12-01T17:25:32.000Z",
+          "receivedAt": "2026-12-01T17:25:32.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v11",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-4e9276f635f1f804",
+            "setIndex": 1,
+            "role": "working",
+            "startedAt": "2026-12-01T17:24:52.000Z",
+            "endedAt": "2026-12-01T17:25:32.000Z",
+            "actual": {
+              "reps": 11,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e74",
+          "entityId": "s23-e74",
+          "revision": 1,
+          "occurredAt": "2026-12-01T17:25:32.000Z",
+          "receivedAt": "2026-12-01T17:25:32.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v11"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01"
+        ],
+        "nextGymTemplate": "B",
+        "completedVisits": 8,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 17,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1720
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    },
+    {
+      "number": 12,
+      "visitId": "s23-v12",
+      "start": "2026-12-04T17:25:32.000Z",
+      "trainingDate": "2026-12-04",
+      "setting": "gym",
+      "identity": {
+        "variant": "db_flat_press",
+        "setupId": "scenario-verified"
+      },
+      "inputs": {
+        "scriptMode": "pain-correction",
+        "inventory": {
+          "verified": true,
+          "equipment": [
+            "dumbbells",
+            "bench"
+          ],
+          "loads": [
+            {
+              "amountMilli": 10000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 12500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 15000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 17500,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 20000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 25000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 30000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 35000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 40000,
+              "unit": "lb"
+            },
+            {
+              "amountMilli": 45000,
+              "unit": "lb"
+            }
+          ]
+        },
+        "easyFeedback": false,
+        "declineIncrease": false,
+        "extrasScript": false,
+        "timingQuality": "measured",
+        "receiptOffsetSeconds": 0
+      },
+      "decisions": [
+        {
+          "moment": "visit-start",
+          "decision": {
+            "status": "proposal",
+            "reasons": [],
+            "prerequisites": [],
+            "prescription": {
+              "id": "p-c93faf2604804de6",
+              "visitId": "s23-v12",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                12,
+                12
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "rep_progression",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-12-04T17:25:32.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e57",
+                "s23-e58",
+                "s23-e59",
+                "s23-e6",
+                "s23-e60",
+                "s23-e61",
+                "s23-e62",
+                "s23-e63",
+                "s23-e64",
+                "s23-e65",
+                "s23-e66",
+                "s23-e67",
+                "s23-e68",
+                "s23-e69",
+                "s23-e7",
+                "s23-e70",
+                "s23-e71",
+                "s23-e72",
+                "s23-e73",
+                "s23-e74",
+                "s23-e75",
+                "s23-e76",
+                "s23-e77",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "e754aa257db6be71",
+              "context": "paired"
+            },
+            "stateRevision": 77,
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                11,
+                11
+              ],
+              "establishedAt": "2026-12-01T17:25:32.000Z"
+            },
+            "counters": {
+              "successes": 2,
+              "difficulty": 0,
+              "failedTrialDates": 0
+            }
+          }
+        },
+        {
+          "moment": "after-set-1",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "prepared_prescription_unchanged"
+            ],
+            "prerequisites": [],
+            "stateRevision": 79,
+            "prescription": {
+              "context": "paired",
+              "dependencyFingerprint": "e754aa257db6be71",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e57",
+                "s23-e58",
+                "s23-e59",
+                "s23-e6",
+                "s23-e60",
+                "s23-e61",
+                "s23-e62",
+                "s23-e63",
+                "s23-e64",
+                "s23-e65",
+                "s23-e66",
+                "s23-e67",
+                "s23-e68",
+                "s23-e69",
+                "s23-e7",
+                "s23-e70",
+                "s23-e71",
+                "s23-e72",
+                "s23-e73",
+                "s23-e74",
+                "s23-e75",
+                "s23-e76",
+                "s23-e77",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "extrasAllowed": true,
+              "id": "p-c93faf2604804de6",
+              "identity": {
+                "setupId": "scenario-verified",
+                "variant": "db_flat_press"
+              },
+              "issuedAt": "2026-12-04T17:25:32.000Z",
+              "kind": "working",
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "policyVersion": "experimental-v1",
+              "preparationRequired": true,
+              "provisional": true,
+              "recoverySeconds": 90,
+              "roles": [
+                "working",
+                "working"
+              ],
+              "source": "rep_progression",
+              "targets": [
+                12,
+                12
+              ],
+              "visitId": "s23-v12",
+              "workingSetBudget": 2
+            },
+            "baseline": {
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                11,
+                11
+              ],
+              "establishedAt": "2026-12-01T17:25:32.000Z"
+            }
+          }
+        },
+        {
+          "moment": "after-set-2",
+          "decision": {
+            "status": "hold",
+            "reasons": [
+              "movement_complete_this_visit"
+            ],
+            "prerequisites": [],
+            "stateRevision": 80
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "s23-e75",
+          "entityId": "s23-e75",
+          "revision": 1,
+          "occurredAt": "2026-12-04T17:25:32.000Z",
+          "receivedAt": "2026-12-04T17:25:32.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_started",
+          "payload": {
+            "visitId": "s23-v12",
+            "setting": "gym",
+            "template": "B",
+            "timeZone": "America/Denver",
+            "trainingDate": "2026-12-04",
+            "plannedIdentities": [
+              {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              }
+            ]
+          }
+        },
+        {
+          "id": "s23-e76",
+          "entityId": "s23-e76",
+          "revision": 1,
+          "occurredAt": "2026-12-04T17:25:32.000Z",
+          "receivedAt": "2026-12-04T17:25:32.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "rehearsal_confirmed",
+          "payload": {
+            "visitId": "s23-v12",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "controlled": true
+          }
+        },
+        {
+          "id": "s23-e77",
+          "entityId": "s23-e77",
+          "revision": 1,
+          "occurredAt": "2026-12-04T17:25:32.000Z",
+          "receivedAt": "2026-12-04T17:25:32.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "preparation_confirmed",
+          "payload": {
+            "visitId": "s23-v12",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "recoveryConfirmed": true
+          }
+        },
+        {
+          "id": "s23-e78",
+          "entityId": "s23-e78",
+          "revision": 1,
+          "occurredAt": "2026-12-04T17:25:32.000Z",
+          "receivedAt": "2026-12-04T17:25:32.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "prescription_issued",
+          "payload": {
+            "context": {
+              "visitId": "s23-v12",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "now": "2026-12-04T17:25:32.000Z",
+              "inventory": {
+                "verified": true,
+                "equipment": [
+                  "dumbbells",
+                  "bench"
+                ],
+                "loads": [
+                  {
+                    "amountMilli": 10000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 12500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 15000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 17500,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 20000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 25000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 30000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 35000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 40000,
+                    "unit": "lb"
+                  },
+                  {
+                    "amountMilli": 45000,
+                    "unit": "lb"
+                  }
+                ]
+              },
+              "remainingSeconds": 1800,
+              "context": "paired",
+              "requestTrial": false
+            },
+            "prescription": {
+              "id": "p-c93faf2604804de6",
+              "visitId": "s23-v12",
+              "identity": {
+                "variant": "db_flat_press",
+                "setupId": "scenario-verified"
+              },
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "targets": [
+                12,
+                12
+              ],
+              "roles": [
+                "working",
+                "working"
+              ],
+              "kind": "working",
+              "source": "rep_progression",
+              "provisional": true,
+              "extrasAllowed": true,
+              "preparationRequired": true,
+              "recoverySeconds": 90,
+              "workingSetBudget": 2,
+              "policyVersion": "experimental-v1",
+              "issuedAt": "2026-12-04T17:25:32.000Z",
+              "dependencyIds": [
+                "s23-e1",
+                "s23-e10",
+                "s23-e11",
+                "s23-e12",
+                "s23-e13",
+                "s23-e14",
+                "s23-e15",
+                "s23-e16",
+                "s23-e17",
+                "s23-e18",
+                "s23-e19",
+                "s23-e2",
+                "s23-e20",
+                "s23-e21",
+                "s23-e22",
+                "s23-e23",
+                "s23-e24",
+                "s23-e25",
+                "s23-e26",
+                "s23-e27",
+                "s23-e28",
+                "s23-e29",
+                "s23-e3",
+                "s23-e31",
+                "s23-e32",
+                "s23-e35",
+                "s23-e36",
+                "s23-e38",
+                "s23-e39",
+                "s23-e4",
+                "s23-e40",
+                "s23-e41",
+                "s23-e42",
+                "s23-e43",
+                "s23-e44",
+                "s23-e45",
+                "s23-e46",
+                "s23-e47",
+                "s23-e48",
+                "s23-e49",
+                "s23-e5",
+                "s23-e50",
+                "s23-e51",
+                "s23-e52",
+                "s23-e53",
+                "s23-e54",
+                "s23-e55",
+                "s23-e56",
+                "s23-e57",
+                "s23-e58",
+                "s23-e59",
+                "s23-e6",
+                "s23-e60",
+                "s23-e61",
+                "s23-e62",
+                "s23-e63",
+                "s23-e64",
+                "s23-e65",
+                "s23-e66",
+                "s23-e67",
+                "s23-e68",
+                "s23-e69",
+                "s23-e7",
+                "s23-e70",
+                "s23-e71",
+                "s23-e72",
+                "s23-e73",
+                "s23-e74",
+                "s23-e75",
+                "s23-e76",
+                "s23-e77",
+                "s23-e8",
+                "s23-e9"
+              ],
+              "dependencyFingerprint": "e754aa257db6be71",
+              "context": "paired"
+            },
+            "expectedStateRevision": 77
+          }
+        },
+        {
+          "id": "s23-e79",
+          "entityId": "s23-e79",
+          "revision": 1,
+          "occurredAt": "2026-12-04T17:26:12.000Z",
+          "receivedAt": "2026-12-04T17:26:12.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v12",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-c93faf2604804de6",
+            "setIndex": 0,
+            "role": "working",
+            "startedAt": "2026-12-04T17:25:32.000Z",
+            "endedAt": "2026-12-04T17:26:12.000Z",
+            "actual": {
+              "reps": 12,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e80",
+          "entityId": "s23-e80",
+          "revision": 1,
+          "occurredAt": "2026-12-04T17:28:22.000Z",
+          "receivedAt": "2026-12-04T17:28:22.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "set_recorded",
+          "payload": {
+            "visitId": "s23-v12",
+            "identity": {
+              "variant": "db_flat_press",
+              "setupId": "scenario-verified"
+            },
+            "prescriptionId": "p-c93faf2604804de6",
+            "setIndex": 1,
+            "role": "working",
+            "startedAt": "2026-12-04T17:27:42.000Z",
+            "endedAt": "2026-12-04T17:28:22.000Z",
+            "actual": {
+              "reps": 12,
+              "load": {
+                "amountMilli": 10000,
+                "unit": "lb"
+              },
+              "completed": true,
+              "feedback": "unknown",
+              "cause": "unknown",
+              "timingQuality": "measured"
+            }
+          }
+        },
+        {
+          "id": "s23-e81",
+          "entityId": "s23-e81",
+          "revision": 1,
+          "occurredAt": "2026-12-04T17:28:22.000Z",
+          "receivedAt": "2026-12-04T17:28:22.000Z",
+          "policyVersion": "experimental-v1",
+          "type": "visit_ended",
+          "payload": {
+            "visitId": "s23-v12"
+          }
+        }
+      ],
+      "summary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 9,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 19,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1960
+        },
+        "conflicts": 0,
+        "pending": 0
+      }
+    }
+  ]
+}

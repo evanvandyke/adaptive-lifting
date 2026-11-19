@@ -1,0 +1,20 @@
+{
+  "policyVersion": "experimental-v1",
+  "runId": "adaptive-lifting-engine-K8Kcvn",
+  "specSha256": "ee5a0e6ab9da9ad6b58ab3259bb71e4828c696bef199582418a70f32b2aa61c2",
+  "compiledCandidateSha256": "f45ad53b567c5d5a6ba8ad3256266c891913695388e698ee692c9f3fb225a198",
+  "behaviorTests": 149,
+  "scriptedHistories": 44,
+  "sourceFiles": {
+    "engine/src/authority.ts": "0f07846fa8faa7c137e0c12d7d95f92f04c2fe595665b454fe53dc4bfd64c53d",
+    "engine/src/catalog.ts": "38350556ef51dd3f2d7998963e81a539a8a8110a6848ecbe56d5a29629b88988",
+    "engine/src/evidence.ts": "881cdda6e0cd37517199219ce79e5b613c7b05e818cf6466a3d170fd401879eb",
+    "engine/src/index.ts": "a5c822e6a5391d524f167b4ca16d4d84cbf2c97c2cf1db2249144bdeb580a3fb",
+    "engine/src/journal.ts": "2250d0125e5bc6c0cd767bca5abf799000e8bdc93cd9aa96685ad770206b1c17",
+    "engine/src/planning.ts": "71508db247a89a1f8956d1ef2e31a708522a31bb27b1576406edf06e0825085c",
+    "engine/src/prescription.ts": "c11f646a2bba3c8edc96ddd6c8522fe1c85f8a04a4070f5a185f0ac942f378cb",
+    "engine/src/types.ts": "c0a328ca221769aaf26ce083ea248978bf8c17f968555530ae9c73276bb046ef",
+    "engine/src/util.ts": "f8597cfd6a49b494fd2b8cbf2ed93f09f4e9b215376cb8c02f6f78edbbf7a525"
+  },
+  "testLogSha256": "049209fbfd453f9d0fadabd1fb73bd434cc84ae925876b32aa9071f616eedc9a"
+}

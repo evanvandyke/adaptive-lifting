@@ -15,13 +15,16 @@ Prove you read them by summarizing their current state in your first response. I
 ## Canonical docs (this project's source of truth)
 The handful of documents that are authoritative for this project — the ones a fresh session reads to get up to speed, and where durable facts live instead of memory. Architecture, decisions, and specs live in these docs (and the code), not in this file.
 
-- `README.md` — product overview, the progression algorithm, the default program, tech stack, setup.
-- `Implementation-plan.md` — the original design/build plan: feature specs, AI prompt architecture, the 4 build phases, schema. The "why it works this way" doc.
-- `src/lib/` — the source of truth for behavior: the progression engine, types, AI prompts, motivation logic.
+- `README.md` — product overview, legacy-versus-candidate boundary, setup and validation commands.
+- `GYM-EXPERIENCE.md` + `PROGRAM-DIRECTION.md` — guided workout behavior and Evan's confirmed constraints.
+- `ENGINE-SPEC.md` + `engine/src/` — exact standalone candidate policy and implementation; read before changing engine or workout behavior. `ENGINE-REVIEW.md` and `engine/reports/SUMMARY.md` record review and executed-snapshot evidence.
+- `CLAUDE-DESIGN-PROMPT.md` — visual freedom and gym usability requirements; read before UX/UI work.
+- `Implementation-plan.md` — historical original design/build plan, AI prompts and schema; use it for original intent, not proof of current behavior.
+- `src/lib/` + `src/app/(protected)/workout/actions.ts` — legacy app types, prompts, motivation and current workout creation/completion behavior. The separate legacy progression helper has no caller in this flow.
 - `src/middleware.ts` — auth protection + onboarding redirect (the source of several early bugs; read before touching auth/routing).
 
 ## Project overview
-Adaptive Lifting is a strength-training PWA that auto-adjusts weights via RPE-based progression (BAU5/Anatoly-inspired, research-validated). Next.js 16 + Supabase + Claude API on Vercel, dark-glassmorphism UI. Built and deployed live in a single session; built for Evan's own return to lifting after a year off.
+Adaptive Lifting is a strength-training PWA for Evan's return to lifting. The app uses Next.js 16, Supabase and Claude API on Vercel. The standalone experimental engine in `engine/` is separate from the legacy workout flow; integration must be explicit. Research informs the direction, while exact numerical rules remain testable engineering hypotheses. Visual redesign follows the Claude Design handoff rather than assuming the existing styling is a requirement.
 
 ## Adaptive Lifting is not what you'd assume
 - **Next.js here is not the Next.js in your training data.** This version has breaking changes to APIs, conventions, and file structure. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code.

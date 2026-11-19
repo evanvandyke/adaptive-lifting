@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:engine": "node engine/run.mjs test",
+    "simulate:engine": "node engine/run.mjs simulate",
+    "check:engine": "node engine/run.mjs all"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.95.1",

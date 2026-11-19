@@ -2,21 +2,29 @@
 
 **Show up. Get stronger. Don't quit.**
 
-A progressive web app that auto-adjusts strength training using compound-first principles and RPE-based progression. Built for someone returning to lifting after a setback — focuses on results fast, momentum building, and no-excuses accountability.
+A strength-training PWA being redesigned around guided workouts, confirmed performance and adaptive prescriptions. Built for someone returning to lifting, with consistent participation and low phone friction as the priorities.
 
-Built entirely in a single session with [Claude Code](https://claude.ai/claude-code) using parallel Opus sub-agents.
+## Current implementation boundary
+
+The existing workout flow in this repository is the original application: it seeds weights from previous completed sets and stores progression advice as text. The separate legacy `calculateProgression` function is not called by that flow. The original feature inventory and training tables below describe that build and its intended rules, not the new engine.
+
+The isolated candidate lives in [`engine/`](engine/README.md). Its pure functions cover prescriptions, calibration, progression, visit planning and event replay. It has no connection to the live workout UI, authentication or Supabase writes. Use [`ENGINE-SPEC.md`](ENGINE-SPEC.md) for its exact experimental policy, [`ENGINE-REVIEW.md`](ENGINE-REVIEW.md) for review status, and the [latest simulation report](engine/reports/SUMMARY.md) for the executed snapshot and limitations. A passing software check does not establish training effectiveness or physical suitability.
+
+Run `npm run check:engine` for a fresh compile, behavior tests and scripted histories. `npm run test:engine` and `npm run simulate:engine` run the two validation parts separately. The runner adds no dependencies and makes no live-service calls.
+
+The product flow is in [`GYM-EXPERIENCE.md`](GYM-EXPERIENCE.md), confirmed preferences in [`PROGRAM-DIRECTION.md`](PROGRAM-DIRECTION.md), and the visual-design handoff in [`CLAUDE-DESIGN-PROMPT.md`](CLAUDE-DESIGN-PROMPT.md). Exercise examples in [`TRAINING-PLAN.md`](TRAINING-PLAN.md) provide planning context; the engine specification and code own the candidate's exact transitions.
 
 ## What It Does
 
 - **Tells you what to lift today** — Session A/B rotation with auto-populated weights
-- **Adjusts based on how it felt** — RPE-based autoregulation: easy session = weight goes up, hard session = hold or back off
+- **Stores progression guidance** — the legacy flow records RPE-based advice; automatic application of the new prescriptions requires a later integration
 - **Tracks if you're getting stronger** — PR detection, volume trends, streak tracking
 - **Reminds you why you started** — AI-powered post-workout hype and weekly analysis
 - **Keeps nutrition dead simple** — Protein counter with quick-tap buttons. No calorie counting hell.
 
-## The Algorithm
+## Legacy progression design
 
-Inspired by BAU5 and Anatoly's compound-first training philosophy, validated against Starting Strength, Barbell Medicine, and Mike Tuchscherer's RTS methodology.
+The original RPE-based design drew inspiration from BAU5 and compound-focused training. The table records that earlier intent; it is not the standalone candidate's implemented policy or a validated reconstruction of either training system.
 
 | Condition | Action |
 |-----------|--------|
@@ -25,7 +33,7 @@ Inspired by BAU5 and Anatoly's compound-first training philosophy, validated aga
 | Missed reps or RPE 10 | Reduce weight 10%, rebuild |
 | Missed reps 2 weeks straight | Deload week: drop 20%, keep reps |
 
-**Weeks 1-3 (onboarding phase):** Conservative increments, RPE capped at 7. Your joints and tendons need time even if your muscles don't.
+The original design also proposed a three-week onboarding phase. Current first-use, return and load-change policies are defined separately in the engine specification.
 
 ## Features
 

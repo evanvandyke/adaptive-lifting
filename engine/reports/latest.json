@@ -1,0 +1,2032 @@
+{
+  "runId": "adaptive-lifting-engine-K8Kcvn",
+  "startedAt": "2026-11-19T17:49:56.020Z",
+  "policyVersion": "experimental-v1",
+  "scenarioVersion": "independent-histories-v2",
+  "archiveDirectory": "runs/adaptive-lifting-engine-K8Kcvn",
+  "compiledCandidateSha256": "f45ad53b567c5d5a6ba8ad3256266c891913695388e698ee692c9f3fb225a198",
+  "compiledScenarioSha256": "be6f7ddfa6acc26060121cff2db5ed695e7487ad07856fa2bd448a25ba522759",
+  "specSha256": "ee5a0e6ab9da9ad6b58ab3259bb71e4828c696bef199582418a70f32b2aa61c2",
+  "model": "Deterministic scripted observations; no physiological forecast",
+  "finishedAt": "2026-11-19T17:52:05.826Z",
+  "status": "complete",
+  "counts": {
+    "scriptedHistories": 44,
+    "passedHistories": 44,
+    "failedHistories": 0,
+    "observedVisits": 618,
+    "journalEvents": 4462,
+    "projectedSets": 1285
+  },
+  "limits": [
+    "No physiological safety or effectiveness validation",
+    "Exercise-focused histories isolate adaptation and journal behavior; they are not complete workout programmes",
+    "No live app, database, browser or storage/network integration",
+    "Named behavior tests are counted separately",
+    "Observed outputs came from the compiled public candidate APIs",
+    "Manual/late/conflicting records may be retained without prescription authority"
+  ],
+  "scenarios": [
+    {
+      "id": "01",
+      "title": "Press with no ratings",
+      "purpose": "Ordinary completion establishes and progresses without optional input.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 88,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2580
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "252c79cbc37473163a563ce4f4c75df9b8a2d2148efdc753691f038306389de1",
+      "traceFile": "trace-01.json"
+    },
+    {
+      "id": "02",
+      "title": "Hinge with no ratings",
+      "purpose": "Different rep floor and protected priority lift; no extras prompt.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 116,
+        "projectedSets": 34,
+        "issuedPrescriptions": 18
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2785
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "a6fdad335db36e8453d3a1498e1b96703a3e8326d2fa43f21a3e9788a0d57f41",
+      "traceFile": "trace-02.json"
+    },
+    {
+      "id": "03",
+      "title": "Goblet squat with no ratings",
+      "purpose": "Six-to-eight target range and priority recovery.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 118,
+        "projectedSets": 35,
+        "issuedPrescriptions": 19
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 3,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "total:lb": 2895
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "668b57f53b6e9b4d2426a52deccca9120aecb70368f83307b32d1e0e5f75d721",
+      "traceFile": "trace-03.json"
+    },
+    {
+      "id": "04",
+      "title": "Supported row with longer recovery",
+      "purpose": "Longer recovery still supplies ordinary comparable evidence.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 88,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2580
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "2e89bfc6ea52ac2f7f94ce270b903a597226f8b43d53f64b3df09ac3daa3ed7f",
+      "traceFile": "trace-04.json"
+    },
+    {
+      "id": "05",
+      "title": "Alternating paired and straight sets",
+      "purpose": "Equipment-driven pairing changes must not starve progression.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 88,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2580
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "bc4d380b9bb5d78d0696ea2129f7533e9f8c2f0eff93415bec9c4fd1876323d1",
+      "traceFile": "trace-05.json"
+    },
+    {
+      "id": "06",
+      "title": "Easy feedback bridges low press loads",
+      "purpose": "Acknowledged low-load trials and establishment gates.",
+      "requestedVisits": 18,
+      "observedVisits": 18,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 135,
+        "projectedSets": 40,
+        "issuedPrescriptions": 23
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16",
+          "2026-12-19",
+          "2026-12-22"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 17,
+        "partialVisits": 1,
+        "calibrationVisits": 1,
+        "confirmedWorkingSets": 34,
+        "calibrationSets": 6,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 6920
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "a8d3fe95f64c7bcf9dbc715543cbb059e523cd7c3a4542f26f77d098092cf40b",
+      "traceFile": "trace-06.json"
+    },
+    {
+      "id": "07",
+      "title": "Small lateral-raise implements",
+      "purpose": "Low-load ceiling and2.5-lb steps for a small exercise.",
+      "requestedVisits": 18,
+      "observedVisits": 18,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 133,
+        "projectedSets": 39,
+        "issuedPrescriptions": 22
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16",
+          "2026-12-19",
+          "2026-12-22"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 17,
+        "partialVisits": 1,
+        "calibrationVisits": 1,
+        "confirmedWorkingSets": 34,
+        "calibrationSets": 5,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 3925
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "cc5a936a1b39be31ae97bcc41c2e2d2a1e627b160b38a8f086f0ce86057c655a",
+      "traceFile": "trace-07.json"
+    },
+    {
+      "id": "08",
+      "title": "Normal coarse press steps",
+      "purpose": "Progress through low-load bridge into above-ceiling coarse trials.",
+      "requestedVisits": 28,
+      "observedVisits": 28,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 206,
+        "projectedSets": 60,
+        "issuedPrescriptions": 34
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16",
+          "2026-12-19",
+          "2026-12-22",
+          "2026-12-25",
+          "2026-12-28",
+          "2026-12-31",
+          "2027-01-03",
+          "2027-01-06",
+          "2027-01-09",
+          "2027-01-12",
+          "2027-01-15",
+          "2027-01-18",
+          "2027-01-21"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 26,
+        "partialVisits": 2,
+        "calibrationVisits": 2,
+        "confirmedWorkingSets": 52,
+        "calibrationSets": 8,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 16640
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "a97efd2e98fb9e9ccfb11e73f27f95d53c381a73b3d791fdc14a0f14bf499635",
+      "traceFile": "trace-08.json"
+    },
+    {
+      "id": "09",
+      "title": "Oversized next implement",
+      "purpose": "10-to30 inventory gap must produce an explained limit.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 114,
+        "projectedSets": 33,
+        "issuedPrescriptions": 17
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 3520
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "ccac68e27bb634d56af5463ed199fb51777123862af3cfe34bb03ace3b052f75",
+      "traceFile": "trace-09.json"
+    },
+    {
+      "id": "10",
+      "title": "Kilogram dumbbell inventory",
+      "purpose": "Use original attainable kg entries while applying lb-defined policy bounds exactly.",
+      "requestedVisits": 18,
+      "observedVisits": 18,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 135,
+        "projectedSets": 40,
+        "issuedPrescriptions": 23
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16",
+          "2026-12-19",
+          "2026-12-22"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 17,
+        "partialVisits": 1,
+        "calibrationVisits": 1,
+        "confirmedWorkingSets": 34,
+        "calibrationSets": 6,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 6102.395417277409
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "4ff0da2c569a177a20c5924e1e7c60ec8d098a78c30c1493ee2dd88da0fdcc97",
+      "traceFile": "trace-10.json"
+    },
+    {
+      "id": "11",
+      "title": "Measured optional final-set extras",
+      "purpose": "Extras may accelerate rep-only proposals, never pool sets or skip baseline gates.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 118,
+        "projectedSets": 35,
+        "issuedPrescriptions": 19
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 3,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 4200
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "0cbb46f97ac28437d2eb1a6f43981ba610cb22bbfde78ded9d1f6abcb92c33f6",
+      "traceFile": "trace-11.json"
+    },
+    {
+      "id": "12",
+      "title": "Unknown timing with extras logged",
+      "purpose": "Truthful extra reps remain but unknown timing disables extras acceleration.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 116,
+        "projectedSets": 34,
+        "issuedPrescriptions": 18
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 3790
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "ef7bfbde15894d10eb65cbab4142b0357602ee1f4030bca86be3f02a570af4bd",
+      "traceFile": "trace-12.json"
+    },
+    {
+      "id": "13",
+      "title": "One difficult day",
+      "purpose": "One short exposure affects guidance without deleting established history.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 25,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1960
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "912ec023de1cd1e50c68cd2c0ad3f6931495d375b7c9f27fb9305697ee95141b",
+      "traceFile": "trace-13.json"
+    },
+    {
+      "id": "14",
+      "title": "Repeated unknown-cause shorts",
+      "purpose": "Unanswered cause cannot leave a repeated baseline target permanently stuck.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 25,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1680
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "f28d5a5afbb2148e793a685a97675ef7a2f34501647cf165ffd7f21ca0284e0c",
+      "traceFile": "trace-14.json"
+    },
+    {
+      "id": "15",
+      "title": "Two effort-related short dates",
+      "purpose": "Explicit effort cause uses its distinct difficulty gate.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 25,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1680
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "3145fdf23ce03fdeeefcea647140234a541a6ea3b31716cb57cbb10cc211886e",
+      "traceFile": "trace-15.json"
+    },
+    {
+      "id": "16",
+      "title": "Complete but hard",
+      "purpose": "Completed targets with hard feedback are difficulty rather than success.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 25,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1760
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "4e1b7099668abe979cbbd65d30832ba399a45333b8e53e9f67cc97af80653050",
+      "traceFile": "trace-16.json"
+    },
+    {
+      "id": "17",
+      "title": "A clean success resets difficulty",
+      "purpose": "Hard dates separated by successful work are not one consecutive streak.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 25,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2000
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "a5f91031fe243762981b5e2b9594445a6590000502f1130eeefdcd7ffa787a33",
+      "traceFile": "trace-17.json"
+    },
+    {
+      "id": "18",
+      "title": "Equipment interruptions",
+      "purpose": "Tagged interruptions stay truthful and neutral for adaptation evidence.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 25,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2480
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "1be8b1c454fb60093192a1e00b4fbaee57d73da848bdf78dfa53d2233c827772",
+      "traceFile": "trace-18.json"
+    },
+    {
+      "id": "19",
+      "title": "Actual substitute load",
+      "purpose": "Available lighter dumbbells cannot satisfy the heavier issued-load gate.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 88,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2480
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "bc03babbd6534242758ec24f118484b679ce7801965669abcc0ef5ed1b9186bc",
+      "traceFile": "trace-19.json"
+    },
+    {
+      "id": "20",
+      "title": "Current implement disappears",
+      "purpose": "Verified lower inventory substitution rather than rounding up.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 25,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1680
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "ef0de6d8af372e5e12bd051067ea730860d9ca252491e216fd90a23e269ab11a",
+      "traceFile": "trace-20.json"
+    },
+    {
+      "id": "21",
+      "title": "Manual oversized actual",
+      "purpose": "Out-of-policy observed60lb remains history and grants no future authority.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 88,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 3580
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "a12210bac6140ad4d334c785902e2255e1a142fded4990de38a3c2e61d6cd580",
+      "traceFile": "trace-21.json"
+    },
+    {
+      "id": "22",
+      "title": "Warm-up pain latch",
+      "purpose": "Evidence-excluded warm-up pain still stops the movement until explicit resolution.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 80,
+        "projectedSets": 20,
+        "issuedPrescriptions": 10
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "B",
+        "completedVisits": 9,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 18,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1840
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "600c9eb5cac2ea52de8358391edb4ae698ff781419d441dc2b343b24dceaf3e3",
+      "traceFile": "trace-22.json"
+    },
+    {
+      "id": "23",
+      "title": "Pain flag corrected away",
+      "purpose": "Actual correction cannot erase a safety latch.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 81,
+        "projectedSets": 20,
+        "issuedPrescriptions": 10
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 9,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 19,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1960
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "90fcfcded88483a2e83927468e0111c0c06d10ac98411a27051bedd2c977e096",
+      "traceFile": "trace-23.json"
+    },
+    {
+      "id": "24",
+      "title": "Sibling press after pain",
+      "purpose": "Horizontal-push stop follows the movement family across variants.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 82,
+        "projectedSets": 21,
+        "issuedPrescriptions": 11
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 9,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 19,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1860
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "f44c6fc5e2e34b0ab89c9c52b25376dbf9380119bf172504bd763f0d7a56eabb",
+      "traceFile": "trace-24.json"
+    },
+    {
+      "id": "25",
+      "title": "Return after fifteen days",
+      "purpose": "Frozen85% check remains stable while further increases are deliberately declined.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 114,
+        "projectedSets": 33,
+        "issuedPrescriptions": 17
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16",
+          "2026-12-19",
+          "2026-12-22",
+          "2026-12-25",
+          "2026-12-28",
+          "2026-12-31"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2200
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "7c8490d4506cef928af103926367ab177cd8add771a6a90445513a38c62384e1",
+      "traceFile": "trace-25.json"
+    },
+    {
+      "id": "26",
+      "title": "Another gap during return",
+      "purpose": "Re-entering unfinished return does not compound85% of transient load.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 114,
+        "projectedSets": 33,
+        "issuedPrescriptions": 17
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-22",
+          "2026-12-25",
+          "2026-12-28",
+          "2026-12-31",
+          "2027-01-03",
+          "2027-01-06",
+          "2027-01-09",
+          "2027-01-12",
+          "2027-01-15"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2200
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "2c1d72199b5ee6d7b27d039cb4be717862fd29d0cdefaf24b505f2a1551872e0",
+      "traceFile": "trace-26.json"
+    },
+    {
+      "id": "27",
+      "title": "Fresh start after forty-three days",
+      "purpose": "Archive old capacity and use current first-use selectors.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 88,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2027-01-01",
+          "2027-01-04",
+          "2027-01-07",
+          "2027-01-10",
+          "2027-01-13",
+          "2027-01-16"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1560
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "ecdc0894ae16d5a759ba9f4f7ec649e165d13cfe12f8b2bcf2b62f4f799d35e5",
+      "traceFile": "trace-27.json"
+    },
+    {
+      "id": "28",
+      "title": "Home push-up progression",
+      "purpose": "Bodyweight check initializes reps with no external tonnage.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 25,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 1,
+        "bodyweightReps": 258,
+        "externalTonnageByConvention": {},
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "1ee68f0ad3fe8c03af0a32e16b1aa7c783bef16ad4f39e5a6e7e1a9d66499d14",
+      "traceFile": "trace-28.json"
+    },
+    {
+      "id": "29",
+      "title": "Same dead bug at home and gym",
+      "purpose": "One exact identity shares history across settings.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 25,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 1,
+        "bodyweightReps": 476,
+        "externalTonnageByConvention": {},
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "80fe5af389627129d168798fd60b7c87fee7d7840fff7a0fd287d983f540283f",
+      "traceFile": "trace-29.json"
+    },
+    {
+      "id": "30",
+      "title": "A home week between gym visits",
+      "purpose": "Home attendance preserves due gym rotation and unused-lift absence.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 116,
+        "projectedSets": 34,
+        "issuedPrescriptions": 18
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-15",
+          "2026-11-20",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16",
+          "2026-12-19",
+          "2026-12-22"
+        ],
+        "nextGymTemplate": "B",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 2,
+        "bodyweightReps": 58,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 1800
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "e377c16a2ab09a346bc3cbe4804b828505d5fb1151178a30fbab8c28197eb8d0",
+      "traceFile": "trace-30.json"
+    },
+    {
+      "id": "31",
+      "title": "Correction before unstarted increase",
+      "purpose": "Retract an earlier success and recompute only future guidance.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 89,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2560
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "f8881e9c4a15c7841baf0fd6867fc050026f4e5a74bf80af928cd5176f3018af",
+      "traceFile": "trace-31.json"
+    },
+    {
+      "id": "32",
+      "title": "Correction after higher work",
+      "purpose": "Completed downstream issued and actual performance remains intact.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 117,
+        "projectedSets": 34,
+        "issuedPrescriptions": 18
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 3510
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "259c581b7626b1d1d59fdc5e8e78040436302db0116cb716ea47e05f09a2a5f0",
+      "traceFile": "trace-32.json"
+    },
+    {
+      "id": "33",
+      "title": "Duplicate reconnect traffic",
+      "purpose": "Every performed set is retried, without duplicate evidence or attendance.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 88,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2580
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "5b864eb666ee20712ede35810dafe8aa48f555bf242da5400b8b381fb0740d85",
+      "traceFile": "trace-33.json"
+    },
+    {
+      "id": "34",
+      "title": "Conflicting corrections and resolution",
+      "purpose": "Both candidates remain, affected guidance blocks, referenced selection resolves.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 113,
+        "projectedSets": 30,
+        "issuedPrescriptions": 16
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 14,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 28,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 3020
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "4d888b8115e35307004eece34907f3aeea978a88a5fe2d3011f2cbc2f5d7df62",
+      "traceFile": "trace-34.json"
+    },
+    {
+      "id": "35",
+      "title": "Several visits on the same date",
+      "purpose": "No same-date attendance, rotation or success-gate farming.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 114,
+        "projectedSets": 33,
+        "issuedPrescriptions": 17
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 3120
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "883e72b11a48a51f40669b64cdce5bca1d8478a13a999f8bed506690462d03a1",
+      "traceFile": "trace-35.json"
+    },
+    {
+      "id": "36",
+      "title": "Midnight and DST continuity",
+      "purpose": "Frozen training dates and elapsed time survive calendar boundaries.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 88,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-05",
+          "2026-11-08",
+          "2026-11-11",
+          "2026-11-14",
+          "2026-11-17",
+          "2026-11-20",
+          "2026-11-23",
+          "2026-11-26",
+          "2026-11-29",
+          "2026-12-02"
+        ],
+        "nextGymTemplate": "B",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2540
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "413877a03b23f10570331adf00f4d12376b9b6be70f02919fa2257ca2aee93ab",
+      "traceFile": "trace-36.json"
+    },
+    {
+      "id": "37",
+      "title": "Future clock quarantine and void",
+      "purpose": "A bad future record cannot poison unrelated valid work.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 90,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2580
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "0ae9d321820b4dfa1b9f1db408afd9ce97fa8b1a7b2d99825bae463aed02c30b",
+      "traceFile": "trace-37.json"
+    },
+    {
+      "id": "38",
+      "title": "Repeated partial visits",
+      "purpose": "One performed set is not a complete two-set exposure.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 108,
+        "projectedSets": 26,
+        "issuedPrescriptions": 18
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 8,
+        "partialVisits": 8,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2440
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "85c342e5cf79fb486f55d9722972c565cfc32e0011707937f4bbb2cd1abe47ba",
+      "traceFile": "trace-38.json"
+    },
+    {
+      "id": "39",
+      "title": "Expired visit retains actuals",
+      "purpose": "Late logged work stays truthful but cannot revive an expired visit.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 24,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "B",
+        "completedVisits": 11,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 22,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2380
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "b366fc3c3f485e49d567fdbc46398d4d429d0534acb3138e299622a5fe93655d",
+      "traceFile": "trace-39.json"
+    },
+    {
+      "id": "40",
+      "title": "Unilateral short side",
+      "purpose": "Stronger-side reps cannot compensate for the weaker side.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 86,
+        "projectedSets": 25,
+        "issuedPrescriptions": 13
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 1,
+        "bodyweightReps": 464,
+        "externalTonnageByConvention": {},
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "54d950085c860ade50da167aed1e6af73df41b1c147de8bc753f443c839f7859",
+      "traceFile": "trace-40.json"
+    },
+    {
+      "id": "41",
+      "title": "Partial return crosses a visit boundary",
+      "purpose": "A single return set refreshes exposure but cannot erase the frozen return epoch or satisfy its success gate.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 113,
+        "projectedSets": 32,
+        "issuedPrescriptions": 17
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16",
+          "2026-12-19",
+          "2026-12-22",
+          "2026-12-25",
+          "2026-12-28",
+          "2026-12-31"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 15,
+        "partialVisits": 1,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 31,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2700
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "6bc7ddf06ca24d163a22a8cdfea4d717c85b24f5f62ac70af5ceeebac023a51c",
+      "traceFile": "trace-41.json"
+    },
+    {
+      "id": "42",
+      "title": "Time-neutral return crosses a visit boundary",
+      "purpose": "Completed cause:time return work counts attendance but remains neutral for return re-establishment.",
+      "requestedVisits": 16,
+      "observedVisits": 16,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 114,
+        "projectedSets": 33,
+        "issuedPrescriptions": 17
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-12-01",
+          "2026-12-04",
+          "2026-12-07",
+          "2026-12-10",
+          "2026-12-13",
+          "2026-12-16",
+          "2026-12-19",
+          "2026-12-22",
+          "2026-12-25",
+          "2026-12-28",
+          "2026-12-31"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 16,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 32,
+        "calibrationSets": 1,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2760
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "98a26e9c8bf99be4972012fa2358d4bb2a21726e6f0818fcc61ba816a13570f1",
+      "traceFile": "trace-42.json"
+    },
+    {
+      "id": "43",
+      "title": "Ordinary work with a two-minute device clock offset",
+      "purpose": "Every occurrence is two minutes ahead of trusted receipt; authority becomes valid at occurrence time and ordinary progress remains possible.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 88,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2580
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "787e7521e1f55e99ce3dcb69bba36de84fddd3a583b282751c9cce9fa27e80bd",
+      "traceFile": "trace-43.json"
+    },
+    {
+      "id": "44",
+      "title": "Manual60 working actual is short",
+      "purpose": "An issued working load10 recorded as60 with short reps cannot authorize a higher easier set.",
+      "requestedVisits": 12,
+      "observedVisits": 12,
+      "status": "passed",
+      "invariantFailures": [],
+      "counts": {
+        "journalEvents": 88,
+        "projectedSets": 26,
+        "issuedPrescriptions": 14
+      },
+      "finalSummary": {
+        "attendanceDates": [
+          "2026-11-01",
+          "2026-11-04",
+          "2026-11-07",
+          "2026-11-10",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-19",
+          "2026-11-22",
+          "2026-11-25",
+          "2026-11-28",
+          "2026-12-01",
+          "2026-12-04"
+        ],
+        "nextGymTemplate": "A",
+        "completedVisits": 12,
+        "partialVisits": 0,
+        "calibrationVisits": 0,
+        "confirmedWorkingSets": 24,
+        "calibrationSets": 2,
+        "bodyweightReps": 0,
+        "externalTonnageByConvention": {
+          "per_hand:lb": 2960
+        },
+        "conflicts": 0,
+        "pending": 0
+      },
+      "journalSha256": "447e76822a1b0cd324c343c47c92957ee03d245ddc983bd26b37296043eaefa6",
+      "traceFile": "trace-44.json"
+    }
+  ]
+}
