@@ -4,7 +4,7 @@ Before editing, read `~/.agents/project-template/_SPEC.md`, section "AGENDA.md".
 
 ## ACTIVE (one deliverable)
 
-- **Project: Adaptive Lifting → Finalize the gym and home training plan.** Why: Evan approved continued planning around three weekly visits, a 30-minute target and a bodyweight fallback; initial exercise variants, starting loads and progression policies need definition for his fresh training baseline. Plan: `TRAINING-PLAN.md`
+- **Project: Adaptive Lifting → Choose the workout UX/UI design direction with Claude Design.** Why: Evan wants a fresh visual direction around guided workouts, fast adjustments and controls usable in the gym. Plan: `CLAUDE-DESIGN-PROMPT.md`
 
 ## UP NEXT (three slots total, including FOLLOW-UP)
 
@@ -17,6 +17,8 @@ Before editing, read `~/.agents/project-template/_SPEC.md`, section "AGENDA.md".
 ### FOLLOW-UP
 
 ## FOR SURE (committed, unscheduled)
+
+- **Project: Adaptive Lifting → Finalize the gym and home training plan.** Why: Initial exercise variants, starting loads and progression policies need definition for Evan's fresh training baseline, followed by scenario simulations before the engine guides real workouts. Plan: `TRAINING-PLAN.md`
 
 - **Project: Adaptive Lifting → Test AI weekly analysis on real multi-session data.** Why: The `/api/ai/analyze` endpoint works but has only seen synthetic input; verify it once Evan has logged a few real workouts.
 
