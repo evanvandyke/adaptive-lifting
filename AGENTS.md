@@ -18,13 +18,14 @@ The handful of documents that are authoritative for this project — the ones a 
 - `README.md` — product overview, legacy-versus-candidate boundary, setup and validation commands.
 - `GYM-EXPERIENCE.md` + `PROGRAM-DIRECTION.md` — guided workout behavior and Evan's confirmed constraints.
 - `ENGINE-SPEC.md` + `engine/src/` — exact standalone candidate policy and implementation; read before changing engine or workout behavior. `ENGINE-REVIEW.md` and `engine/reports/SUMMARY.md` record review and executed-snapshot evidence.
+- `src/app/lift/` — the live guided workout ("Signal") at `/lift`, where sign-in lands: `coach/coach.ts` plans each visit (tests: `npm run test:coach`), `visit/use-visit.ts` runs it, `store.ts` keeps it on the phone and syncs to Supabase, `signal/` is the screens. `/lift/preview` is a dev-only no-login copy. Tables: `supabase/signal-tables.sql`.
 - `CLAUDE-DESIGN-PROMPT.md` — visual freedom and gym usability requirements; read before UX/UI work.
 - `Implementation-plan.md` — historical original design/build plan, AI prompts and schema; use it for original intent, not proof of current behavior.
 - `src/lib/` + `src/app/(protected)/workout/actions.ts` — legacy app types, prompts, motivation and current workout creation/completion behavior. The separate legacy progression helper has no caller in this flow.
 - `src/middleware.ts` — auth protection + onboarding redirect (the source of several early bugs; read before touching auth/routing).
 
 ## Project overview
-Adaptive Lifting is a strength-training PWA for Evan's return to lifting. The app uses Next.js 16, Supabase and Claude API on Vercel. The standalone experimental engine in `engine/` is separate from the legacy workout flow; integration must be explicit. Research informs the direction, while exact numerical rules remain testable engineering hypotheses. Visual redesign follows the Claude Design handoff rather than assuming the existing styling is a requirement.
+Adaptive Lifting is a strength-training PWA for Evan's return to lifting. The app uses Next.js 16, Supabase and Claude API on Vercel. The live flow is the Signal workout at `/lift`, planned by its own small coach module. The standalone experimental engine in `engine/` is parked and connected to nothing, and the older dashboard/workout pages are legacy; integration of either must be explicit. Research informs the direction, while exact numerical rules remain testable engineering hypotheses. Visual redesign follows the Claude Design handoff rather than assuming the existing styling is a requirement.
 
 ## Adaptive Lifting is not what you'd assume
 - **Next.js here is not the Next.js in your training data.** This version has breaking changes to APIs, conventions, and file structure. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code.

@@ -4,7 +4,7 @@ Before editing, read `~/.agents/project-template/_SPEC.md`, section "AGENDA.md".
 
 ## ACTIVE (one deliverable)
 
-- **Project: Adaptive Lifting → Review the Claude Design workout UX/UI proposal.** Why: Evan will bring the design back for feedback against the guided flow, quick adjustments and gym usability requirements. Plan: `CLAUDE-DESIGN-PROMPT.md`
+- **Project: Adaptive Lifting → Fix what Evan's first real Signal workout on his phone turns up.** Why: `/lift` is live but has only been run in a desktop browser; his phone, his hands and his reports decide what changes next. Plan: `Docs_Compressions/session-03-2026-11-19-signal-workout-built-and-live.md`
 
 ## UP NEXT (three slots total, including FOLLOW-UP)
 
@@ -12,9 +12,9 @@ Before editing, read `~/.agents/project-template/_SPEC.md`, section "AGENDA.md".
 
 2. **Project: Adaptive Lifting → Manually test the nutrition tracker.** Why: The protein page and dashboard protein card were built by a sub-agent and never hand-verified; confirm the quick-tap buttons and 7-day bar chart persist and render.
 
-3.
-
 ### FOLLOW-UP
+
+- reminder · due: 2026-11-20 · run `supabase/signal-tables.sql` once in the Supabase SQL editor so workouts sync across devices and problem reports reach the database (ref: session 03 note)
 
 ## FOR SURE (committed, unscheduled)
 

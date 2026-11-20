@@ -6,6 +6,10 @@ A strength-training PWA being redesigned around guided workouts, confirmed perfo
 
 ## Current implementation boundary
 
+**The live workout is Signal, at `/lift`** (`src/app/lift/`), and sign-in lands there. A small coach module (`coach/coach.ts`, `npm run test:coach`) plans each visit from the history of finished visits; the visit runs in a reducer (`visit/use-visit.ts`); the phone keeps everything in `localStorage` first and syncs to Supabase when it can (`store.ts`, tables in `supabase/signal-tables.sql`, run once in the SQL editor). `/lift/preview` is the same app with no login, in development only. A "!" tab on every screen sends a problem report with the page and workout state attached.
+
+Everything below this paragraph describes the original application and the parked engine candidate. Those pages still exist at their old addresses, and neither is connected to Signal.
+
 The existing workout flow in this repository is the original application: it seeds weights from previous completed sets and stores progression advice as text. The separate legacy `calculateProgression` function is not called by that flow. The original feature inventory and training tables below describe that build and its intended rules, not the new engine.
 
 The isolated candidate lives in [`engine/`](engine/README.md). Its pure functions cover prescriptions, calibration, progression, visit planning and event replay. It has no connection to the live workout UI, authentication or Supabase writes. Use [`ENGINE-SPEC.md`](ENGINE-SPEC.md) for its exact experimental policy, [`ENGINE-REVIEW.md`](ENGINE-REVIEW.md) for review status, and the [latest simulation report](engine/reports/SUMMARY.md) for the executed snapshot and limitations. A passing software check does not establish training effectiveness or physical suitability.
