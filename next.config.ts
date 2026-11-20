@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // The project AGENTS.md already carries the Next.js warning; stop `next dev` from appending its own copy.
+  agentRules: false,
 };
 
 export default nextConfig;

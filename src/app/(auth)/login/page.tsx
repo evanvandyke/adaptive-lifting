@@ -29,7 +29,7 @@ export default async function LoginPage({
       redirect(`/login?error=${encodeURIComponent(error.message)}`);
     }
 
-    redirect("/dashboard");
+    redirect("/lift");
   }
 
   return (

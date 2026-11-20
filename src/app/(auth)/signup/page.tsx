@@ -29,7 +29,7 @@ export default async function SignupPage({
     }
 
     const supabase = await createClient();
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -41,7 +41,12 @@ export default async function SignupPage({
       redirect(`/signup?error=${encodeURIComponent(error.message)}`);
     }
 
-    redirect("/onboarding");
+    // With email confirmation on there is no session yet: say so, instead of bouncing to a bare login.
+    if (!data.session) {
+      redirect(`/login?message=${encodeURIComponent("Check your email for a confirmation link, then sign in.")}`);
+    }
+
+    redirect("/lift");
   }
 
   return (

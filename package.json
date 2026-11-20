@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "test:engine": "node engine/run.mjs test",
+    "test:coach": "node --test src/app/lift/coach/coach.test.ts",
     "simulate:engine": "node engine/run.mjs simulate",
     "check:engine": "node engine/run.mjs all"
   },

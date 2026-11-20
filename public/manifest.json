@@ -2,10 +2,10 @@
   "name": "Adaptive Lifting",
   "short_name": "Lifting",
   "description": "Auto-adjusting strength training. Show up. Get stronger. Don't quit.",
-  "start_url": "/dashboard",
+  "start_url": "/lift",
   "display": "standalone",
-  "background_color": "#0B0F1A",
-  "theme_color": "#0B0F1A",
+  "background_color": "#1c1a14",
+  "theme_color": "#1c1a14",
   "orientation": "portrait",
   "icons": [
     {

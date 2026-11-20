@@ -34,8 +34,12 @@ export const updateSession = async (request: NextRequest) => {
     request.nextUrl.pathname.startsWith("/login") ||
     request.nextUrl.pathname.startsWith("/signup");
   const isOnboarding = request.nextUrl.pathname.startsWith("/onboarding");
+  // The no-sign-in preview of the workout exists on a developer's machine only.
+  const isPreview =
+    process.env.NODE_ENV !== "production" &&
+    request.nextUrl.pathname.startsWith("/lift/preview");
   const isPublic =
-    request.nextUrl.pathname === "/" || isAuthPage || isOnboarding;
+    request.nextUrl.pathname === "/" || isAuthPage || isOnboarding || isPreview;
 
   if (!user && !isPublic) {
     const url = request.nextUrl.clone();
@@ -43,9 +47,10 @@ export const updateSession = async (request: NextRequest) => {
     return NextResponse.redirect(url);
   }
 
-  if (user && isAuthPage) {
+  // Signed in: the workout is the front door.
+  if (user && (isAuthPage || request.nextUrl.pathname === "/")) {
     const url = request.nextUrl.clone();
-    url.pathname = "/dashboard";
+    url.pathname = "/lift";
     return NextResponse.redirect(url);
   }
 
