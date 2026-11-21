@@ -37,7 +37,6 @@ Everything still open on the live workout at `/lift`. Work top to bottom inside 
 ## Housekeeping
 
 - [ ] Root layout blocks pinch-zoom (`maximumScale: 1`, `userScalable: false` in `src/app/layout.tsx`); the sign-in pages allow it. Decide for Signal and make them agree.
-- [ ] Next.js is 16.4.3; session 03 recorded moderate advisories fixed in 16.4.6. Upgrade and re-run the checks.
-- [ ] `npx eslint` across the whole repo, now that the old pages are gone: clear what remains or scope the lint script.
+- [ ] `npx eslint src` shows one warning since Next 16.4.6: `window.location.assign('/login')` after sign-out in `src/app/lift/lift-app.tsx`. The full reload is deliberate (it clears everything in memory); silence the rule there with a comment, or switch to the router and re-test sign-out.
 - [ ] `scripts/generate-icons.js` makes only the 192 and 512 icons; fold in the 180 home screen icon and `favicon.ico` so one command rebuilds all of them from `public/icons/icon.svg`.
 - [ ] Intro video is live under the sign-in form. Watch it once on a real iPhone: plays inline, sound works, loads quickly on cellular. To swap in a new cut: `npm run intro:add -- <file>`.
