@@ -1,0 +1,166 @@
+/* Tokens and slab geometry from ../lift/signal/signal.module.css (ink ground). */
+.shell,
+:global(html):has(.shell) {
+  --ink: #1c1a14;
+  --yellow: #ffc800;
+  --quiet: #b89000;
+  --ledge: #8f7000;
+}
+
+/* Presence-scoped: these rules stop matching when auth unmounts, even if CSS stays loaded. */
+:global(html):has(.shell),
+:global(body):has(.shell) {
+  background: var(--ink);
+}
+
+:global(body):has(.shell) > :global(.aurora-container) {
+  display: none;
+}
+
+.shell {
+  box-sizing: border-box;
+  flex: 1;
+  min-height: 100svh;
+  background: var(--ink);
+  color: var(--yellow);
+  color-scheme: dark;
+  font-family: var(--signal-font), system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  padding: calc(env(safe-area-inset-top, 0px) + 32px)
+    calc(env(safe-area-inset-right, 0px) + 20px)
+    calc(env(safe-area-inset-bottom, 0px) + 24px)
+    calc(env(safe-area-inset-left, 0px) + 20px);
+}
+
+.shell *,
+.shell *::before,
+.shell *::after {
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  max-width: 390px;
+  margin-inline: auto;
+}
+
+.header { margin-bottom: 36px; }
+.wordmark {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+.wordmark svg { display: block; width: 100%; height: auto; }
+.tagline { margin: 10px 0 0; color: var(--quiet); }
+.title {
+  margin: 0 0 24px;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+.form { display: grid; gap: 20px; }
+.label { display: block; margin-bottom: 8px; font-weight: 800; }
+.input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 56px;
+  border: 2px solid var(--yellow);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: var(--ink);
+  color: var(--yellow);
+  caret-color: var(--yellow);
+  font: inherit;
+  font-size: 18px;
+  appearance: none;
+  scroll-margin-block: 24px;
+}
+.input::placeholder { color: var(--quiet); opacity: 1; }
+.input:focus {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+  box-shadow: inset 0 0 0 1px var(--yellow);
+}
+.input:autofill {
+  box-shadow: inset 0 0 0 1000px var(--ink);
+  -webkit-text-fill-color: var(--yellow);
+}
+.input:autofill:focus { outline: 3px solid var(--yellow); outline-offset: 3px; }
+
+.notice,
+.error {
+  margin: 0 0 24px;
+  padding-left: 14px;
+  overflow-wrap: anywhere;
+}
+.error { border-left: 5px solid var(--yellow); }
+.error strong { font-weight: 900; }
+.notice { border-left: 2px solid var(--quiet); }
+
+.slabWrap {
+  position: relative;
+  display: block;
+  margin-top: 8px;
+  padding-bottom: 5px;
+}
+.ledge {
+  position: absolute;
+  inset: auto 0 0;
+  height: 30px;
+  border-radius: 0 0 12px 12px;
+  background: var(--ledge);
+}
+.slab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 72px;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: var(--yellow);
+  color: var(--ink);
+  font: inherit;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 60ms linear;
+}
+.slab:active { transform: translateY(5px); }
+.slab:focus-visible,
+.word:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+.secondary { margin: 16px 0 0; }
+.word {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-right: 16px;
+  color: var(--yellow);
+  font-size: 17px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  touch-action: manipulation;
+}
+.word:focus-visible { outline-offset: 0; }
+.word:active { text-decoration-thickness: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .slab { transition: none; }
+  .slab:active { transform: none; outline: 3px solid var(--yellow); outline-offset: 3px; }
+}

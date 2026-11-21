@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title">
+  <title id="title">The loaded bar / yellow ground</title>
+  <rect width="1024" height="1024" fill="#ffc800"/>
+  <g fill="#1c1a14" color="#1c1a14"><path d="M152 480H872V544H152Z"/>
+  <rect x="176" y="374" width="64" height="276" rx="12"/>
+  <rect x="276" y="290" width="92" height="444" rx="12"/>
+  <rect x="656" y="290" width="92" height="444" rx="12"/>
+  <rect x="784" y="374" width="64" height="276" rx="12"/></g>
+</svg>

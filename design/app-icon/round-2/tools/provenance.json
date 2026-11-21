@@ -1,0 +1,27 @@
+{
+  "extraction": "Ran node design/app-icon/round-2/tools/extract.mjs. Node v22.22.0 imported the actual src/app/lift/signal/lifter/rig.ts using native TypeScript stripping and called scene(move,t). No geometry was reconstructed from an image.",
+  "snapshots": [
+    "goblet at t=1",
+    "bench at t=0 and t=1",
+    "tall at t=1",
+    "victory at t=1",
+    "lateralraise at t=1"
+  ],
+  "d": "Uses scene(bench,0), the actual dumbbell bench lockout. Joint coordinates, head radius, limb lengths, dumbbell boxes and bench are unchanged. Uniform scale 4.65, y flip, source small-size stroke multiplier 1.2. Floor omitted. Head moved to a last layer with halo=true to preserve its disc at 60px; no coordinate moved.",
+  "e": "Retains actual scene(tall,1) head, torso and legs. Arms rotate about extracted shoulder points to 74 degrees, with exact 32+30 unit segments, 13-unit stroke and 1.2 bolding. Loaded bar adds the drawings.tsx plate-height ratio 1:.72, rounded boxes, sleeve and collars.",
+  "f": "Head-height end-on bench-press projection. Body hidden behind a 13-unit disc enlarged by perspective. Arms use 13-unit round-capped strokes with far/near tones; bench is second tone. Left A and right L are actual Overpass 900 outlined glyphs combined with handles and endcaps.",
+  "f2": "Same end-on pose as F, with the rig dumbbell construction: 5-unit handle, ends at +/-12, each 10x20 with radius2.5, uniformly scaled by6. More readable than F.",
+  "g": "Refines round-1 C by adding one character motif: the rig-style 13-unit disc head and rounded grips at the bar. Stepped plates remain simple.",
+  "rendering": "/opt/homebrew/bin/rsvg-convert for all 1024,180,60 icon PNGs; project node_modules sharp for sheet.png. No browser used.",
+  "font": {
+    "family": "Overpass",
+    "weight": 900,
+    "method": "fontTools variable-font instantiation; HarfBuzz shaping; SVGPathPen outlines",
+    "sha256": "970717df17a7f9911dee45f60695d05bfa9d745fa0a11fc5c348371fa21f0073"
+  },
+  "visual_review": "Opened sheet.png and all ten final 60px PNGs. Replaced initial goblet D because hand/weight merged; simplified E from three plates per side to two; added the Figure-style gap to the unchanged D head disc. Rechecked final sheet.",
+  "recommendation": "F2 on yellow. Its large head-first viewpoint and plain dumbbells are distinctive and read at 60px; F letter shapes compete with the weights.",
+  "limitations": "F was honestly attempted, but the A/L glyphs compromise the dumbbell silhouette. F2 is included as the stronger version. HTML was generated without launching a browser, as requested.",
+  "scope": "All writes are under design/app-icon/round-2/. Round-1 hashes verified unchanged. No providers, subagents, commits, agenda/memory/shared-file edits or app changes.",
+  "wrap": "Final deliverables, scope and checks reviewed. Session-note, agenda, memory and commit steps skipped under the explicit user write boundary."
+}

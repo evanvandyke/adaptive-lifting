@@ -1,0 +1,20 @@
+{
+  "concepts": {
+    "h": "Four monotonically increasing plate heights on a level front-view bar with shaft, collars, and thicker sleeves.",
+    "i": "Exact E figure subtree copied byte-for-byte, same position and scale; equipment replaced with four ascending plates.",
+    "j": "Balanced loaded bar with one detached outlined plate at the right end; 26-unit stroke = 1.52 pixels at 60 px."
+  },
+  "figure": "No joints, strokes, proportions, or figure transforms changed from round 2 E. Its front-view pose uses only near tone, matching the source. No second tone added to imply state.",
+  "font": {
+    "family": "Overpass",
+    "weight": 900,
+    "method": "Copied round-2 font; instantiated at wght=900, shaped with HarfBuzz, converted to SVG paths by fontTools.",
+    "sha256": "970717df17a7f9911dee45f60695d05bfa9d745fa0a11fc5c348371fa21f0073"
+  },
+  "renderer": "/opt/homebrew/bin/rsvg-convert",
+  "composition": "sharp from project node_modules; no browser",
+  "scope": "Only design/app-icon/round-3/ written. No providers, subagents, app changes, shared-file changes, agenda or memory writes, or commits.",
+  "recommendation": "H on yellow is the strongest challenger to E: the plate heights convey progression at 60 px. E remains the more personal mark because of the app character.",
+  "omissions": "H2 and K are optional and omitted: the three required concepts supply distinct comparisons without adding weaker variants.",
+  "wrap": "Read wrap skill. Artifact checks and handoff completed here; project-note, agenda, memory and commit writes skipped under the explicit user boundary."
+}

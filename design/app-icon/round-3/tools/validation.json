@@ -1,0 +1,175 @@
+{
+  "icons": [
+    {
+      "file": "concept-h-yellow.svg",
+      "bounds": [
+        132,
+        278,
+        891,
+        745
+      ],
+      "palette": [
+        "#ffc800",
+        "#1c1a14"
+      ],
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "opaque": true
+    },
+    {
+      "file": "concept-h-ink.svg",
+      "bounds": [
+        132,
+        278,
+        891,
+        745
+      ],
+      "palette": [
+        "#1c1a14",
+        "#ffc800"
+      ],
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "opaque": true
+    },
+    {
+      "file": "concept-i-yellow.svg",
+      "bounds": [
+        148,
+        103,
+        875,
+        890
+      ],
+      "palette": [
+        "#ffc800",
+        "#1c1a14"
+      ],
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "opaque": true
+    },
+    {
+      "file": "concept-i-ink.svg",
+      "bounds": [
+        148,
+        103,
+        875,
+        890
+      ],
+      "palette": [
+        "#1c1a14",
+        "#ffc800"
+      ],
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "opaque": true
+    },
+    {
+      "file": "concept-j-yellow.svg",
+      "bounds": [
+        126,
+        302,
+        919,
+        721
+      ],
+      "palette": [
+        "#ffc800",
+        "#1c1a14"
+      ],
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "opaque": true
+    },
+    {
+      "file": "concept-j-ink.svg",
+      "bounds": [
+        126,
+        302,
+        919,
+        721
+      ],
+      "palette": [
+        "#1c1a14",
+        "#ffc800"
+      ],
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "opaque": true
+    }
+  ],
+  "wordmarks": [
+    {
+      "file": "wordmark-e.svg",
+      "dimensions": [
+        1728,
+        472
+      ],
+      "opaque": true,
+      "outlined": true
+    },
+    {
+      "file": "wordmark-e-yellow.svg",
+      "dimensions": [
+        1728,
+        472
+      ],
+      "opaque": true,
+      "outlined": true
+    },
+    {
+      "file": "wordmark-h.svg",
+      "dimensions": [
+        1728,
+        472
+      ],
+      "opaque": true,
+      "outlined": true
+    },
+    {
+      "file": "wordmark-h-yellow.svg",
+      "dimensions": [
+        1728,
+        472
+      ],
+      "opaque": true,
+      "outlined": true
+    }
+  ],
+  "figure": "I includes exact round-2 E character subtree in both palettes",
+  "outsideScope": {
+    "checked": 561,
+    "earlierRounds": "All round-1 and round-2 hashes match",
+    "rigAndDrawings": "All source hashes match",
+    "concurrentChanges": [
+      "tsconfig.tsbuildinfo",
+      "next-env.d.ts",
+      "src/app/(auth)/layout.tsx",
+      "src/app/(auth)/signup/page.tsx",
+      "src/app/(auth)/login/page.tsx"
+    ],
+    "note": "These unrelated files changed during the task. No command in this task wrote outside round-3; concurrent changes were left untouched."
+  },
+  "html": "All local image and artwork links resolve; not browser-rendered.",
+  "visualReview": "Opened all six actual 60 px icon renders and the composed sheet; the outlined next plate remains open. Reviewed all wordmarks.",
+  "renderer": "/opt/homebrew/bin/rsvg-convert",
+  "sheet": "sharp from project node_modules",
+  "optionalConcepts": "H2 and K omitted"
+}

@@ -1,0 +1,168 @@
+{
+  "icons": [
+    {
+      "file": "concept-d-yellow.svg",
+      "bounds": [
+        142,
+        218,
+        871,
+        823
+      ],
+      "opaque": true,
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "safe_area": "centered 80% square"
+    },
+    {
+      "file": "concept-d-ink.svg",
+      "bounds": [
+        142,
+        218,
+        871,
+        823
+      ],
+      "opaque": true,
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "safe_area": "centered 80% square"
+    },
+    {
+      "file": "concept-e-yellow.svg",
+      "bounds": [
+        148,
+        111,
+        875,
+        890
+      ],
+      "opaque": true,
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "safe_area": "centered 80% square"
+    },
+    {
+      "file": "concept-e-ink.svg",
+      "bounds": [
+        148,
+        111,
+        875,
+        890
+      ],
+      "opaque": true,
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "safe_area": "centered 80% square"
+    },
+    {
+      "file": "concept-f-yellow.svg",
+      "bounds": [
+        186,
+        221,
+        837,
+        760
+      ],
+      "opaque": true,
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "safe_area": "centered 80% square"
+    },
+    {
+      "file": "concept-f-ink.svg",
+      "bounds": [
+        186,
+        221,
+        837,
+        760
+      ],
+      "opaque": true,
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "safe_area": "centered 80% square"
+    },
+    {
+      "file": "concept-f2-yellow.svg",
+      "bounds": [
+        184,
+        247,
+        839,
+        760
+      ],
+      "opaque": true,
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "safe_area": "centered 80% square"
+    },
+    {
+      "file": "concept-f2-ink.svg",
+      "bounds": [
+        184,
+        247,
+        839,
+        760
+      ],
+      "opaque": true,
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "safe_area": "centered 80% square"
+    },
+    {
+      "file": "concept-g-yellow.svg",
+      "bounds": [
+        120,
+        290,
+        903,
+        733
+      ],
+      "opaque": true,
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "safe_area": "centered 80% square"
+    },
+    {
+      "file": "concept-g-ink.svg",
+      "bounds": [
+        120,
+        290,
+        903,
+        733
+      ],
+      "opaque": true,
+      "sizes": [
+        1024,
+        180,
+        60
+      ],
+      "safe_area": "centered 80% square"
+    }
+  ],
+  "round1": "All baseline hashes match",
+  "renderer": "/opt/homebrew/bin/rsvg-convert",
+  "composition": "sharp from project node_modules; no browser",
+  "lettering": "F uses actual Overpass variable font instantiated at 900 and outlined by fontTools/HarfBuzz."
+}

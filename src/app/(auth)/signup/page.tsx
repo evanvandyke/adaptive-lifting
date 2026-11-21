@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
+import s from "../auth.module.css";
 
 export default async function SignupPage({
   searchParams,
@@ -50,117 +51,79 @@ export default async function SignupPage({
   }
 
   return (
-    <div className="glass-card p-8">
-      <h2
-        className="text-xl font-semibold mb-6 text-center"
-        style={{ color: "var(--text-primary)" }}
-      >
-        Create your account
-      </h2>
+    <div>
+      <h2 className={s.title}>Create your account</h2>
 
       {params.error && (
-        <div
-          className="mb-6 px-4 py-3 rounded-md text-sm"
-          style={{
-            background: "rgba(248, 113, 113, 0.1)",
-            border: "1px solid rgba(248, 113, 113, 0.3)",
-            color: "var(--error)",
-          }}
-        >
-          {params.error}
-        </div>
+        <p className={s.error} role="alert">
+          <strong>Error:</strong>{" "}{params.error}
+        </p>
       )}
 
       {params.message && (
-        <div
-          className="mb-6 px-4 py-3 rounded-md text-sm"
-          style={{
-            background: "rgba(52, 211, 153, 0.1)",
-            border: "1px solid rgba(52, 211, 153, 0.3)",
-            color: "var(--success)",
-          }}
-        >
-          {params.message}
-        </div>
+        <p className={s.notice} role="status">{params.message}</p>
       )}
 
-      <form action={signUp} className="space-y-4">
+      <form action={signUp} className={s.form}>
+
         <div>
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium mb-1.5"
-            style={{ color: "var(--text-secondary)" }}
-          >
-            Email
-          </label>
+          <label htmlFor="email" className={s.label}>Email</label>
           <input
             id="email"
             name="email"
             type="email"
             autoComplete="email"
+            inputMode="email"
+            autoCapitalize="none"
+            spellCheck={false}
             required
-            className="glass-input"
+            className={s.input}
             placeholder="you@example.com"
           />
         </div>
 
         <div>
-          <label
-            htmlFor="password"
-            className="block text-sm font-medium mb-1.5"
-            style={{ color: "var(--text-secondary)" }}
-          >
-            Password
-          </label>
+          <label htmlFor="password" className={s.label}>Password</label>
           <input
             id="password"
             name="password"
             type="password"
             autoComplete="new-password"
+            inputMode="text"
+            autoCapitalize="none"
+            spellCheck={false}
             required
             minLength={6}
-            className="glass-input"
+            className={s.input}
             placeholder="At least 6 characters"
           />
         </div>
 
         <div>
-          <label
-            htmlFor="confirmPassword"
-            className="block text-sm font-medium mb-1.5"
-            style={{ color: "var(--text-secondary)" }}
-          >
-            Confirm Password
-          </label>
+          <label htmlFor="confirmPassword" className={s.label}>Confirm password</label>
           <input
             id="confirmPassword"
             name="confirmPassword"
             type="password"
             autoComplete="new-password"
+            inputMode="text"
+            autoCapitalize="none"
+            spellCheck={false}
             required
             minLength={6}
-            className="glass-input"
+            className={s.input}
             placeholder="Confirm your password"
           />
         </div>
 
-        <button type="submit" className="btn-primary w-full mt-2">
-          Create Account
-        </button>
+        <span className={s.slabWrap}>
+          <span className={s.ledge} aria-hidden="true" />
+          <button type="submit" className={s.slab}>Create account</button>
+        </span>
       </form>
 
-      <p
-        className="mt-6 text-center text-sm"
-        style={{ color: "var(--text-secondary)" }}
-      >
-        Already have an account?{" "}
-        <Link
-          href="/login"
-          className="font-medium hover:underline"
-          style={{ color: "var(--teal)" }}
-        >
-          Sign in
-        </Link>
+      <p className={s.secondary}>
+        <Link href="/login" className={s.word}>I have an account</Link>
       </p>
     </div>
   );

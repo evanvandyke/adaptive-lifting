@@ -1,25 +1,35 @@
+import type { Viewport } from "next";
+import { Overpass } from "next/font/google";
+import s from "./auth.module.css";
+
+const overpass = Overpass({ subsets: ['latin'], weight: ['600', '800', '900'], variable: '--signal-font', display: 'swap' });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#1c1a14",
+  maximumScale: 5,
+  userScalable: true,
+};
+
+function Wordmark() {
+  // Replace this text span with the inline SVG; the heading keeps its accessible name.
+  return <span aria-hidden="true">Adaptive Lifting</span>;
+}
+
 export default function AuthLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
-      <div className="w-full max-w-md">
-        <div className="text-center mb-8">
-          <h1
-            className="text-3xl font-bold tracking-tight"
-            style={{ color: "var(--text-primary)" }}
-          >
-            Adaptive Lifting
-          </h1>
-          <p
-            className="mt-2 text-sm"
-            style={{ color: "var(--text-secondary)" }}
-          >
-            Show up. Get stronger. Don&apos;t quit.
-          </p>
-        </div>
+    <div className={`${overpass.variable} ${s.shell}`}>
+      <div className={s.column}>
+        <header className={s.header}>
+          <h1 className={s.wordmark} aria-label="Adaptive Lifting"><Wordmark /></h1>
+          <p className={s.tagline}>One set at a time.</p>
+        </header>
         {children}
       </div>
     </div>

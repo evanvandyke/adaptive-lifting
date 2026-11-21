@@ -1,0 +1,103 @@
+{
+  "icons": [
+    {
+      "file": "concept-a-yellow.svg",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "opaque": true,
+      "mark_bounds": [
+        268,
+        184,
+        755,
+        848
+      ],
+      "max_radius_px": 396.4,
+      "safe_radius_px": 409.6
+    },
+    {
+      "file": "concept-a-ink.svg",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "opaque": true,
+      "mark_bounds": [
+        268,
+        184,
+        755,
+        848
+      ],
+      "max_radius_px": 396.4,
+      "safe_radius_px": 409.6
+    },
+    {
+      "file": "concept-b-yellow.svg",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "opaque": true,
+      "mark_bounds": [
+        202,
+        302,
+        821,
+        779
+      ],
+      "max_radius_px": 372.69,
+      "safe_radius_px": 409.6
+    },
+    {
+      "file": "concept-b-ink.svg",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "opaque": true,
+      "mark_bounds": [
+        202,
+        302,
+        821,
+        779
+      ],
+      "max_radius_px": 372.69,
+      "safe_radius_px": 409.6
+    },
+    {
+      "file": "concept-c-yellow.svg",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "opaque": true,
+      "mark_bounds": [
+        152,
+        290,
+        871,
+        733
+      ],
+      "max_radius_px": 360.88,
+      "safe_radius_px": 409.6
+    },
+    {
+      "file": "concept-c-ink.svg",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "opaque": true,
+      "mark_bounds": [
+        152,
+        290,
+        871,
+        733
+      ],
+      "max_radius_px": 360.88,
+      "safe_radius_px": 409.6
+    }
+  ],
+  "wordmarks": "All lettering is paths.",
+  "rendering": "rsvg-convert for all assets; sharp for the sheet.",
+  "visual_review": "All six actual 60 px PNGs inspected; head/arm gaps, letter counter and plate steps remain clear."
+}

@@ -1,0 +1,20 @@
+{
+  "font_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/overpass/Overpass%5Bwght%5D.ttf",
+  "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/overpass/OFL.txt",
+  "source_sha256": "970717df17a7f9911dee45f60695d05bfa9d745fa0a11fc5c348371fa21f0073",
+  "family": "Overpass",
+  "weight": 900,
+  "method": "fontTools variable-font instantiation at wght=900; HarfBuzz shaping/kerning; fontTools SVGPathPen outlines.",
+  "concepts": {
+    "a": "Victory pose, simplified from rig.ts front/VICTORY.",
+    "b": "Overpass 900 AL with a heavy supporting bar.",
+    "c": "Front-view barbell, stepped plates and thick shaft."
+  },
+  "recommended": "A on yellow: the familiar character makes the icon personal, and the large yellow field is easy to find.",
+  "variant_recommendations": {
+    "a": "yellow",
+    "b": "yellow",
+    "c": "ink"
+  },
+  "wordmarks": "Yellow on ink, matching the default sign-in direction; all visible letters are paths."
+}

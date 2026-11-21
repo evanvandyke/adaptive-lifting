@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title">
+  <title id="title">The lifter / ink ground</title>
+  <rect width="1024" height="1024" fill="#1c1a14"/>
+  <g fill="#ffc800" color="#ffc800"><g stroke="currentColor" stroke-linecap="round" fill="none">
+    <path d="M399 410 300 216 M625 410 724 216" stroke-width="64"/>
+    <path d="M478 621 451 817 M546 621 573 817" stroke-width="64"/>
+  </g>
+  <rect x="446" y="390" width="132" height="252" rx="24"/>
+  <circle cx="512" cy="300" r="58"/></g>
+</svg>
