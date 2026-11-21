@@ -4,13 +4,13 @@ Before editing, read `~/.agents/project-template/_SPEC.md`, section "AGENDA.md".
 
 ## ACTIVE (one deliverable)
 
-- **Project: Adaptive Lifting → Fix what Evan's first real Signal workout on his phone turns up.** Why: `/lift` is live but has only been run in a desktop browser; his phone, his hands and his reports decide what changes next. Plan: `Docs_Compressions/session-03-2026-11-19-signal-workout-built-and-live.md`
+- **Project: Adaptive Lifting → Tune the workout and its coach from real workout feedback.** Why: Signal is live on its own database and Evan is signed up; his reports after each workout, and his brother's, decide what changes next, with the coach's rules as the main thing to optimize. Plan: `plans/signal-burndown.md`
 
 ## UP NEXT (three slots total, including FOLLOW-UP)
 
-1. **Project: Adaptive Lifting → Visual-verify warm-up sets + plate calculator.** Why: Both were integrated into `ExerciseCard` during the build but never confirmed in a real browser; screenshot-check them first because they're load-bearing gym UX.
+1. **Project: Adaptive Lifting → Add a forgotten-password reset.** Why: there is no way back in from the sign-in screen, so a forgotten password strands Evan's brother until Evan resets it by hand in Supabase. Plan: `plans/accounts-profile-tracking.md`
 
-2. **Project: Adaptive Lifting → Manually test the nutrition tracker.** Why: The protein page and dashboard protein card were built by a sub-agent and never hand-verified; confirm the quick-tap buttons and 7-day bar chart persist and render.
+2.
 
 3.
 
@@ -18,14 +18,14 @@ Before editing, read `~/.agents/project-template/_SPEC.md`, section "AGENDA.md".
 
 ## FOR SURE (committed, unscheduled)
 
-- **Project: Adaptive Lifting → Fix the "Start Workout" double-click.** Why: It sometimes needs a second click; suspected race where `router.refresh()` doesn't pick up the new workout on the first try.
+- **Project: Adaptive Lifting → Accounts, profile and body tracking.** Why: Evan wants weight and blood pressure tracking and a basic profile, and his brother needs a way back in if he forgets his password. Plan: `plans/accounts-profile-tracking.md`
 
-- **Project: Adaptive Lifting → Test AI weekly analysis on real multi-session data.** Why: The `/api/ai/analyze` endpoint works but has only seen synthetic input; verify it once Evan has logged a few real workouts.
+- **Project: Adaptive Lifting → Decide coach versus engine, then close the coach's gaps.** Why: the small coach is live and the larger engine is parked; a few weeks of real workouts will show which differences matter. Plan: `plans/coach-and-engine.md`
 
-- **Project: Adaptive Lifting → Confirm the plank completion counter updates in real time.** Why: A sub-agent fixed `ExerciseCard` but the integration was never verified end-to-end.
-
-- **Project: Adaptive Lifting → Build progress photos: camera upload + gallery scroll-back.** Why: The one planned feature from the original spec that was never built; visual proof beats scale weight.
+- **Project: Adaptive Lifting → Build progress photos: camera upload + gallery scroll-back.** Why: The one planned feature from the original spec that was never built; visual proof beats scale weight. Plan: `plans/accounts-profile-tracking.md`
 
 ## IDEAS (maybe / someday)
 
-- **Project: Adaptive Lifting → Graduate to the 4-day upper/lower split.** Why: The periodization planner already ships the advanced templates; flip to them when 3x/week full-body stops driving progress.
+- **Project: Adaptive Lifting → Intro video on the sign-in page.** Why: a funny one-minute explainer starring the lifter would tell a new person what to expect; materials are ready for another session to build it. Plan: `design/intro-video/EXPLAINER-BRIEF.md`
+
+- **Project: Adaptive Lifting → Graduate to the 4-day upper/lower split.** Why: for when 3x/week full-body stops driving progress; the old templates were retired, so this would be designed fresh. Plan: `plans/coach-and-engine.md`

@@ -1,11 +1,26 @@
 'use client';
 import { useEffect, useRef, useState, type MouseEvent, type ReactNode, type Ref } from 'react';
 import { HapticTap } from '../visit/haptic-tap';
+import { useSoundPreference } from '../visit/feedback';
 import type { StepStatus } from '../visit/use-visit';
 import { EXERCISES, type Block, type ExerciseId } from '../visit/visit-data';
 import { useTones } from './ground';
 import { Lifter, type LifterProps } from './lifter/lifter';
+import { soundActionWords } from './words';
 import s from './signal.module.css';
+
+/** Waves and a slash make the preference visible without relying on color. */
+export function SoundButton() {
+  const [on, setOn] = useSoundPreference();
+  return (
+    <button type="button" className={s.soundButton} aria-pressed={on} aria-label={soundActionWords(on)} onClick={() => setOn(!on)}>
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+        <path d="M4 11h4l6-5v16l-6-5H4z" />
+        {on ? <path d="M18 10a6 6 0 0 1 0 8M21 6a11 11 0 0 1 0 16" /> : <path d="M3 25 25 3" />}
+      </svg>
+    </button>
+  );
+}
 
 /** The one check shape: two round-ended strokes. It takes the color of the text around it. */
 export function Check({ size = 14 }: { size?: number }) {

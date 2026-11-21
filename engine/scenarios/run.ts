@@ -440,7 +440,7 @@ const provenance = {
   runId, startedAt, policyVersion: POLICY, scenarioVersion: SCENARIO_VERSION, archiveDirectory,
   compiledCandidateSha256: hashTree(resolve(here, "../src")),
   compiledScenarioSha256: hash(readFileSync(__filename, "utf8")),
-  specSha256: hash(readFileSync(resolve("ENGINE-SPEC.md"), "utf8")),
+  specSha256: hash(readFileSync(resolve("docs/engine/ENGINE-SPEC.md"), "utf8")),
   model: "Deterministic scripted observations; no physiological forecast",
 };
 const summaries: Record<string, unknown>[] = [];

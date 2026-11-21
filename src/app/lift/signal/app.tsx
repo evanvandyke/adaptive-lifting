@@ -8,7 +8,7 @@ import { BugButton } from './bug';
 import { HOLD_MS, useArmed, useCover } from './hooks';
 import { BlockDone, Finish, Found } from './moments';
 import { SetScreen, type LoggedLine, type SetView, type SheetKind } from './set-screen';
-import { ChangeSheet, CountSheet, FixSheet, HowSheet, OutSheet } from './sheets';
+import { ChangeSheet, CountSheet, FixSheet, HowSheet, OutSheet, SignOutSheet } from './sheets';
 import { Start } from './start';
 import type { Pop } from './parts';
 import { announcement, beatWords, loggedWords, trialWords, type Notice } from './words';
@@ -21,7 +21,7 @@ import s from './signal.module.css';
 const SHEET_OUT_MS = 350;
 
 interface OpenSheet {
-  kind: SheetKind;
+  kind: SheetKind | 'signOut';
   open: boolean;
   /** Goes up with every opening, so each one is a fresh sheet. */
   n: number;
@@ -44,6 +44,7 @@ export interface SignalProps {
   /** A visit to carry on from, read back from the phone. */
   saved: VisitState | null;
   setting: Setting;
+  settingHint?: boolean;
   onSetting: (setting: Setting) => void;
   /** The visit is over and its record is kept: the page reads the history again. */
   onClosed: () => void;
@@ -101,7 +102,7 @@ export function Shell({ children, awake, marks }: { children: React.ReactNode; a
  * Signal: a black sign with a yellow pictogram. One screen per set, one tap per set, three loud things:
  * the lift's name, the weight and reps, and the one action.
  */
-export default function Signal({ userId, plan, saved, setting, onSetting, onClosed, onSignOut }: SignalProps) {
+export default function Signal({ userId, plan, saved, setting, settingHint = false, onSetting, onClosed, onSignOut }: SignalProps) {
   const visit = useVisit({ plan, saved });
   useVisitSounds(visit);
   const { phase, stepIndex, steps, lastEvent, lastLogged, lastTrial, restOver, startNext } = visit;
@@ -228,8 +229,9 @@ export default function Signal({ userId, plan, saved, setting, onSetting, onClos
   const slot = useRef<HTMLDivElement>(null);
   const fixable = sheet !== null && sheet.mark === mark && (visit.lastDone === 'trial' || visit.canUndo);
   const shown = sheet && sheet.startedAt === visit.startedAt && sheet.stepIndex === stepIndex && (
-    phase === 'finish' ? sheet.kind === 'fix' && fixable && cover.stage === 'hold'
-      : working && !covered && (
+    phase === 'start' ? sheet.kind === 'signOut'
+      : phase === 'finish' ? sheet.kind === 'fix' && fixable && cover.stage === 'hold'
+      : working && !covered && sheet.kind !== 'signOut' && (
         sheet.kind === 'fix' ? fixable
           : sheet.kind === 'count' ? visit.setup?.kind === 'check'
             : sheet.kind === 'change' ? !visit.setup
@@ -243,7 +245,7 @@ export default function Signal({ userId, plan, saved, setting, onSetting, onClos
   /** Open, or closed and still sliding away. */
   const sheetUp = shown !== null;
 
-  const openSheet = useCallback((kind: SheetKind, from: HTMLElement) => {
+  const openSheet = useCallback((kind: OpenSheet['kind'], from: HTMLElement) => {
     opener.current = from;
     setSheet(now => ({ kind, open: true, n: (now?.n ?? 0) + 1, startedAt: visit.startedAt, stepIndex, mark }));
   }, [stepIndex, visit.startedAt, mark]);
@@ -271,7 +273,7 @@ export default function Signal({ userId, plan, saved, setting, onSetting, onClos
     const closed = wasUp.current && !sheetUp;
     wasUp.current = sheetUp;
     if (sheetUp) return;
-    if (phase === 'finish') {
+    if (phase === 'finish' || phase === 'start') {
       if (closed && opener.current?.isConnected) opener.current.focus({ preventScroll: true });
       return;
     }
@@ -286,7 +288,7 @@ export default function Signal({ userId, plan, saved, setting, onSetting, onClos
     <Shell awake={working} marks={{ 'data-phase': phase, 'data-step': stepIndex, 'data-logged': visit.logged.length }}>
       <div className={s.root} data-plan={visit.plan.template}>
         <main className={s.app} inert={sheetUp || covered}>
-          {phase === 'start' && <Start visit={visit} setting={setting} onSetting={onSetting} onSignOut={onSignOut} />}
+          {phase === 'start' && <Start visit={visit} setting={setting} settingHint={settingHint} onSetting={onSetting} onSignOut={from => openSheet('signOut', from)} />}
           {view && <Working visit={visit} view={view} logged={logged} covered={covered} pop={pop} onOpen={openSheet} onNotice={notify} slotRef={slot} />}
         </main>
 
@@ -302,6 +304,7 @@ export default function Signal({ userId, plan, saved, setting, onSetting, onClos
         {shown?.kind === 'fix' && <FixSheet key={shown.n} visit={visit} open={shown.open} onClose={closeSheet} edged={phase === 'finish'} />}
         {shown?.kind === 'count' && <CountSheet key={shown.n} visit={visit} open={shown.open} onClose={closeSheet} onNotice={notify} />}
         {shown?.kind === 'out' && <OutSheet key={shown.n} visit={visit} open={shown.open} onClose={closeSheet} onSwitch={switchSheet} onNotice={notify} />}
+        {shown?.kind === 'signOut' && <SignOutSheet key={shown.n} open={shown.open} onClose={closeSheet} onSignOut={onSignOut} />}
 
         <BugButton userId={userId} context={context} />
         <p className={s.vh} aria-live="polite"><span key={said.id}>{said.text}</span></p>

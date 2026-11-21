@@ -3,7 +3,17 @@
  */
 import { duration, repsWord } from '../visit/copy';
 import type { Setup, Trial, TrialAnswer, Visit } from '../visit/use-visit';
-import { EXERCISES, type Block, type Exercise, type ExerciseId, type Plan, type Step } from '../visit/visit-data';
+import { EXERCISES, type Block, type Exercise, type ExerciseId, type Plan, type Setting, type Step } from '../visit/visit-data';
+
+export const SETTING_QUESTION = 'Where are you lifting today?';
+export const SETTING_CHOICES: { setting: Setting; name: string; line: string }[] = [
+  { setting: 'home', name: 'Home', line: 'Bodyweight at home' },
+  { setting: 'gym', name: 'Gym', line: 'Dumbbells and machines at the gym' },
+];
+export const settingSwitchWords = (setting: Setting) => setting === 'home' ? 'Do the gym workout' : 'Do the home workout';
+export const settingHintWords = (setting: Setting) => `Change it anytime with “${settingSwitchWords(setting)}”.`;
+export const soundActionWords = (on: boolean) => on ? 'Turn sound off' : 'Turn sound on';
+export const SIGN_OUT = { action: 'Sign out', title: 'Sign out?', line: 'Workouts saved on this phone stay saved.', stay: 'Stay signed in' };
 
 interface Result { weight: number; reps: number }
 

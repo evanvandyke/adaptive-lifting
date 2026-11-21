@@ -1,0 +1,421 @@
+/*
+ * Signal: a sign with a pictogram, in two colors. Evan's pick is black with yellow; yellow with black and white
+ * with black are the same screens on another ground.
+ * Two colors and one quiet tone. One family at 600, 800, 900. Three loud things per screen: the lift's name,
+ * the weight and reps, the one action. Everything else is small and quiet, or not there.
+ * A small word that can be pressed is underlined; a small word that only tells is not. That is the whole system.
+ */
+.theme {
+  --y: #ffc800; --ink: #1c1a14; --ochre: #5c4a00;
+  /*
+   * The ground the app stands on, and what is drawn on it. Black is the default: yellow on the ink ground, small
+   * text a dimmer yellow (5.8:1 on the ink), the slab yellow with an ink label on a darker-yellow ledge, the disc
+   * yellow with an ink figure. The two other grounds (below) only change these properties, by the
+   * `data-signal-ground` attribute on the element around the app: nothing else in this file names a color.
+   * --fg: type and drawings. --bg: what is drawn on top of --fg (a check, a plate's number). --quiet: small text.
+   * --slab, --slab-label, --ledge: the one big button. --disc: the figure button's disc.
+   */
+  --ground: var(--ink); --fg: var(--y); --bg: var(--ground); --quiet: #b89000;
+  --slab: var(--y); --slab-label: var(--ink); --ledge: #8f7000;
+  --disc: var(--y); --disc-filter: none; --figure-filter: none;
+  /*
+   * The same, for the two big moments and the sheets: the ground turns, so they are an event. On black they turn
+   * to the yellow ground with ink.
+   */
+  --ev-ground: var(--y); --ev-fg: var(--ink); --ev-quiet: var(--ochre);
+  --ev-slab: var(--ink); --ev-slab-label: #fff; --ev-ledge: var(--ochre);
+  /* Heavy and quick, with a dead stop: everything accelerates into place and stops. */
+  --stop: cubic-bezier(0.4, 0, 1, 1);
+  background: var(--ground); color: var(--fg);
+  font-family: var(--signal-font), system-ui, sans-serif; font-size: 17px; font-weight: 600; line-height: 1.3;
+  -webkit-font-smoothing: antialiased; font-synthesis: none;
+}
+.theme *, .theme *::before, .theme *::after { box-sizing: border-box; }
+.theme :where(h1, h2, p, ol, ul) { margin: 0; padding: 0; font: inherit; }
+.theme :where(ol, ul) { list-style: none; }
+.theme :where(button) {
+  margin: 0; padding: 0; border: 0; border-radius: 0; background: none; color: inherit; font: inherit; text-align: left;
+  cursor: pointer; appearance: none; -webkit-appearance: none; touch-action: manipulation;
+}
+.theme :focus-visible { outline: 3px solid var(--fg); outline-offset: 3px; }
+
+/*
+ * On yellow: ink on the yellow ground, small text in ochre, the slab ink with a white label on an ochre ledge,
+ * the disc ink with a yellow figure. The moments and the sheets are black with yellow type.
+ * On white: the same, on a white ground (below).
+ */
+:global([data-signal-ground='yellow']) .theme, :global([data-signal-ground='white']) .theme {
+  --ground: var(--y); --fg: var(--ink); --quiet: var(--ochre);
+  --slab: var(--ink); --slab-label: #fff; --ledge: var(--ochre);
+  --disc: var(--ink);
+  --ev-ground: var(--ink); --ev-fg: var(--y); --ev-quiet: var(--y);
+  --ev-slab: var(--y); --ev-slab-label: var(--ink); --ev-ledge: var(--ochre);
+}
+/*
+ * On white: small text is a warm gray (5.8:1 on white), the ledge a mid-gray. The disc stays ink; its figure is
+ * drawn yellow and turned white by a filter. The figure on the ground keeps its ink, and its second tone (an
+ * ochre, made for the yellow ground) is turned gray. Yellow appears only where the black screens already use it.
+ */
+:global([data-signal-ground='white']) .theme {
+  --ground: #ffffff; --quiet: #6b6558; --ledge: #8d877a;
+  --disc-filter: grayscale(1) brightness(1.35); --figure-filter: grayscale(1);
+}
+
+/* The turned ground: the two big moments and the sheets. On black that is yellow with ink; on yellow and on white, black with yellow type. */
+.dark, .sheet {
+  --fg: var(--ev-fg); --bg: var(--ev-ground); --quiet: var(--ev-quiet);
+  --slab: var(--ev-slab); --slab-label: var(--ev-slab-label); --ledge: var(--ev-ledge);
+  background: var(--ev-ground); color: var(--ev-fg);
+}
+
+/* The root is not positioned, so the black moments and the sheets cover the whole screen, safe areas included. */
+.root { display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); min-height: 0; }
+.app { min-height: 0; container-type: size; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- the one layout: one column, left-aligned, top to bottom ---------- */
+.screen { display: flex; flex-direction: column; height: 100%; padding: 16px 20px 6px; }
+.screen[data-screen='start'] { padding-top: 32px; }
+.spacer { flex: 1 1 0; }
+
+/* The workout track: ten segments, grouped 2, 4, 4. */
+.track { display: flex; flex: none; height: 8px; }
+.seg { flex: 1 1 0; height: 8px; border: 2px solid var(--fg); border-radius: 4px; }
+.seg + .seg { margin-left: 4px; }
+.seg[data-group] { margin-left: 12px; }
+.seg[data-logged] { background: var(--fg); }
+
+/*
+ * The logged line. Its place is always kept, so nothing below moves when it comes and goes. On a taller screen
+ * this band takes a fifth of the spare height, so the top opens up along with the middle.
+ */
+.loggedSlot { flex: 1 1 60px; max-height: 124px; padding-top: 8px; }
+/* It changes at once, like the words below it: the marker and the slab are what move. */
+.logged { display: flex; align-items: center; gap: 8px; min-height: 44px; color: var(--quiet); }
+.loggedCheck { display: grid; flex: none; }
+.loggedWords { flex: 1 1 0; min-width: 0; line-height: 22px; }
+.loggedWords strong { color: var(--fg); font-weight: 800; white-space: nowrap; }
+
+/* A small word that can be pressed: underlined, in its own color. The words are small; the place to press is not. */
+.word {
+  display: inline-flex; flex: none; align-items: center; min-width: 44px; min-height: 44px; padding-right: 16px;
+  color: var(--fg); font-size: 17px; font-weight: 800; white-space: nowrap;
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px;
+}
+/* The ring hugs the word's box, so it is whole even on the bottom row, 6 px from the screen's edge. */
+.word:focus-visible { outline-offset: 0; }
+.wordRight { justify-content: flex-end; padding-right: 0; padding-left: 16px; }
+/* A small word that only tells: no underline. */
+.next { color: var(--quiet); white-space: nowrap; }
+
+/* The lift: name and figure button, set markers, drawing, numbers, last time. */
+/* Its basis is what it needs at 620; above that it takes four fifths of the spare height. Its words change at once: no fade. */
+.lift { display: flex; flex: 4 1 302px; flex-direction: column; min-height: 0; }
+.titleRow { display: flex; flex: none; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; }
+.name { font-size: 30px; font-weight: 900; line-height: 1.08; letter-spacing: -0.01em; text-wrap: balance; }
+.figureBtn { flex: none; border-radius: 50%; }
+.disc { display: grid; flex: none; place-items: center; width: 52px; height: 52px; overflow: hidden; border-radius: 50%; background: var(--disc); }
+/* The figure is cropped to itself and 36 px tall; one lying down is held to 40 px wide, so every lift fills about 70% of the disc. */
+.discFigure { display: block; max-width: 40px; height: auto; filter: var(--disc-filter); }
+/* On a sheet the ground has turned: the disc is the sheet's own ink, and no ground filter applies. */
+.discTurned { background: var(--fg); }
+.discFigureTurned { display: block; max-width: 40px; height: auto; }
+
+.sets { display: flex; flex: none; align-items: center; gap: 10px; min-height: 26px; margin-top: 10px; color: var(--quiet); }
+.markerRow { display: inline-flex; gap: 8px; }
+.marker { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; color: var(--bg); }
+.marker[data-state='logged'] { background: var(--fg); }
+.marker[data-state='current'] { border: 3px solid var(--fg); }
+.marker[data-state='current']::after { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--fg); }
+.marker[data-state='ahead'] { border: 2px solid var(--fg); }
+.marker[data-pop='once'] { animation: stamp 150ms var(--stop) both; }
+/* A set that beat last time: two quick stamps. */
+.marker[data-pop='twice'] { animation: stamp-twice 340ms var(--stop) both; }
+/* The finish's week marker for today: hollow until everything else has landed, then it fills with its own stamp. */
+.marker[data-pop='late'] { animation: hollow 1500ms step-end, stamp 150ms var(--stop) 1500ms; }
+/* In a rest the numbers below are the next set's, and the word says so. */
+.sets[data-mode='rest'] .setWord { color: var(--fg); font-weight: 800; }
+
+/* The drawing takes whatever height is left. It is the first thing to give when the screen is short. */
+.drawing { display: flex; flex: 1 1 0; align-items: center; min-height: 120px; padding-block: 14px; }
+/* The figure has air on both sides: at least 24 px to the markers above and to the numbers below. */
+.drawing[data-mode='figure'] { padding-block: 24px; }
+
+/* The whole bar, front view. Every part is the same solid ink; the plates carry their numbers in yellow. */
+.bar { position: relative; align-self: stretch; width: 100%; --tallest: 132px; }
+.shaft, .sleeve, .collar, .plate { position: absolute; top: 0; bottom: 0; margin-block: auto; background: var(--fg); }
+.shaft { height: 6px; }
+.sleeve { height: 12px; }
+.sleeve[data-side='left'] { border-radius: 6px 0 0 6px; }
+.sleeve[data-side='right'] { border-radius: 0 6px 6px 0; }
+.collar { width: 7px; height: 26px; border-radius: 2px; }
+.plate {
+  display: grid; place-items: center; height: min(calc(var(--h) * 100%), calc(var(--h) * var(--tallest))); border-radius: 7px;
+  color: var(--bg); font-size: 14px; font-weight: 800; line-height: 1;
+  animation: slide-left 170ms var(--stop) backwards;
+}
+.plate[data-side='right'] { animation-name: slide-right; }
+.plate[data-small] { font-size: 12px; letter-spacing: -0.04em; }
+.plate[data-tiny] { font-size: 9px; letter-spacing: -0.06em; }
+.bar[data-still] .plate { animation: none; }
+
+.body { display: flex; flex: 1 1 0; align-items: center; align-self: stretch; min-width: 0; }
+/* The figure is a button with no chrome: a tap opens the How sheet. Never smaller than a thumb. */
+/*
+ * He uses the room he has: as tall as the zone when he stands, and when he lies down as wide as two thirds of the
+ * column. (At the column's full width a lying figure is the heaviest thing on the screen; at two thirds he is the
+ * picture and the numbers are still the news.)
+ */
+.bodyButton { display: flex; flex: none; align-items: flex-end; min-width: 44px; max-width: 66%; min-height: 44px; }
+/* Cropped to the figure, so it stands at the column's left edge. */
+.bodyFigure { display: block; flex: none; max-width: 100%; height: auto; filter: var(--figure-filter); }
+/* The rehearsal: the try's figure, unseen, gives the box; the empty-handed one lies over it at the same scale. */
+.twin { position: relative; display: flex; flex: none; align-items: flex-end; max-width: 100%; }
+.twinBox { visibility: hidden; }
+.twinOver { position: absolute; display: block; }
+.twinFigure { display: block; filter: var(--figure-filter); }
+/* A figure drawn at the shared scale: hidden for the one frame it takes to read its crop. */
+.scaled { display: flex; flex: none; align-items: flex-end; max-width: 100%; visibility: hidden; }
+.scaled[data-ready] { visibility: visible; }
+
+/* The numbers: weight, then reps, on one baseline. They open Change, and carry no chrome. */
+.numbers { display: flex; flex: none; align-items: baseline; gap: 28px; white-space: nowrap; }
+.num { display: inline-flex; align-items: baseline; gap: 6px; }
+.numeral { font-size: 68px; font-weight: 900; line-height: 1; letter-spacing: -0.02em; }
+.unit { font-size: 20px; font-weight: 800; }
+.numbers[data-tight] { gap: 18px; }
+.numbers[data-tight] .numeral { font-size: 60px; }
+.last { flex: none; min-height: 22px; margin-top: 4px; color: var(--quiet); }
+/* A rehearsal's one sentence, in the room the numbers and their quiet line take, so the figure above keeps its size. */
+.rehearse { display: flex; flex: none; align-items: flex-end; min-height: 94px; max-width: 30ch; text-wrap: pretty; }
+
+/* ---------- the action slot ---------- */
+.slot { flex: none; height: 77px; margin-top: 22px; }
+
+/* Live: a slab on a ledge. Pressed, it sinks 5 px onto the ledge in 60 ms. */
+.slabWrap { position: relative; display: block; height: 77px; }
+.ledge { position: absolute; inset: auto 0 0; height: 30px; border-radius: 0 0 12px 12px; background: var(--ledge); }
+.slab {
+  position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 72px; border-radius: 12px;
+  background: var(--slab); color: var(--slab-label); font-size: 24px; font-weight: 800; line-height: 1; text-align: center;
+  transition: transform 60ms linear;
+}
+.slabWrap[data-pressed] .slab, .slab:active { transform: translateY(5px); }
+/*
+ * Three slabs in the footprint of one: the answers to a try. Each is a whole slab on its own ledge, the same
+ * height as Done, with its label on two lines at 18 px.
+ */
+.choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; height: 77px; }
+/* The last try has two answers: each takes half the footprint. */
+.choices[data-count='2'] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.choice { flex-direction: column; gap: 0; padding-inline: 2px; font-size: 18px; line-height: 1.12; text-align: center; }
+.choice span { display: block; }
+
+/* A slab arriving (the rest is over, or the lift has changed): it and its ledge fill up from the bottom edge. One firm move. */
+.fill { animation: fill-up 140ms var(--stop) both; }
+
+/*
+ * Rest: the same slab and ledge, outlined. The time large, one small line that says it can be pressed, and a thin
+ * bar under them that fills as the rest passes. The bar's whole length is drawn faintly from the start, so its
+ * first second reads as a bar beginning and never as a notch in the corner.
+ */
+.ledgeOpen { border: 3px solid var(--fg); background: var(--bg); }
+.rest {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  width: 100%; height: 72px; padding-bottom: 9px; border: 3px solid var(--fg); border-radius: 12px; background: var(--bg);
+  transition: transform 60ms linear;
+}
+.rest:active { transform: translateY(5px); }
+.restTime { font-size: 28px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; }
+.restWord { color: var(--quiet); font-size: 15px; font-weight: 600; line-height: 1.1; }
+.restTrack { position: absolute; right: 16px; bottom: 6px; left: 16px; height: 4px; overflow: hidden; border-radius: 2px; background: color-mix(in srgb, var(--fg) 16%, transparent); }
+.restLine { display: block; width: 100%; height: 100%; background: var(--fg); transform-origin: left center; animation: rest-fill linear both; }
+
+.foot { display: flex; flex: none; align-items: center; justify-content: space-between; min-height: 44px; margin-top: 2px; }
+
+/* ---------- start ---------- */
+/* When a line of this is too long ("Push-up and air squat done."), it breaks evenly, never leaving one word alone. */
+.big { font-size: 40px; font-weight: 900; line-height: 1.05; letter-spacing: -0.015em; text-wrap: balance; }
+.fact { margin-top: 6px; color: var(--quiet); }
+.blocks { display: grid; gap: 16px; margin-top: 28px; }
+.planNote { margin-top: 20px; color: var(--quiet); }
+.planWord { align-self: flex-start; margin-top: 4px; }
+.block { display: flex; align-items: center; gap: 14px; }
+.blockName { display: block; font-size: 20px; font-weight: 800; line-height: 1.2; }
+.blockLine { display: block; color: var(--quiet); }
+.screen[data-screen='start'] .sets { margin-top: 28px; }
+/* A first visit's second quiet sentence, and its rows, which are names alone. */
+.fact + .fact { margin-top: 4px; }
+/* A phone on the home workout: the server's gym start screen is held back until the home one is drawn. */
+:global([data-signal-wait]) .screen[data-screen='start'] > * { visibility: hidden; }
+
+/* ---------- the two big moments ---------- */
+.cover {
+  position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column;
+  padding: calc(var(--safe-top, 0px) + 16px) calc(var(--safe-right, 0px) + 20px) calc(var(--safe-bottom, 0px) + 6px) calc(var(--safe-left, 0px) + 20px);
+  animation: rise 250ms var(--stop) both;
+}
+.cover[data-stage='drop'] { animation: drop 250ms var(--stop) both; }
+.momentBody { display: flex; flex: 1 1 0; flex-direction: column; justify-content: center; min-height: 0; padding-bottom: 56px; }
+/* Nothing here clips: his arms pass outside his own box as they rise. */
+.hero { display: flex; flex: 1 1 0; align-items: flex-end; min-height: 110px; max-height: 200px; margin-top: 20px; }
+.heroFigure { display: block; flex: none; max-width: 100%; height: auto; }
+.momentBody .big { margin-top: 18px; }
+
+.cover[data-moment='finish'] .big { margin-top: 16px; }
+/* "Home workout done." is 379 px wide at 40 px, in a 335 px column. It steps down to one line rather than leave "done." alone on a second. */
+.cover[data-moment='finish'] .big[data-long] { font-size: 34px; }
+/* A short title is sized to stay on one line, so no word is ever left alone on a line. */
+.big[data-one] { white-space: nowrap; }
+/* The one line with weight: the best thing that happened today. */
+.best { margin-top: 10px; font-size: 20px; font-weight: 800; line-height: 1.25; text-wrap: pretty; }
+.cover[data-moment='finish'] .fact { margin-top: 8px; }
+.cover[data-moment='finish'] .sets { margin-top: 16px; }
+.finishSlot { flex: none; height: 117px; margin-top: auto; padding-top: 40px; }
+.cover[data-moment='finish']:not([data-armed]) :where(.finishSlot, .foot) { pointer-events: none; }
+/* The facts land one after another, once the black is up and his arms are raised. */
+.land { animation: land 200ms var(--stop) both; animation-delay: calc(var(--n) * 110ms + 600ms); }
+
+/* ---------- the sheets ---------- */
+.scrim { position: absolute; inset: 0; z-index: 29; pointer-events: none; }
+.scrim[data-live] { pointer-events: auto; }
+.sheet {
+  position: absolute; inset: auto 0 0; z-index: 30; display: flex; flex-direction: column;
+  max-height: calc(100% - var(--safe-top, 0px) - 16px); overflow-y: auto; overscroll-behavior: contain;
+  padding: 22px calc(var(--safe-right, 0px) + 20px) calc(var(--safe-bottom, 0px) + 6px) calc(var(--safe-left, 0px) + 20px);
+  border-radius: 12px 12px 0 0;
+  pointer-events: none; animation: rise 220ms var(--stop) both;
+}
+.sheet[data-live] { pointer-events: auto; }
+.sheet[data-open='false'] { animation: drop 180ms var(--stop) both; }
+.sheet:focus { outline: none; }
+/* Over the finish the sheet is the color of what is behind it: its top edge is drawn so it can be told apart. */
+.sheet[data-edged] { border-top: 3px solid var(--fg); }
+/* A sheet may be taller than what it holds (How rises to cover the figure): its closing word stays on the bottom edge. */
+.sheet > .word { align-self: flex-start; min-height: 52px; margin-top: auto; padding-top: 8px; }
+
+/* The figure's place is a fixed height, so the words under it stay put whichever lift is shown. */
+.howFigure { display: flex; flex: none; align-items: flex-end; align-self: stretch; height: 190px; }
+.sheetFigure { display: block; flex: none; max-width: 100%; height: auto; }
+/* The swap list: up to three rows, each a whole-width button with the lift's disc, name and numbers. */
+.swapList { display: grid; gap: 4px; }
+.swapRow { display: flex; align-items: center; gap: 14px; width: 100%; min-height: 68px; }
+.swapRow .blockLine { color: var(--quiet); }
+.sheetSlot { flex: none; height: 77px; margin-top: 22px; }
+.sheetTitle { margin-top: 12px; font-size: 30px; font-weight: 900; line-height: 1.08; letter-spacing: -0.01em; }
+.sheetTitle:first-child { margin-top: 0; }
+.sheetCue { margin-top: 14px; }
+.sheetText { margin-top: 8px; }
+
+.row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; column-gap: 18px; min-height: 60px; }
+.row + .row { margin-top: 14px; }
+.sheetTitle + .row { margin-top: 18px; }
+.rowLabel { font-weight: 800; line-height: 1.2; }
+.rowLabel span { display: block; font-size: 15px; font-weight: 600; }
+.rowValue { min-width: 2ch; font-size: 44px; font-weight: 900; line-height: 1; text-align: right; font-variant-numeric: tabular-nums; }
+.steppers { display: flex; gap: 12px; }
+.stepper { display: grid; place-items: center; width: 60px; height: 60px; border: 3px solid var(--fg); border-radius: 12px; color: var(--fg); }
+.stepper:active { background: var(--fg); color: var(--bg); }
+.stepper[aria-disabled='true'] { opacity: 0.35; }
+.stepper[aria-disabled='true']:active { background: none; color: var(--fg); }
+
+/* "Undo this set" sits under the row, not on the sheet's bottom edge with Close. */
+.sheet > .undoWord { min-height: 44px; margin-top: 12px; padding-top: 0; }
+/* The sheet may be taller than what it holds (it rises to cover the numbers): the two words stay on its bottom edge. */
+.sheet .sheetFoot { margin-top: auto; padding-top: 10px; }
+
+/* ---------- motion: each one answers a tap, a clock ending, or a screen arriving ---------- */
+@keyframes stamp { from { transform: scale(1.4); } to { transform: none; } }
+@keyframes stamp-twice { from { transform: scale(1.4); } 40% { transform: none; } 55% { transform: scale(1.4); } to { transform: none; } }
+@keyframes hollow { from, to { background: transparent; box-shadow: inset 0 0 0 2px var(--fg); color: transparent; } }
+/* The plates come from outside the screen, unfaded, and stop dead. */
+@keyframes slide-left { from { transform: translateX(-140px); } to { transform: none; } }
+@keyframes slide-right { from { transform: translateX(140px); } to { transform: none; } }
+@keyframes fill-up { from { clip-path: inset(100% 0 0 0 round 12px); } to { clip-path: inset(0 0 0 0 round 12px); } }
+@keyframes rest-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes rise { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes drop { from { transform: none; } to { transform: translateY(100%); } }
+@keyframes land { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+
+/* Reduced motion: every movement becomes a 160 ms fade. (The figure holds its end pose; that is the Lifter's own rule.) */
+@media (prefers-reduced-motion: reduce) {
+  .marker[data-pop='once'], .marker[data-pop='twice'], .marker[data-pop='late'], .plate, .plate[data-side='right'], .fill, .cover, .sheet, .land {
+    animation-name: fade; animation-duration: 160ms; animation-timing-function: linear;
+  }
+  .cover[data-stage='drop'], .sheet[data-open='false'] { animation-name: fade-out; animation-duration: 160ms; animation-timing-function: linear; }
+  .restLine { animation: none; transform: scaleX(var(--f, 0)); }
+  .slab { transition: opacity 160ms linear; }
+  .slabWrap[data-pressed] .slab, .slab:active, .rest:active { opacity: 0.8; transform: none; }
+}
+
+/* A very short screen: the loud things step down to their floor sizes and the gaps tighten. Nothing is packed. */
+@container (max-height: 560px) {
+  .screen { padding-top: 12px; }
+  .loggedSlot { flex: none; height: 46px; padding-top: 2px; }
+  .lift { flex: 1 1 0; }
+  .name { font-size: 26px; }
+  .numeral { font-size: 60px; }
+  .sets { margin-top: 6px; }
+  .slot { margin-top: 14px; }
+  .drawing, .drawing[data-mode='figure'] { padding-block: 8px 12px; }
+}
+
+/* ---------- the app's own shell: the whole window, black, with the phone-sized screen in the middle ---------- */
+.shell { position: fixed; inset: 0; z-index: 50; display: flex; justify-content: center; align-items: center; background: #1c1a14; }
+/*
+ * The screen. A positioned box padded by the safe areas, so the root sits inside them while anything placed with
+ * `position: absolute; inset: 0` (the moments, the sheets) still covers the whole screen.
+ */
+.phone {
+  --safe-top: env(safe-area-inset-top, 0px); --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px); --safe-left: env(safe-area-inset-left, 0px);
+  position: relative; isolation: isolate; overflow: hidden; overflow: clip; flex: none; box-sizing: border-box;
+  display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  width: 100%; max-width: 430px; height: 100%; max-height: 932px;
+  padding: var(--safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left);
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none;
+  user-select: none; -webkit-user-select: none; -webkit-text-size-adjust: 100%; text-size-adjust: 100%;
+}
+/* A fixed shell: the page behind the app never rubber-bands. */
+html:has(.shell), html:has(.shell) body { overscroll-behavior: none; overflow: hidden; }
+
+/* The two words at the left of the foot, and a "next" line that gives way to them on a narrow phone. */
+.footWords { display: flex; flex: none; }
+.foot .next { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+
+/* The way out: a short list of plain rows, each a whole-width place to press. */
+.outList { display: grid; margin-top: 6px; }
+.sheetText + .outList { margin-top: 14px; }
+.outRow { display: flex; align-items: center; width: 100%; min-height: 58px; font-size: 20px; font-weight: 800; border-bottom: 2px solid color-mix(in srgb, var(--fg) 18%, transparent); }
+.outList li:last-child .outRow { border-bottom: 0; }
+.outRow:active { background: color-mix(in srgb, var(--fg) 12%, transparent); }
+
+/* Coming back to a visit left half done. */
+.resumeFact { margin-top: 10px; color: var(--quiet); }
+
+/* ---------- the report button: a small tab on the right edge, and a short panel at the top ---------- */
+.bugTab {
+  position: absolute; top: calc(var(--safe-top, 0px) + 34%); right: 0; z-index: 40;
+  display: grid; place-items: center; width: 22px; height: 52px; border-radius: 10px 0 0 10px;
+  background: color-mix(in srgb, #ffc800 22%, #1c1a14); color: #ffc800; font-size: 15px; font-weight: 900; line-height: 1;
+  border: 0; padding: 0; cursor: pointer; opacity: 0.85;
+}
+/* The place to press is wider than the tab looks. */
+.bugTab::before { content: ''; position: absolute; inset: -6px 0 -6px -22px; }
+.bugPanel {
+  position: absolute; top: calc(var(--safe-top, 0px) + 8px); right: 8px; left: 8px; z-index: 41;
+  display: grid; gap: 10px; padding: 14px; border: 3px solid #ffc800; border-radius: 12px; background: #1c1a14; color: #ffc800;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.6);
+}
+.bugPanel h2 { font-size: 20px; font-weight: 900; line-height: 1.1; }
+.bugPanel p { color: #b89000; font-size: 15px; }
+.bugText {
+  width: 100%; min-height: 96px; padding: 10px; border: 2px solid #b89000; border-radius: 8px; background: #000; color: #fff;
+  font: inherit; font-size: 17px; line-height: 1.3; resize: none; user-select: text; -webkit-user-select: text;
+}
+.bugText:focus { outline: none; border-color: #ffc800; }
+.bugRow { display: flex; align-items: center; justify-content: space-between; }
+.bugSend { min-width: 120px; min-height: 48px; padding: 0 18px; border-radius: 10px; background: #ffc800; color: #1c1a14; font-size: 18px; font-weight: 900; text-align: center; }
+.bugSend[aria-disabled='true'] { opacity: 0.4; }

@@ -7,6 +7,8 @@ import { createClient } from '@/utils/supabase/client';
 import type { RecordedSet, VisitRecord } from './coach/coach';
 import { stepsOf, type VisitState } from './visit/use-visit';
 import { EXERCISES, type ExerciseId, type Setting } from './visit/visit-data';
+import { writeStoredSetting } from './store-setting';
+export { readSetting, readStoredSetting } from './store-setting';
 
 const key = (name: string, userId: string) => `lift:${name}:${userId}`;
 
@@ -148,12 +150,8 @@ export const clearActive = (userId: string) => remove('active', userId);
 
 /* ---------- where he lifts ---------- */
 
-export function readSetting(userId: string): Setting {
-  return read<string>('setting', userId, 'home') === 'gym' ? 'gym' : 'home';
-}
-
 export function writeSetting(userId: string, setting: Setting): void {
-  write('setting', userId, setting);
+  writeStoredSetting(userId, setting);
   void (async () => {
     try {
       await createClient().from('lifting_signal_state').upsert({ user_id: userId, state: { setting }, updated_at: new Date().toISOString() });

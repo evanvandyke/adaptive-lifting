@@ -1,5 +1,5 @@
 -- Adaptive Lifting: tables for the Signal workout (run once in the Supabase SQL editor).
--- Additive only. Every table is prefixed lifting_ and locked to its owner, so Hank is unaffected.
+-- Additive only. Every table is prefixed lifting_ and locked to its owner.
 
 create table if not exists public.lifting_signal_visits (
   id text primary key,

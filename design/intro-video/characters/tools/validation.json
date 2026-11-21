@@ -1,0 +1,2429 @@
+{
+  "sourceMode": "originating app source",
+  "counts": {
+    "poses": 164,
+    "png": 164,
+    "frames": 36
+  },
+  "pngChecks": [
+    {
+      "file": "png/airsquat-t0-ink.png",
+      "width": 705,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        694,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/airsquat-t0-yellow.png",
+      "width": 705,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        694,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/airsquat-t0.5-ink.png",
+      "width": 705,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        121,
+        694,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/airsquat-t0.5-yellow.png",
+      "width": 705,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        121,
+        694,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/airsquat-t1-ink.png",
+      "width": 705,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        319,
+        694,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/airsquat-t1-yellow.png",
+      "width": 705,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        319,
+        694,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bench-t0-ink.png",
+      "width": 1358,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        15,
+        1342,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bench-t0-yellow.png",
+      "width": 1358,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        15,
+        1342,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bench-t0.5-ink.png",
+      "width": 1358,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        106,
+        1342,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bench-t0.5-yellow.png",
+      "width": 1358,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        106,
+        1342,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bench-t1-ink.png",
+      "width": 1358,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        310,
+        1342,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bench-t1-yellow.png",
+      "width": 1358,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        310,
+        1342,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/birddog-t0-ink.png",
+      "width": 2287,
+      "height": 1024,
+      "alphaBounds": [
+        365,
+        20,
+        1948,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/birddog-t0-yellow.png",
+      "width": 2287,
+      "height": 1024,
+      "alphaBounds": [
+        365,
+        20,
+        1948,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/birddog-t0.5-ink.png",
+      "width": 2287,
+      "height": 1024,
+      "alphaBounds": [
+        252,
+        20,
+        2130,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/birddog-t0.5-yellow.png",
+      "width": 2287,
+      "height": 1024,
+      "alphaBounds": [
+        252,
+        20,
+        2130,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/birddog-t1-ink.png",
+      "width": 2287,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        20,
+        2265,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/birddog-t1-yellow.png",
+      "width": 2287,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        20,
+        2265,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bridge-t0-ink.png",
+      "width": 2623,
+      "height": 1024,
+      "alphaBounds": [
+        31,
+        70,
+        2591,
+        992
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bridge-t0-yellow.png",
+      "width": 2623,
+      "height": 1024,
+      "alphaBounds": [
+        31,
+        70,
+        2591,
+        992
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bridge-t0.5-ink.png",
+      "width": 2623,
+      "height": 1024,
+      "alphaBounds": [
+        31,
+        33,
+        2591,
+        992
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bridge-t0.5-yellow.png",
+      "width": 2623,
+      "height": 1024,
+      "alphaBounds": [
+        31,
+        33,
+        2591,
+        992
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bridge-t1-ink.png",
+      "width": 2623,
+      "height": 1024,
+      "alphaBounds": [
+        31,
+        31,
+        2591,
+        992
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/bridge-t1-yellow.png",
+      "width": 2623,
+      "height": 1024,
+      "alphaBounds": [
+        31,
+        31,
+        2591,
+        992
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/calf-t0-ink.png",
+      "width": 596,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        80,
+        586,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/calf-t0-yellow.png",
+      "width": 596,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        80,
+        586,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/calf-t0.5-ink.png",
+      "width": 596,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        41,
+        586,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/calf-t0.5-yellow.png",
+      "width": 596,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        41,
+        586,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/calf-t1-ink.png",
+      "width": 596,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        9,
+        586,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/calf-t1-yellow.png",
+      "width": 596,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        9,
+        586,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/cheer-t0-ink.png",
+      "width": 608,
+      "height": 1024,
+      "alphaBounds": [
+        291,
+        169,
+        581,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/cheer-t0-yellow.png",
+      "width": 608,
+      "height": 1024,
+      "alphaBounds": [
+        291,
+        169,
+        581,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/cheer-t0.5-ink.png",
+      "width": 608,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        161,
+        590,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/cheer-t0.5-yellow.png",
+      "width": 608,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        161,
+        590,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/cheer-t1-ink.png",
+      "width": 608,
+      "height": 1024,
+      "alphaBounds": [
+        279,
+        9,
+        598,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/cheer-t1-yellow.png",
+      "width": 608,
+      "height": 1024,
+      "alphaBounds": [
+        279,
+        9,
+        598,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/deadbug-t0-ink.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/deadbug-t0-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/deadbug-t0.5-ink.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/deadbug-t0.5-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/deadbug-t1-ink.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        23,
+        23,
+        2667,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/deadbug-t1-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        23,
+        23,
+        2667,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/goblet-t0-ink.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/goblet-t0-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/goblet-t0.5-ink.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        112,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/goblet-t0.5-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        112,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/goblet-t1-ink.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        307,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/goblet-t1-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        307,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/incline-t0-ink.png",
+      "width": 945,
+      "height": 1024,
+      "alphaBounds": [
+        12,
+        12,
+        932,
+        1011
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/incline-t0-yellow.png",
+      "width": 945,
+      "height": 1024,
+      "alphaBounds": [
+        12,
+        12,
+        932,
+        1011
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/incline-t0.5-ink.png",
+      "width": 945,
+      "height": 1024,
+      "alphaBounds": [
+        12,
+        130,
+        932,
+        1011
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/incline-t0.5-yellow.png",
+      "width": 945,
+      "height": 1024,
+      "alphaBounds": [
+        12,
+        130,
+        932,
+        1011
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/incline-t1-ink.png",
+      "width": 945,
+      "height": 1024,
+      "alphaBounds": [
+        12,
+        266,
+        932,
+        1011
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/incline-t1-yellow.png",
+      "width": 945,
+      "height": 1024,
+      "alphaBounds": [
+        12,
+        266,
+        932,
+        1011
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/inclinepushup-t0-ink.png",
+      "width": 1223,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        13,
+        1189,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/inclinepushup-t0-yellow.png",
+      "width": 1223,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        13,
+        1189,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/inclinepushup-t0.5-ink.png",
+      "width": 1223,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        177,
+        1189,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/inclinepushup-t0.5-yellow.png",
+      "width": 1223,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        177,
+        1189,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/inclinepushup-t1-ink.png",
+      "width": 1223,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        342,
+        1209,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/inclinepushup-t1-yellow.png",
+      "width": 1223,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        342,
+        1209,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/kneepushup-t0-ink.png",
+      "width": 1904,
+      "height": 1024,
+      "alphaBounds": [
+        19,
+        19,
+        1883,
+        1004
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/kneepushup-t0-yellow.png",
+      "width": 1904,
+      "height": 1024,
+      "alphaBounds": [
+        19,
+        19,
+        1883,
+        1004
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/kneepushup-t0.5-ink.png",
+      "width": 1904,
+      "height": 1024,
+      "alphaBounds": [
+        19,
+        270,
+        1883,
+        1004
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/kneepushup-t0.5-yellow.png",
+      "width": 1904,
+      "height": 1024,
+      "alphaBounds": [
+        19,
+        270,
+        1883,
+        1004
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/kneepushup-t1-ink.png",
+      "width": 1904,
+      "height": 1024,
+      "alphaBounds": [
+        19,
+        523,
+        1883,
+        1004
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/kneepushup-t1-yellow.png",
+      "width": 1904,
+      "height": 1024,
+      "alphaBounds": [
+        19,
+        523,
+        1883,
+        1004
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/lateralraise-t0-ink.png",
+      "width": 1070,
+      "height": 1024,
+      "alphaBounds": [
+        269,
+        10,
+        799,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/lateralraise-t0-yellow.png",
+      "width": 1070,
+      "height": 1024,
+      "alphaBounds": [
+        269,
+        10,
+        799,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/lateralraise-t0.5-ink.png",
+      "width": 1070,
+      "height": 1024,
+      "alphaBounds": [
+        59,
+        10,
+        1009,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/lateralraise-t0.5-yellow.png",
+      "width": 1070,
+      "height": 1024,
+      "alphaBounds": [
+        59,
+        10,
+        1009,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/lateralraise-t1-ink.png",
+      "width": 1070,
+      "height": 1024,
+      "alphaBounds": [
+        16,
+        10,
+        1052,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/lateralraise-t1-yellow.png",
+      "width": 1070,
+      "height": 1024,
+      "alphaBounds": [
+        16,
+        10,
+        1052,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedcalf-t0-ink.png",
+      "width": 476,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        80,
+        466,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedcalf-t0-yellow.png",
+      "width": 476,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        80,
+        466,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedcalf-t0.5-ink.png",
+      "width": 476,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        41,
+        466,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedcalf-t0.5-yellow.png",
+      "width": 476,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        41,
+        466,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedcalf-t1-ink.png",
+      "width": 476,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        9,
+        466,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedcalf-t1-yellow.png",
+      "width": 476,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        9,
+        466,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedsplit-t0-ink.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedsplit-t0-yellow.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedsplit-t0.5-ink.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        104,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedsplit-t0.5-yellow.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        104,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedsplit-t1-ink.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        198,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/loadedsplit-t1-yellow.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        198,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/onearmrow-t0-ink.png",
+      "width": 1435,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        15,
+        1418,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/onearmrow-t0-yellow.png",
+      "width": 1435,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        15,
+        1418,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/onearmrow-t0.5-ink.png",
+      "width": 1435,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        15,
+        1418,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/onearmrow-t0.5-yellow.png",
+      "width": 1435,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        15,
+        1418,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/onearmrow-t1-ink.png",
+      "width": 1435,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        15,
+        1418,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/onearmrow-t1-yellow.png",
+      "width": 1435,
+      "height": 1024,
+      "alphaBounds": [
+        15,
+        15,
+        1418,
+        1008
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/overhead-press-icon-ink.png",
+      "width": 1024,
+      "height": 1024,
+      "alphaBounds": [
+        148,
+        111,
+        875,
+        890
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/overhead-press-icon-yellow.png",
+      "width": 1024,
+      "height": 1024,
+      "alphaBounds": [
+        148,
+        111,
+        875,
+        890
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pulldown-t0-ink.png",
+      "width": 561,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        9,
+        550,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pulldown-t0-yellow.png",
+      "width": 561,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        9,
+        550,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pulldown-t0.5-ink.png",
+      "width": 561,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        9,
+        550,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pulldown-t0.5-yellow.png",
+      "width": 561,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        9,
+        550,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pulldown-t1-ink.png",
+      "width": 561,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        9,
+        550,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pulldown-t1-yellow.png",
+      "width": 561,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        9,
+        550,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pushup-t0-ink.png",
+      "width": 2029,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        20,
+        2002,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pushup-t0-yellow.png",
+      "width": 2029,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        20,
+        2002,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pushup-t0.5-ink.png",
+      "width": 2029,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        268,
+        2002,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pushup-t0.5-yellow.png",
+      "width": 2029,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        268,
+        2002,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pushup-t1-ink.png",
+      "width": 2029,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        516,
+        2007,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/pushup-t1-yellow.png",
+      "width": 2029,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        516,
+        2007,
+        1003
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/rdl-t0-ink.png",
+      "width": 598,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        570,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/rdl-t0-yellow.png",
+      "width": 598,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        570,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/rdl-t0.5-ink.png",
+      "width": 598,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        115,
+        570,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/rdl-t0.5-yellow.png",
+      "width": 598,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        115,
+        570,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/rdl-t1-ink.png",
+      "width": 598,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        377,
+        586,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/rdl-t1-yellow.png",
+      "width": 598,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        377,
+        586,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/row-t0-ink.png",
+      "width": 1109,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        13,
+        1094,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/row-t0-yellow.png",
+      "width": 1109,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        13,
+        1094,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/row-t0.5-ink.png",
+      "width": 1109,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        13,
+        1094,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/row-t0.5-yellow.png",
+      "width": 1109,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        13,
+        1094,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/row-t1-ink.png",
+      "width": 1109,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        13,
+        1094,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/row-t1-yellow.png",
+      "width": 1109,
+      "height": 1024,
+      "alphaBounds": [
+        13,
+        13,
+        1094,
+        1010
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlebridge-t0-ink.png",
+      "width": 2158,
+      "height": 1024,
+      "alphaBounds": [
+        21,
+        369,
+        2136,
+        1002
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlebridge-t0-yellow.png",
+      "width": 2158,
+      "height": 1024,
+      "alphaBounds": [
+        21,
+        369,
+        2136,
+        1002
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlebridge-t0.5-ink.png",
+      "width": 2158,
+      "height": 1024,
+      "alphaBounds": [
+        21,
+        278,
+        2119,
+        1002
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlebridge-t0.5-yellow.png",
+      "width": 2158,
+      "height": 1024,
+      "alphaBounds": [
+        21,
+        278,
+        2119,
+        1002
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlebridge-t1-ink.png",
+      "width": 2158,
+      "height": 1024,
+      "alphaBounds": [
+        21,
+        21,
+        2119,
+        1002
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlebridge-t1-yellow.png",
+      "width": 2158,
+      "height": 1024,
+      "alphaBounds": [
+        21,
+        21,
+        2119,
+        1002
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlecalf-t0-ink.png",
+      "width": 633,
+      "height": 1024,
+      "alphaBounds": [
+        17,
+        80,
+        623,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlecalf-t0-yellow.png",
+      "width": 633,
+      "height": 1024,
+      "alphaBounds": [
+        17,
+        80,
+        623,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlecalf-t0.5-ink.png",
+      "width": 633,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        41,
+        623,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlecalf-t0.5-yellow.png",
+      "width": 633,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        41,
+        623,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlecalf-t1-ink.png",
+      "width": 633,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        9,
+        623,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/singlecalf-t1-yellow.png",
+      "width": 633,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        9,
+        623,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/splitsquat-t0-ink.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/splitsquat-t0-yellow.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/splitsquat-t0.5-ink.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        104,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/splitsquat-t0.5-yellow.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        104,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/splitsquat-t1-ink.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        198,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/splitsquat-t1-yellow.png",
+      "width": 750,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        198,
+        738,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/squat-t0-ink.png",
+      "width": 479,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        468,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/squat-t0-yellow.png",
+      "width": 479,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        468,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/squat-t0.5-ink.png",
+      "width": 479,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        135,
+        468,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/squat-t0.5-yellow.png",
+      "width": 479,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        135,
+        468,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/squat-t1-ink.png",
+      "width": 479,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        339,
+        468,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/squat-t1-yellow.png",
+      "width": 479,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        339,
+        468,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/stand-t0-ink.png",
+      "width": 366,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        354,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/stand-t0-yellow.png",
+      "width": 366,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        354,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/stand-t0.5-ink.png",
+      "width": 366,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        354,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/stand-t0.5-yellow.png",
+      "width": 366,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        354,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/stand-t1-ink.png",
+      "width": 366,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        354,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/stand-t1-yellow.png",
+      "width": 366,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        354,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/tall-t0-ink.png",
+      "width": 399,
+      "height": 1024,
+      "alphaBounds": [
+        30,
+        28,
+        368,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/tall-t0-yellow.png",
+      "width": 399,
+      "height": 1024,
+      "alphaBounds": [
+        30,
+        28,
+        368,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/tall-t0.5-ink.png",
+      "width": 399,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        19,
+        378,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/tall-t0.5-yellow.png",
+      "width": 399,
+      "height": 1024,
+      "alphaBounds": [
+        20,
+        19,
+        378,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/tall-t1-ink.png",
+      "width": 399,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        388,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/tall-t1-yellow.png",
+      "width": 399,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        388,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/victory-t0-ink.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        299,
+        140,
+        599,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/victory-t0-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        299,
+        140,
+        599,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/victory-t0.5-ink.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        16,
+        132,
+        882,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/victory-t0.5-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        16,
+        132,
+        882,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/victory-t1-ink.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        160,
+        9,
+        738,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/victory-t1-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        160,
+        9,
+        738,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/wallpushup-t0-ink.png",
+      "width": 647,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        635,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/wallpushup-t0-yellow.png",
+      "width": 647,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        635,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/wallpushup-t0.5-ink.png",
+      "width": 647,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        635,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/wallpushup-t0.5-yellow.png",
+      "width": 647,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        635,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/wallpushup-t1-ink.png",
+      "width": 647,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        635,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "png/wallpushup-t1-yellow.png",
+      "width": 647,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        635,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-00-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-01-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-02-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-03-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-04-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-05-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-06-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-07-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        124,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-08-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        118,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-09-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        75,
+        23,
+        2603,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-10-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        43,
+        23,
+        2620,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/deadbug-11-yellow.png",
+      "width": 2692,
+      "height": 1024,
+      "alphaBounds": [
+        23,
+        23,
+        2667,
+        1000
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-00-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        10,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-01-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        14,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-02-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        25,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-03-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        43,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-04-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        67,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-05-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        96,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-06-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        129,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-07-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        165,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-08-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        202,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-09-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        238,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-10-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        273,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/goblet-11-yellow.png",
+      "width": 540,
+      "height": 1024,
+      "alphaBounds": [
+        10,
+        307,
+        529,
+        1013
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-00-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        299,
+        140,
+        599,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-01-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        229,
+        139,
+        669,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-02-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        164,
+        137,
+        734,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-03-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        106,
+        136,
+        792,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-04-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        59,
+        134,
+        839,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-05-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        26,
+        133,
+        871,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-06-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        132,
+        889,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-07-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        9,
+        130,
+        889,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-08-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        25,
+        129,
+        873,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-09-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        57,
+        104,
+        841,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-10-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        103,
+        50,
+        795,
+        1014
+      ],
+      "clearCanvasEdges": true
+    },
+    {
+      "file": "frames/victory-11-yellow.png",
+      "width": 899,
+      "height": 1024,
+      "alphaBounds": [
+        160,
+        9,
+        738,
+        1014
+      ],
+      "clearCanvasEdges": true
+    }
+  ],
+  "figureComparison": {
+    "move": "deadbug",
+    "t": 1,
+    "tone": "yellow",
+    "equipment": true,
+    "weights": true,
+    "height": 1024,
+    "reference": "src/app/lift/signal/lifter/figure.tsx",
+    "rigSha256": "0c829ab6265d275db3b5348348fe071d4d20923977e78f58bbcd0e9c8b44b529",
+    "figureSha256": "c5ba211e33994d189503b94dc295b651ac062870d34db2a6fb2ff9f7d1f914d7",
+    "referenceRaster": "tools/figure-check.png",
+    "differingRgbaChannels": 0,
+    "rawRgbaSha256": "82f8fe8cf49bf68e02f9970a5a1573f543b0ff7df91b4bab41b66ceb97c32e56",
+    "coverage": "Whole disc head, near/far limbs, floor, and transparent head halo; identical full raster."
+  },
+  "sheet": {
+    "width": 1920,
+    "height": 2680
+  }
+}

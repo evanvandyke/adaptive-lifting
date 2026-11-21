@@ -1,0 +1,45 @@
+{
+  "capturedAt": "2026-11-21T03:17:18.721Z",
+  "sources": {
+    "rig.ts": {
+      "source": "src/app/lift/signal/lifter/rig.ts",
+      "sha256": "0c829ab6265d275db3b5348348fe071d4d20923977e78f58bbcd0e9c8b44b529"
+    },
+    "figure.tsx": {
+      "source": "src/app/lift/signal/lifter/figure.tsx",
+      "sha256": "c5ba211e33994d189503b94dc295b651ac062870d34db2a6fb2ff9f7d1f914d7"
+    },
+    "lifter.tsx": {
+      "source": "src/app/lift/signal/lifter/lifter.tsx",
+      "sha256": "ad5d3d52ea1c6acbd8cbc58c4aa952eaa682cfb85841c530c65b774d7107e00f"
+    },
+    "drawings.tsx": {
+      "source": "src/app/lift/signal/drawings.tsx",
+      "sha256": "4a7ec5dda7afb5ac369f2753ce666509cb29c674efeadbf95d62a200043ef240"
+    },
+    "visit-data.ts": {
+      "source": "src/app/lift/visit/visit-data.ts",
+      "sha256": "9e7dee5b22db0cfb27406d15e9c52919ce7767b6533c43e6ed18813509b8b663"
+    },
+    "signal.module.css": {
+      "source": "src/app/lift/signal/signal.module.css",
+      "sha256": "fd93f96e23cc4cfffe9bb54dbf8a979610832c04522624865f0108ac20c35a57"
+    },
+    "layout.tsx": {
+      "source": "src/app/lift/layout.tsx",
+      "sha256": "e47574812aa98c9723ad8834b83f77c4d03c8f03b4db95a4abb086bbf14262b3"
+    },
+    "concept-e-ink.svg": {
+      "source": "design/app-icon/round-2/concept-e-ink.svg",
+      "sha256": "fd0c4a468cbf49426123ea9f498dccf2bdd49e3e33c6a37fe9eb8d7e895b1d74"
+    },
+    "concept-e-yellow.svg": {
+      "source": "design/app-icon/round-2/concept-e-yellow.svg",
+      "sha256": "1d0c4daf0d247c35d2dad36ab7329a4814305094a164f8a24fe6f38c70cb8b0f"
+    },
+    "extract.mjs": {
+      "source": "design/app-icon/round-2/tools/extract.mjs",
+      "sha256": "b6a56521df85052bbf328ce01d71c5bdda3bb3d176cacc151a6b7077d15372e9"
+    }
+  }
+}

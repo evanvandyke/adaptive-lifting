@@ -1,6 +1,6 @@
 # Standalone training engine
 
-This is the isolated `experimental-v1` candidate specified in [ENGINE-SPEC.md](../ENGINE-SPEC.md). It implements deterministic training decisions and event replay with synthetic tests. It is not connected to the current workout UI, Supabase tables, authentication or a live training session.
+This is the isolated `experimental-v1` candidate specified in [ENGINE-SPEC.md](../docs/engine/ENGINE-SPEC.md). It implements deterministic training decisions and event replay with synthetic tests. It is not connected to the current workout UI, Supabase tables, authentication or a live training session.
 
 Passing a test means that a software transition matched its stated policy. It does not establish appropriate loads for Evan, physiological safety or expected strength gains. The numerical policy is experimental; the catalogue, observed inputs and explicit bounds determine what the candidate can propose.
 

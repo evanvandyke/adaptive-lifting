@@ -15,21 +15,20 @@ Prove you read them by summarizing their current state in your first response. I
 ## Canonical docs (this project's source of truth)
 The handful of documents that are authoritative for this project — the ones a fresh session reads to get up to speed, and where durable facts live instead of memory. Architecture, decisions, and specs live in these docs (and the code), not in this file.
 
-- `README.md` — product overview, legacy-versus-candidate boundary, setup and validation commands.
-- `GYM-EXPERIENCE.md` + `PROGRAM-DIRECTION.md` — guided workout behavior and Evan's confirmed constraints.
-- `ENGINE-SPEC.md` + `engine/src/` — exact standalone candidate policy and implementation; read before changing engine or workout behavior. `ENGINE-REVIEW.md` and `engine/reports/SUMMARY.md` record review and executed-snapshot evidence.
+- `README.md` — what is live, the database, what is parked, setup and validation commands.
 - `src/app/lift/` — the live guided workout ("Signal") at `/lift`, where sign-in lands: `coach/coach.ts` plans each visit (tests: `npm run test:coach`), `visit/use-visit.ts` runs it, `store.ts` keeps it on the phone and syncs to Supabase, `signal/` is the screens. `/lift/preview` is a dev-only no-login copy. Tables: `supabase/signal-tables.sql`.
-- `CLAUDE-DESIGN-PROMPT.md` — visual freedom and gym usability requirements; read before UX/UI work.
-- `Implementation-plan.md` — historical original design/build plan, AI prompts and schema; use it for original intent, not proof of current behavior.
-- `src/lib/` + `src/app/(protected)/workout/actions.ts` — legacy app types, prompts, motivation and current workout creation/completion behavior. The separate legacy progression helper has no caller in this flow.
-- `src/middleware.ts` — auth protection + onboarding redirect (the source of several early bugs; read before touching auth/routing).
+- `src/app/(auth)/` + `src/utils/supabase/middleware.ts` — sign-in, sign-up and the routing gate; read before touching auth or routing.
+- `docs/product/GYM-EXPERIENCE.md` + `docs/product/PROGRAM-DIRECTION.md` — guided workout behavior and Evan's confirmed constraints.
+- `docs/product/CLAUDE-DESIGN-PROMPT.md` — visual freedom and gym usability requirements; read before UX/UI work.
+- `docs/engine/ENGINE-SPEC.md` + `engine/src/` — the parked standalone candidate's policy and implementation; read before changing the engine or folding its ideas into the coach. `docs/engine/ENGINE-REVIEW.md` and `engine/reports/SUMMARY.md` record review and executed-snapshot evidence.
+- `plans/` — the burn-down lists the agenda points to; read the one for the item being worked.
 
 ## Project overview
-Adaptive Lifting is a strength-training PWA for Evan's return to lifting. The app uses Next.js 16, Supabase and Claude API on Vercel. The live flow is the Signal workout at `/lift`, planned by its own small coach module. The standalone experimental engine in `engine/` is parked and connected to nothing, and the older dashboard/workout pages are legacy; integration of either must be explicit. Research informs the direction, while exact numerical rules remain testable engineering hypotheses. Visual redesign follows the Claude Design handoff rather than assuming the existing styling is a requirement.
+Adaptive Lifting is a strength-training PWA for Evan's return to lifting, shared with his brother. The app uses Next.js 16 and Supabase on Vercel. The live flow is the Signal workout at `/lift`, planned by its own small coach module. The standalone experimental engine in `engine/` is parked and connected to nothing; folding any of it into the coach must be explicit. The original dashboard, workout, nutrition and AI pages were retired on 2026-11-20 and live only in git history and `archive/`. Research informs the direction, while exact numerical rules remain testable engineering hypotheses.
 
 ## Adaptive Lifting is not what you'd assume
 - **Next.js here is not the Next.js in your training data.** This version has breaking changes to APIs, conventions, and file structure. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code.
-- **The Supabase project is shared with Hank.** All this app's DB tables are prefixed `lifting_*` to coexist. Evan's auth account (`evan.vandyke@gmail.com`) is shared across both apps — a login can land on an existing Hank account with no `lifting_profiles` row, which is why middleware redirects such users to onboarding.
+- **The app has its own Supabase project** (ref `ljyqtcosoigsribpyiwq`, under a dedicated Gmail plus-address login of Evan's, free plan, which pauses after about a week unused). It holds three tables, all prefixed `lifting_`. It is not the Hank project the app started on; that one is unreachable and nothing here points at it.
 
 **At session end:** run the wrap skill (`~/.agents/skills/wrap/SKILL.md`).
 

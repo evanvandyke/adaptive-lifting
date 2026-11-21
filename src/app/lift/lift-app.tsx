@@ -5,7 +5,8 @@ import { planVisit, type VisitRecord } from './coach/coach';
 import Signal, { Shell } from './signal/app';
 import { BugButton } from './signal/bug';
 import { Slab } from './signal/parts';
-import { clearActive, makeRecord, readActive, readHistory, readSetting, saveRecord, syncHistory, writeSetting } from './store';
+import { SettingChoice } from './signal/start';
+import { clearActive, makeRecord, readActive, readHistory, readStoredSetting, saveRecord, syncHistory, writeSetting } from './store';
 import type { VisitState } from './visit/use-visit';
 import { EXERCISES, type Setting } from './visit/visit-data';
 import s from './signal/signal.module.css';
@@ -17,7 +18,7 @@ const QUIET_MS = 10 * 60_000;
 /** How long a phone with no history waits on the database before starting anyway. */
 const SYNC_WAIT_MS = 3000;
 
-interface Boot { history: VisitRecord[]; setting: Setting; saved: VisitState | null; ask: boolean; savedAt: number }
+interface Boot { history: VisitRecord[]; setting: Setting | null; saved: VisitState | null; ask: boolean; savedAt: number }
 
 /** What the phone holds when the page opens. A visit that finished, or was left for hours, is settled here. */
 function boot(userId: string): Boot {
@@ -26,7 +27,7 @@ function boot(userId: string): Boot {
   } catch {
     // A visit in progress this version cannot read: it is let go so the app opens.
     clearActive(userId);
-    return { history: readHistory(userId), setting: readSetting(userId), saved: null, ask: false, savedAt: 0 };
+    return { history: readHistory(userId), setting: readStoredSetting(userId), saved: null, ask: false, savedAt: 0 };
   }
 }
 
@@ -54,7 +55,7 @@ function read(userId: string): Boot {
       ask = idle > QUIET_MS;
     }
   } else if (active) clearActive(userId);
-  return { history: readHistory(userId), setting: readSetting(userId), saved, ask, savedAt: active?.savedAt ?? 0 };
+  return { history: readHistory(userId), setting: readStoredSetting(userId), saved, ask, savedAt: active?.savedAt ?? 0 };
 }
 
 /** Coming back to a visit left half done: where he was, and the choice to carry on or stop there. */
@@ -84,7 +85,9 @@ function Resume({ state, onCarryOn, onEnd }: { state: VisitState; onCarryOn: () 
 export default function LiftApp({ userId }: { userId: string }) {
   const [first] = useState(() => boot(userId));
   const [history, setHistory] = useState(first.history);
-  const [setting, setSetting] = useState(first.setting);
+  const [chosenSetting, setSetting] = useState(first.setting);
+  const setting = chosenSetting ?? 'home';
+  const [settingHint, setSettingHint] = useState(false);
   const [saved, setSaved] = useState(first.saved);
   const [asking, setAsking] = useState(first.ask);
   // The day the plan is for. Looked at again whenever the app comes back to the front.
@@ -154,6 +157,19 @@ export default function LiftApp({ userId }: { userId: string }) {
     );
   }
   if (!checked) return <Shell><div className={s.root} /></Shell>;
+  // Keep this after the first-sync wait. A late merge also removes an unanswered question immediately.
+  if (chosenSetting === null && history.length === 0 && saved === null) {
+    return (
+      <Shell>
+        <div className={s.root}>
+          <main className={s.app}>
+            <SettingChoice onSetting={next => { chooseSetting(next); setSettingHint(true); }} />
+          </main>
+        </div>
+        <BugButton userId={userId} context={() => ({ phase: 'setting' })} />
+      </Shell>
+    );
+  }
   // Keyed on whether it carries on from a saved visit, so "End it here" starts from a clean one.
-  return <Signal key={saved ? 'saved' : 'fresh'} userId={userId} plan={plan} saved={saved} setting={setting} onSetting={chooseSetting} onClosed={closed} onSignOut={signOut} />;
+  return <Signal key={saved ? 'saved' : 'fresh'} userId={userId} plan={plan} saved={saved} setting={setting} settingHint={settingHint} onSetting={chooseSetting} onClosed={closed} onSignOut={signOut} />;
 }

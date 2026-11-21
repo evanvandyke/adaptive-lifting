@@ -13,10 +13,6 @@
   background: var(--ink);
 }
 
-:global(body):has(.shell) > :global(.aurora-container) {
-  display: none;
-}
-
 .shell {
   box-sizing: border-box;
   flex: 1;

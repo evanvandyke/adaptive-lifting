@@ -1,0 +1,188 @@
+{
+  "moves": 27,
+  "poses": 164,
+  "png": 164,
+  "frames": 36,
+  "rigSamples": 111,
+  "sheet": {
+    "width": 1920,
+    "height": 2680
+  },
+  "representatives": [
+    {
+      "move": "squat",
+      "name": "Back squat",
+      "t": 1,
+      "stem": "squat-t1"
+    },
+    {
+      "move": "bench",
+      "name": "Dumbbell flat press",
+      "t": 0,
+      "stem": "bench-t0"
+    },
+    {
+      "move": "row",
+      "name": "Supported row",
+      "t": 1,
+      "stem": "row-t1"
+    },
+    {
+      "move": "calf",
+      "name": "Calf raise",
+      "t": 1,
+      "stem": "calf-t1"
+    },
+    {
+      "move": "deadbug",
+      "name": "Dead bug",
+      "t": 1,
+      "stem": "deadbug-t1"
+    },
+    {
+      "move": "stand",
+      "name": "Stand",
+      "t": 0,
+      "stem": "stand-t0"
+    },
+    {
+      "move": "tall",
+      "name": "Tall",
+      "t": 1,
+      "stem": "tall-t1"
+    },
+    {
+      "move": "victory",
+      "name": "Victory",
+      "t": 1,
+      "stem": "victory-t1"
+    },
+    {
+      "move": "pushup",
+      "name": "Push-up",
+      "t": 0,
+      "stem": "pushup-t0"
+    },
+    {
+      "move": "airsquat",
+      "name": "Air squat",
+      "t": 1,
+      "stem": "airsquat-t1"
+    },
+    {
+      "move": "bridge",
+      "name": "Glute bridge",
+      "t": 1,
+      "stem": "bridge-t1"
+    },
+    {
+      "move": "goblet",
+      "name": "Goblet squat",
+      "t": 1,
+      "stem": "goblet-t1"
+    },
+    {
+      "move": "splitsquat",
+      "name": "Split squat",
+      "t": 1,
+      "stem": "splitsquat-t1"
+    },
+    {
+      "move": "incline",
+      "name": "Dumbbell incline press",
+      "t": 0,
+      "stem": "incline-t0"
+    },
+    {
+      "move": "onearmrow",
+      "name": "One-arm dumbbell row",
+      "t": 1,
+      "stem": "onearmrow-t1"
+    },
+    {
+      "move": "pulldown",
+      "name": "Lat pulldown",
+      "t": 1,
+      "stem": "pulldown-t1"
+    },
+    {
+      "move": "birddog",
+      "name": "Bird dog",
+      "t": 1,
+      "stem": "birddog-t1"
+    },
+    {
+      "move": "singlecalf",
+      "name": "Single-leg calf raise",
+      "t": 1,
+      "stem": "singlecalf-t1"
+    },
+    {
+      "move": "cheer",
+      "name": "Cheer",
+      "t": 1,
+      "stem": "cheer-t1"
+    },
+    {
+      "move": "rdl",
+      "name": "Dumbbell Romanian deadlift",
+      "t": 1,
+      "stem": "rdl-t1"
+    },
+    {
+      "move": "kneepushup",
+      "name": "Knee push-up",
+      "t": 0,
+      "stem": "kneepushup-t0"
+    },
+    {
+      "move": "wallpushup",
+      "name": "Wall push-up",
+      "t": 1,
+      "stem": "wallpushup-t1"
+    },
+    {
+      "move": "inclinepushup",
+      "name": "Incline push-up",
+      "t": 1,
+      "stem": "inclinepushup-t1"
+    },
+    {
+      "move": "lateralraise",
+      "name": "Dumbbell lateral raise",
+      "t": 1,
+      "stem": "lateralraise-t1"
+    },
+    {
+      "move": "singlebridge",
+      "name": "Single-leg bridge",
+      "t": 1,
+      "stem": "singlebridge-t1"
+    },
+    {
+      "move": "loadedcalf",
+      "name": "Calf raise with dumbbells",
+      "t": 1,
+      "stem": "loadedcalf-t1"
+    },
+    {
+      "move": "loadedsplit",
+      "name": "Split squat with dumbbells",
+      "t": 1,
+      "stem": "loadedsplit-t1"
+    },
+    {
+      "move": "overhead-press-icon",
+      "name": "Overhead press (icon)",
+      "t": null,
+      "stem": "overhead-press-icon"
+    }
+  ],
+  "versions": {
+    "node": "v22.22.0",
+    "react": "19.2.9",
+    "typescript": "5.9.3",
+    "sharp": "0.35.5",
+    "librsvg": "rsvg-convert version 2.61.1"
+  }
+}

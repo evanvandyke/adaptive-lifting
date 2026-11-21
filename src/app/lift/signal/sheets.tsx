@@ -1,12 +1,12 @@
 'use client';
-import { useEffect, useLayoutEffect, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState, type KeyboardEvent, type ReactNode, type RefObject } from 'react';
 import { playSound } from '../visit/feedback';
 import { REPS_MAX, REPS_MIN, type Visit } from '../visit/use-visit';
 import { EXERCISES, type Exercise, type ExerciseId } from '../visit/visit-data';
 import { useTones } from './ground';
 import { useArmed } from './hooks';
 import { FigureDisc, ScaledFigure, Slab } from './parts';
-import { numbersLine, repsCount, setName, trialName, weightUnit } from './words';
+import { numbersLine, repsCount, setName, SIGN_OUT, trialName, weightUnit } from './words';
 import s from './signal.module.css';
 
 /** A sheet opens under the finger that asked for it: its controls stay dead this long, so a double tap changes nothing. */
@@ -28,11 +28,13 @@ interface SheetProps {
    * top edge, so it covers that thing whole and leaves everything above it in view, at any screen height.
    */
   over?: string;
+  /** A confirmation can focus its safe default instead of the panel itself. */
+  initialFocus?: RefObject<HTMLButtonElement | null>;
   children: ReactNode;
 }
 
 /** The black sheet: slides up from the bottom edge, closes on Escape and on a tap outside, and keeps focus inside. */
-function Sheet({ label, open, onClose, bare, edged, view, over, children }: SheetProps) {
+function Sheet({ label, open, onClose, bare, edged, view, over, initialFocus, children }: SheetProps) {
   const panel = useRef<HTMLDivElement>(null);
   const armed = useArmed(SHEET_GUARD_MS);
 
@@ -56,8 +58,8 @@ function Sheet({ label, open, onClose, bare, edged, view, over, children }: Shee
   }, [view, over]);
 
   useEffect(() => {
-    panel.current?.focus({ preventScroll: true });
-  }, []);
+    (initialFocus?.current ?? panel.current)?.focus({ preventScroll: true });
+  }, [initialFocus]);
 
   // Escape closes it wherever focus happens to be.
   useEffect(() => {
@@ -90,6 +92,28 @@ function Sheet({ label, open, onClose, bare, edged, view, over, children }: Shee
         {!bare && <button type="button" className={s.word} onClick={onClose}>Close</button>}
       </div>
     </>
+  );
+}
+
+/** Sign out only after an explicit second action. Staying signed in is the large, focused default. */
+export function SignOutSheet({ open, onClose, onSignOut }: { open: boolean; onClose: () => void; onSignOut: () => void }) {
+  const armed = useArmed(SHEET_GUARD_MS);
+  const stay = useRef<HTMLButtonElement>(null);
+  const leaving = useRef(false);
+  return (
+    <Sheet label={SIGN_OUT.title} open={open} onClose={onClose} bare initialFocus={stay}>
+      <h2 className={s.sheetTitle}>{SIGN_OUT.title}</h2>
+      <p className={s.sheetText}>{SIGN_OUT.line}</p>
+      <div className={s.sheetSlot}>
+        <Slab buttonRef={stay} onClick={() => { if (open && armed) onClose(); }}>{SIGN_OUT.stay}</Slab>
+      </div>
+      <button type="button" className={s.word} onClick={() => {
+        if (!open || !armed || leaving.current) return;
+        leaving.current = true;
+        onSignOut();
+        onClose();
+      }}>{SIGN_OUT.action}</button>
+    </Sheet>
   );
 }
 

@@ -1,20 +1,36 @@
 'use client';
-import { useSoundPreference } from '../visit/feedback';
 import { GUARD_MS, type Visit } from '../visit/use-visit';
 import type { Setting } from '../visit/visit-data';
 import { useArmed } from './hooks';
-import { FigureDisc, Markers, Slab, type MarkerState } from './parts';
-import { blockWords, firstStartWords } from './words';
+import { FigureDisc, Markers, Slab, SoundButton, type MarkerState } from './parts';
+import { blockWords, firstStartWords, SETTING_CHOICES, SETTING_QUESTION, settingHintWords, settingSwitchWords, SIGN_OUT } from './words';
 import s from './signal.module.css';
+
+/** Two equal choices, before the first plan. The normal start has its own guard against a second tap. */
+export function SettingChoice({ onSetting }: { onSetting: (setting: Setting) => void }) {
+  const armed = useArmed(GUARD_MS);
+  return (
+    <div className={s.screen} data-screen="setting">
+      <h1 className={s.big}>{SETTING_QUESTION}</h1>
+      <div className={s.settingChoices}>
+        {SETTING_CHOICES.map(choice => (
+          <Slab key={choice.setting} className={s.settingChoice} onClick={() => { if (armed) onSetting(choice.setting); }}>
+            <span>{choice.name}</span>
+            <span className={s.settingDescription}>{choice.line}</span>
+          </Slab>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 /**
  * The start: what today is, in a few rows, and one place to press. One small word swaps the gym for the home
  * workout, and the phone remembers it. A first visit says so, with one sentence in place of the numbers.
  */
-export function Start({ visit, setting, onSetting, onSignOut }: { visit: Visit; setting: Setting; onSetting: (setting: Setting) => void; onSignOut: () => void }) {
+export function Start({ visit, setting, settingHint, onSetting, onSignOut }: { visit: Visit; setting: Setting; settingHint: boolean; onSetting: (setting: Setting) => void; onSignOut: (from: HTMLElement) => void }) {
   // Start sits where the finish's Done was: the second tap of a double tap there must not start a new visit.
   const armed = useArmed(GUARD_MS);
-  const [soundOn, setSoundOn] = useSoundPreference();
   const { plan } = visit;
   const home = setting === 'home';
   const first = plan.first !== null;
@@ -24,6 +40,10 @@ export function Start({ visit, setting, onSetting, onSignOut }: { visit: Visit; 
 
   return (
     <div className={s.screen} data-screen="start" data-plan={plan.template}>
+      <div className={s.startControls}>
+        <button type="button" className={`${s.word} ${s.accountWord}`} onClick={event => { if (armed) onSignOut(event.currentTarget); }}>{SIGN_OUT.action}</button>
+        <SoundButton />
+      </div>
       <h1 className={s.big}>{plan.name}</h1>
       {first
         ? firstStartWords(plan).map(sentence => <p key={sentence} className={s.fact}>{sentence}</p>)
@@ -47,18 +67,13 @@ export function Start({ visit, setting, onSetting, onSignOut }: { visit: Visit; 
         <span>Visit {plan.week.visit} of {plan.week.of} this week</span>
       </p>
       <button type="button" className={`${s.word} ${s.planWord}`} onClick={() => { if (armed) onSetting(home ? 'gym' : 'home'); }}>
-        {home ? 'Do the gym workout' : 'Do the home workout'}
+        {settingSwitchWords(setting)}
       </button>
+      {settingHint && <p className={s.fact}>{settingHintWords(setting)}</p>}
 
       <div className={s.spacer} />
       <div className={s.slot}>
         <Slab onClick={() => { if (armed) visit.start(); }}>Start</Slab>
-      </div>
-      <div className={s.foot}>
-        <button type="button" className={s.word} onClick={() => { if (armed) onSignOut(); }}>Sign out</button>
-        <button type="button" className={`${s.word} ${s.wordRight}`} aria-pressed={soundOn} aria-label="Sound" onClick={() => setSoundOn(!soundOn)}>
-          {soundOn ? 'Sound on' : 'Sound off'}
-        </button>
       </div>
     </div>
   );

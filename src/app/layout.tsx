@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Aurora } from "@/components/Aurora";
 
 export const metadata: Metadata = {
   title: "Adaptive Lifting",
-  description: "Auto-adjusting strength training. Show up. Get stronger. Don't quit.",
+  description: "One set at a time.",
   manifest: "/manifest.json",
   icons: {
     icon: [
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0B0F1A",
+  themeColor: "#1c1a14",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -40,7 +39,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col relative">
-        <Aurora />
         <main className="relative z-10 flex-1 flex flex-col">
           {children}
         </main>
