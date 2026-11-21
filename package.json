@@ -10,7 +10,9 @@
     "test:engine": "node engine/run.mjs test",
     "test:coach": "node --test src/app/lift/coach/coach.test.ts",
     "simulate:engine": "node engine/run.mjs simulate",
-    "check:engine": "node engine/run.mjs all"
+    "check:engine": "node engine/run.mjs all",
+    "intro:add": "node scripts/add-intro-video.mjs",
+    "intro:remove": "node scripts/add-intro-video.mjs --remove"
   },
   "dependencies": {
     "@supabase/ssr": "^0.10.3",
