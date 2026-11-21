@@ -12,9 +12,9 @@ Before editing, read `~/.agents/project-template/_SPEC.md`, section "AGENDA.md".
 
 2. **Project: Adaptive Lifting → Manually test the nutrition tracker.** Why: The protein page and dashboard protein card were built by a sub-agent and never hand-verified; confirm the quick-tap buttons and 7-day bar chart persist and render.
 
-### FOLLOW-UP
+3.
 
-- reminder · due: 2026-11-20 · run `supabase/signal-tables.sql` once in the Supabase SQL editor so workouts sync across devices and problem reports reach the database (ref: session 03 note)
+### FOLLOW-UP
 
 ## FOR SURE (committed, unscheduled)
 
