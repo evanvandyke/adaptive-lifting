@@ -14,8 +14,9 @@ export const viewport: Viewport = {
 };
 
 function Wordmark() {
-  // Replace this text span with the inline SVG; the heading keeps its accessible name.
-  return <span aria-hidden="true">Adaptive Lifting</span>;
+  // The lifter and the name, drawn in Overpass 900 outlines (source: design/app-icon/round-3/wordmark-e.svg).
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src="/brand/wordmark.svg" alt="" width={1602} height={412} />;
 }
 
 export default function AuthLayout({

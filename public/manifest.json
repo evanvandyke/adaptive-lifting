@@ -1,7 +1,7 @@
 {
   "name": "Adaptive Lifting",
   "short_name": "Lifting",
-  "description": "Auto-adjusting strength training. Show up. Get stronger. Don't quit.",
+  "description": "One set at a time.",
   "start_url": "/lift",
   "display": "standalone",
   "background_color": "#1c1a14",
@@ -12,13 +12,25 @@
       "src": "/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

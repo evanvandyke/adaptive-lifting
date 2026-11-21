@@ -56,7 +56,7 @@
   line-height: 1.08;
   letter-spacing: -0.01em;
 }
-.wordmark svg { display: block; width: 100%; height: auto; }
+.wordmark img { display: block; width: 100%; height: auto; }
 .tagline { margin: 10px 0 0; color: var(--quiet); }
 .title {
   margin: 0 0 24px;
