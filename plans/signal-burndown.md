@@ -40,4 +40,4 @@ Everything still open on the live workout at `/lift`. Work top to bottom inside 
 - [ ] Next.js is 16.4.3; session 03 recorded moderate advisories fixed in 16.4.6. Upgrade and re-run the checks.
 - [ ] `npx eslint` across the whole repo, now that the old pages are gone: clear what remains or scope the lint script.
 - [ ] `scripts/generate-icons.js` makes only the 192 and 512 icons; fold in the 180 home screen icon and `favicon.ico` so one command rebuilds all of them from `public/icons/icon.svg`.
-- [ ] Intro video: materials are in `design/intro-video/`. When a video exists, decide where it shows (sign-in page, or once after sign-up).
+- [ ] Intro video: another session is making it from `design/intro-video/`. When Evan has the file: `npm run intro:add -- <file>`, look at `/login` locally, commit `public/intro/` and `src/app/(auth)/intro-video.ts`, push, check the live sign-in page. The slot is built and switched off until then.
