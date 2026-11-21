@@ -82,3 +82,9 @@ When Evan's video is ready: `npm run intro:add -- <his file>`, look at `/login` 
 ### Final status
 
 Repair: not due (session 4). Agenda, memory and commits are recorded in the wrap report in the conversation.
+
+### Addendum, 21:35 MST: the video is live
+
+Evan's other session finished the video the same evening and saved it to `design/intro-video/adaptive-lifting-intro.mp4` (1080x1080, 52 s, 8.3 MB). I ran `npm run intro:add` on it: `public/intro/intro-202611210431.mp4` (720x720, 2.4 MB) and a poster, switched on in `src/app/(auth)/intro-video.ts`. Checked locally that it plays inside the sign-in page at phone width, then pushed and checked the live file answers range requests. The "last small job" above is done. The agenda's intro-video idea was removed as complete. Not checked: playback on a real iPhone.
+
+The video's coach is the lifter in a red headband with a stopwatch, in the app's colors; the script ends on "ONE SET! AT A TIME!" and points at the "!" tab.

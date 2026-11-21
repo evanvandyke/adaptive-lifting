@@ -26,6 +26,4 @@ Before editing, read `~/.agents/project-template/_SPEC.md`, section "AGENDA.md".
 
 ## IDEAS (maybe / someday)
 
-- **Project: Adaptive Lifting → Intro video on the sign-in page.** Why: a funny one-minute explainer starring the lifter would tell a new person what to expect; materials are ready for another session to build it. Plan: `design/intro-video/EXPLAINER-BRIEF.md`
-
 - **Project: Adaptive Lifting → Graduate to the 4-day upper/lower split.** Why: for when 3x/week full-body stops driving progress; the old templates were retired, so this would be designed fresh. Plan: `plans/coach-and-engine.md`
