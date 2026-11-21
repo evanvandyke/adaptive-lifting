@@ -20,7 +20,7 @@ function Wordmark() {
   return <img src="/brand/wordmark.svg" alt="" width={1602} height={412} />;
 }
 
-/** The one-minute explainer, under the form so signing in stays the first thing. Nothing loads until it is played. */
+/** The one-minute explainer, above the form: the first thing a new person sees. Nothing loads until it is played. */
 function IntroVideo() {
   if (!INTRO_VIDEO) return null;
   return (
@@ -53,8 +53,8 @@ export default function AuthLayout({
           <h1 className={s.wordmark} aria-label="Adaptive Lifting"><Wordmark /></h1>
           <p className={s.tagline}>One set at a time.</p>
         </header>
-        {children}
         <IntroVideo />
+        {children}
       </div>
     </div>
   );

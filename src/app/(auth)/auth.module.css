@@ -156,7 +156,7 @@
 .word:focus-visible { outline-offset: 0; }
 .word:active { text-decoration-thickness: 4px; }
 
-.intro { margin-top: 40px; border-top: 2px solid var(--ledge); padding-top: 24px; }
+.intro { margin-bottom: 36px; border-bottom: 2px solid var(--ledge); padding-bottom: 32px; }
 .introTitle { margin: 0 0 14px; font-size: 20px; font-weight: 800; line-height: 1.2; }
 .introVideo {
   display: block;
